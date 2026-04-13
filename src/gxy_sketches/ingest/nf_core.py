@@ -85,10 +85,12 @@ class NfCoreIngestor:
         version = self._latest_release(entry)
         license_ = entry.get("license") or "MIT"
 
-        # nf-core test data lives in the nf-core/test-datasets repo on a per-pipeline
-        # branch and is referenced by URL in conf/test.config. We do NOT mirror it
-        # here — the generator records the reference and the ingestor just notes
-        # which test config file(s) to consult.
+        # nf-core test data lives in the nf-core/test-datasets repo on a
+        # per-pipeline branch and is referenced by URL (and by samplesheet
+        # CSV one level in) from `conf/test.config`. v1 does not build a
+        # TestManifest for nf-core — the generator will emit sketches with
+        # empty test_data/expected_output and describe the test profile in
+        # the body prose. v2 can add a samplesheet + nextflow.config parser.
         return WorkflowRecord(
             ecosystem="nf-core",
             slug=name,
@@ -97,7 +99,7 @@ class NfCoreIngestor:
             version=version,
             license=license_,
             files=files,
-            test_data_paths=[],  # URL-referenced, not local
+            test_manifest=None,
             raw_root=dest,
         )
 
