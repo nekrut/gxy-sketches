@@ -1,0 +1,24 @@
+# Remote test data
+
+These inputs are referenced by URL rather than bundled with the sketch. They come from the source workflow's planemo test manifest.
+
+- **assembly_gfa** (gfa1) — https://zenodo.org/records/17190637/files/Assembly%20GFA.gfa1  (SHA-1 `674d80de5c15f407a7f8c194d0fa098bef9ae53b`)
+- **estimated_genome_size_parameter_file** (expression.json) — https://zenodo.org/records/17190637/files/Estimated%20genome%20size%20-%20Parameter%20File.expression.json  (SHA-1 `71cb196fbcdbf99c80d431de60704386d3a92d5f`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmmccxy_l6_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMMCCXY_L6_R1.fq.gz  (SHA-1 `e28a3c03d447f75f9f4b1ebba638d7519718653f`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmmccxy_l6_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMMCCXY_L6_R2.fq.gz  (SHA-1 `a79ef11410b7d1f28f93dcbbd0c9ca12537c9df2`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l8_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L8_R1.fq.gz  (SHA-1 `f327e867f7e9b986b60196152c020b7c1a177e1b`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l8_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L8_R2.fq.gz  (SHA-1 `cc4bf7af7686447bf9409aeb50f3825faca87e1b`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l7_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L7_R1.fq.gz  (SHA-1 `9b67b4d69cc9b0bc8248a68550d2b2c19b3ac2ac`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l7_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L7_R2.fq.gz  (SHA-1 `10085c31a5d99205c52dca89b3df569165c226cc`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l6_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L6_R1.fq.gz  (SHA-1 `688442b3d97416f02eadb6fc4e3b3021d6b2c8bf`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l6_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L6_R2.fq.gz  (SHA-1 `9f3fdec98d03356b6dd73710e5ab723867b6b4a4`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l5_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L5_R1.fq.gz  (SHA-1 `cf4fea47b72d4f81f099a7a98729a53237b91441`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l5_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L5_R2.fq.gz  (SHA-1 `1b806853794f65b6292f3e7a16294543d09ccba8`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l4_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L4_R1.fq.gz  (SHA-1 `17e493fc2b897bb8233ad3fe6d08010804f76e9d`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l4_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L4_R2.fq.gz  (SHA-1 `97dd20426ecaa0a85c098506354c2dcbc8abf534`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l3_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L3_R1.fq.gz  (SHA-1 `7f7d69998da49d5d34a2801dff8485bddaa74750`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l3_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L3_R2.fq.gz  (SHA-1 `372ff52ecf58d379fa227a0392af88a2501eca54`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l2_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L2_R1.fq.gz  (SHA-1 `ae585d838170a5388f6a148328a6cf0a7d85afd1`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l2_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L2_R2.fq.gz  (SHA-1 `3b5a6f100e0ee9787b1a8aea7a255ac860e53346`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l1_r1_fq_gz__forward** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L1_R1.fq.gz  (SHA-1 `f873ddaa1822673498879dd6f4b37e16641fd430`)
+- **hi_c_reads__btaegut2_ari8_001_uspd16084394_ak5146_hjfmfccxy_l1_r1_fq_gz__reverse** — https://zenodo.org/records/17190637/files/bTaeGut2_ARI8_001_USPD16084394-AK5146_HJFMFCCXY_L1_R2.fq.gz  (SHA-1 `c70c3e99b70ee81f4262ddba46cdc2a8abb7964b`)
