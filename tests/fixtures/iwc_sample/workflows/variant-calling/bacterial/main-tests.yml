@@ -1,0 +1,11 @@
+- doc: Test outline for bacterial variant calling
+  job:
+    reads_forward:
+      path: test-data/reads_1.fastq.gz
+    reads_reverse:
+      path: test-data/reads_2.fastq.gz
+    reference:
+      path: test-data/reference.fasta
+  outputs:
+    variants:
+      path: test-data/expected.vcf

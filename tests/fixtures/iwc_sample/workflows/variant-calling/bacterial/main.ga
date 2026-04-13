@@ -1,0 +1,14 @@
+{
+  "a_galaxy_workflow": "true",
+  "format-version": "0.1",
+  "name": "Bacterial Variant Calling",
+  "release": "0.1.2",
+  "license": "MIT",
+  "steps": {
+    "0": {"type": "data_input", "label": "reads_forward"},
+    "1": {"type": "data_input", "label": "reads_reverse"},
+    "2": {"type": "data_input", "label": "reference"},
+    "3": {"type": "tool", "tool_id": "bwa_mem2"},
+    "4": {"type": "tool", "tool_id": "bcftools_call"}
+  }
+}
