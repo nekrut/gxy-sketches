@@ -69,6 +69,8 @@ def validate_sketch(sketch_dir: Path, report: ValidationReport) -> None:
     declared: set[str] = set()
 
     for td in fm.test_data:
+        if td.path is None:
+            continue  # URL-only — nothing to check on disk
         declared.add(td.path)
         if not (sketch_dir / td.path).exists():
             report.add(
@@ -78,6 +80,8 @@ def validate_sketch(sketch_dir: Path, report: ValidationReport) -> None:
             )
 
     for eo in fm.expected_output:
+        if eo.path is None:
+            continue  # URL- or assertions-only — nothing to check on disk
         declared.add(eo.path)
         if not (sketch_dir / eo.path).exists():
             report.add(
@@ -88,6 +92,13 @@ def validate_sketch(sketch_dir: Path, report: ValidationReport) -> None:
                 )
             )
 
+    # Known "reserved" files created by the sketch writer for URL-only /
+    # assertion-only entries. They're intentional, not orphans.
+    reserved = {
+        "test_data/README.md",
+        "expected_output/ASSERTIONS.md",
+    }
+
     for sub in ("test_data", "expected_output"):
         sub_dir = sketch_dir / sub
         if not sub_dir.is_dir():
@@ -96,6 +107,8 @@ def validate_sketch(sketch_dir: Path, report: ValidationReport) -> None:
             if not f.is_file():
                 continue
             rel = f.relative_to(sketch_dir).as_posix()
+            if rel in reserved:
+                continue
             if rel not in declared:
                 report.add(
                     ValidationIssue(

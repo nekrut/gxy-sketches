@@ -6,16 +6,19 @@ from gxy_sketches.ingest.iwc import IwcIngestor
 FIXTURE_ROOT = Path(__file__).parent / "fixtures" / "iwc_sample"
 
 
-def test_walk_finds_fixture_workflow(monkeypatch) -> None:
+def _discover_one(monkeypatch):
     ingestor = IwcIngestor()
-    # bypass ensure_clone by pointing at the checked-in fixture
     monkeypatch.setattr(
         "gxy_sketches.ingest.iwc.ensure_clone",
         lambda repo_url, dest: FIXTURE_ROOT,
     )
     records = list(ingestor.discover(cache_root=Path("/tmp/unused")))
     assert len(records) == 1
-    r = records[0]
+    return records[0]
+
+
+def test_walk_finds_fixture_workflow(monkeypatch) -> None:
+    r = _discover_one(monkeypatch)
     assert r.ecosystem == "iwc"
     assert r.display_name == "Bacterial Variant Calling"
     assert r.version == "0.1.2"
@@ -26,18 +29,45 @@ def test_walk_finds_fixture_workflow(monkeypatch) -> None:
     assert any(p.endswith("README.md") for p in paths)
     assert any(p.endswith("main-tests.yml") for p in paths)
 
-    # test_data harvest
-    names = {p.name for p in r.test_data_paths}
-    assert names == {"reads_1.fastq.gz", "reads_2.fastq.gz", "reference.fasta"}
+
+def test_parses_planemo_manifest_inputs(monkeypatch) -> None:
+    r = _discover_one(monkeypatch)
+    assert r.test_manifest is not None
+    roles = {i.role for i in r.test_manifest.inputs}
+    # One top-level File + two collection elements (forward + reverse of SAMPLE1)
+    assert "reference" in roles
+    assert any(role.endswith("forward") for role in roles)
+    assert any(role.endswith("reverse") for role in roles)
+    # URLs + SHA-1 are lifted
+    ref = next(i for i in r.test_manifest.inputs if i.role == "reference")
+    assert ref.url == "https://example.com/test-data/reference.fasta"
+    assert ref.sha1 == "a" * 40
+    assert ref.filetype == "fasta"
+    assert ref.path is None  # remote-only
 
 
-def test_metadata_bundle_contains_readme(monkeypatch) -> None:
-    ingestor = IwcIngestor()
-    monkeypatch.setattr(
-        "gxy_sketches.ingest.iwc.ensure_clone",
-        lambda repo_url, dest: FIXTURE_ROOT,
-    )
-    record = next(iter(ingestor.discover(cache_root=Path("/tmp/unused"))))
-    bundle = record.metadata_bundle()
-    assert "Haploid SNV" in bundle
-    assert "bwa-mem2" in bundle
+def test_parses_planemo_manifest_outputs(monkeypatch) -> None:
+    r = _discover_one(monkeypatch)
+    assert r.test_manifest is not None
+    roles = [o.role for o in r.test_manifest.outputs]
+    assert "annotated_variants" in roles
+    assert "snpeff_variants" in roles
+
+    # Local-path output should be copied from source into the manifest's map.
+    annotated = next(o for o in r.test_manifest.outputs if o.role == "annotated_variants")
+    assert annotated.path == "expected_output/expected_variants.tabular"
+    source_path = r.test_manifest.output_source_map[annotated.path]
+    assert source_path.exists()
+
+    # Assertion-only output has no path.
+    snpeff = next(o for o in r.test_manifest.outputs if o.role == "snpeff_variants")
+    assert snpeff.path is None
+    assert any("has_line" in a for a in snpeff.assertions)
+
+
+def test_metadata_bundle_includes_parsed_manifest(monkeypatch) -> None:
+    r = _discover_one(monkeypatch)
+    bundle = r.metadata_bundle()
+    assert "PARSED TEST MANIFEST" in bundle
+    assert "reference" in bundle
+    assert "has_line" in bundle

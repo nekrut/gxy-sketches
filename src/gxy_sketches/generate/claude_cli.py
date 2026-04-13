@@ -11,8 +11,8 @@ import json
 import shutil
 import subprocess
 
-from ..schema import SketchFrontmatter, WorkflowRecord
-from .llm import DEFAULT_MODEL, GeneratedSketch, _parse_json_object
+from ..schema import WorkflowRecord
+from .llm import DEFAULT_MODEL, GeneratedSketch, finalize_llm_payload
 from .prompts import build_system_prompt, build_user_prompt
 
 
@@ -72,26 +72,10 @@ class ClaudeCliGenerator:
         if not isinstance(result_text, str):
             raise ClaudeCliError(f"claude CLI envelope missing .result string: {envelope}")
 
-        payload = _parse_json_object(result_text)
-        fm_data = payload.get("frontmatter")
-        body = payload.get("body")
-        if not isinstance(fm_data, dict) or not isinstance(body, str):
-            raise ClaudeCliError(
-                f"model output did not match expected shape: {result_text[:500]}"
-            )
-
-        # Authoritative source-field back-fill (same as direct API backend).
-        fm_data.setdefault("source", {})
-        fm_data["source"].setdefault("ecosystem", record.ecosystem)
-        fm_data["source"].setdefault("workflow", record.display_name)
-        fm_data["source"].setdefault("url", record.source_url)
-        if record.version:
-            fm_data["source"].setdefault("version", record.version)
-        if record.license:
-            fm_data["source"].setdefault("license", record.license)
-
-        frontmatter = SketchFrontmatter.model_validate(fm_data)
-        return GeneratedSketch(frontmatter=frontmatter, body=body)
+        try:
+            return finalize_llm_payload(result_text, record)
+        except ValueError as e:
+            raise ClaudeCliError(str(e)) from e
 
 
 def _parse_envelope(stdout: str) -> dict:

@@ -3,8 +3,8 @@
 Layout per sketch:
     sketches/<domain>/<name>/
         SKETCH.md
-        test_data/<files copied from the source workflow>
-        expected_output/<placeholder or harvested files>
+        test_data/<files copied from source, when checked-in locally>
+        expected_output/<files copied from source or assertion stubs>
 
 The writer never copies files larger than `MAX_BUNDLED_BYTES`; those are left
 as URL references in the frontmatter instead.
@@ -17,7 +17,13 @@ from pathlib import Path
 
 import yaml
 
-from ..schema import SketchFrontmatter, WorkflowRecord
+from ..schema import (
+    ExpectedOutputRef,
+    SketchFrontmatter,
+    TestDataRef,
+    TestManifest,
+    WorkflowRecord,
+)
 from .llm import GeneratedSketch
 
 
@@ -38,8 +44,8 @@ def write_sketch(
     (target / "test_data").mkdir(exist_ok=True)
     (target / "expected_output").mkdir(exist_ok=True)
 
-    _copy_test_data(record, target, generated.frontmatter)
-    _write_expected_output_placeholders(target, generated.frontmatter)
+    _materialize_expected_output(record, target, generated.frontmatter)
+    _materialize_test_data_readme(target, generated.frontmatter)
     _write_sketch_md(target, generated)
 
     return target
@@ -55,45 +61,77 @@ def _write_sketch_md(target: Path, generated: GeneratedSketch) -> None:
     (target / "SKETCH.md").write_text(f"---\n{fm_yaml}---\n\n{body}")
 
 
-def _copy_test_data(
+def _materialize_expected_output(
     record: WorkflowRecord,
     target: Path,
     frontmatter: SketchFrontmatter,
 ) -> None:
-    """Copy source test data into target/test_data/, honoring the 5 MB cap.
+    """Copy expected outputs listed in the parsed test manifest.
 
-    The frontmatter lists the *shape* the LLM expects; we copy every source
-    file we have and let the validator reconcile shape vs. reality.
+    Only entries with a local `path:` get copied — URL-backed and
+    assertion-only outputs become an ASSERTIONS.md note instead so the
+    validator has an on-disk artifact to reference.
     """
-    if not record.test_data_paths:
-        return
-    dest = target / "test_data"
-    total = 0
-    for src in record.test_data_paths:
-        size = src.stat().st_size
-        if total + size > MAX_BUNDLED_BYTES:
-            break
-        shutil.copy2(src, dest / src.name)
-        total += size
+    manifest = record.test_manifest
+    copied_bytes = 0
+    for eo in frontmatter.expected_output:
+        if eo.path is None:
+            continue
+        source = None
+        if manifest is not None:
+            source = manifest.output_source_map.get(eo.path)
+        if source is None or not source.exists():
+            continue
+        size = source.stat().st_size
+        if copied_bytes + size > MAX_BUNDLED_BYTES:
+            # Too big to bundle — drop the local path, leave URL/assertions.
+            continue
+        dest = target / eo.path
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, dest)
+        copied_bytes += size
+
+    # For expected outputs with assertions but no path, drop a stub file so
+    # the sketch dir isn't empty of signal. Only if it would still fit.
+    assertion_only = [
+        eo for eo in frontmatter.expected_output if not eo.path and eo.assertions
+    ]
+    if assertion_only:
+        stub = target / "expected_output" / "ASSERTIONS.md"
+        lines = ["# Content assertions (no golden file checked in)\n"]
+        for eo in assertion_only:
+            lines.append(f"## {eo.role or '(unnamed)'}\n")
+            lines.append(f"{eo.description}\n\n")
+            for a in eo.assertions:
+                lines.append(f"- {a}\n")
+            lines.append("\n")
+        stub.write_text("".join(lines))
 
 
-def _write_expected_output_placeholders(
+def _materialize_test_data_readme(
     target: Path, frontmatter: SketchFrontmatter
 ) -> None:
-    """For each declared expected_output, ensure a file exists.
+    """Drop a README in test_data/ for URL-only inputs so the dir isn't empty.
 
-    v1 writes a stub explaining the file was declared by the generator but
-    has not yet been produced by an actual run of the analysis. A later pass
-    (running the workflow against `test_data/`) replaces the stubs with real
-    outputs.
+    Validators and humans get a single source of truth listing the remote
+    URLs + hashes.
     """
-    for eo in frontmatter.expected_output:
-        p = target / eo.path
-        p.parent.mkdir(parents=True, exist_ok=True)
-        if p.exists():
-            continue
-        p.write_text(
-            f"# STUB — {eo.kind}\n"
-            f"# {eo.description}\n"
-            f"# Replace with real output from running the analysis on ../test_data/.\n"
-        )
+    url_only = [td for td in frontmatter.test_data if td.url and not td.path]
+    if not url_only:
+        return
+    lines = [
+        "# Remote test data\n",
+        "\n",
+        "These inputs are referenced by URL rather than bundled with the sketch. "
+        "They come from the source workflow's planemo test manifest.\n",
+        "\n",
+    ]
+    for td in url_only:
+        lines.append(f"- **{td.role}**")
+        if td.filetype:
+            lines.append(f" ({td.filetype})")
+        lines.append(f" — {td.url}")
+        if td.sha1:
+            lines.append(f"  (SHA-1 `{td.sha1}`)")
+        lines.append("\n")
+    (target / "test_data" / "README.md").write_text("".join(lines))

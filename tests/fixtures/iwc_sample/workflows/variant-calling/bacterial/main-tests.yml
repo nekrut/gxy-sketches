@@ -1,11 +1,40 @@
 - doc: Test outline for bacterial variant calling
   job:
-    reads_forward:
-      path: test-data/reads_1.fastq.gz
-    reads_reverse:
-      path: test-data/reads_2.fastq.gz
-    reference:
-      path: test-data/reference.fasta
+    Reference:
+      class: File
+      location: https://example.com/test-data/reference.fasta
+      filetype: fasta
+      hashes:
+        - hash_function: SHA-1
+          hash_value: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    Paired Collection:
+      class: Collection
+      collection_type: list:paired
+      elements:
+        - class: Collection
+          type: paired
+          identifier: SAMPLE1
+          elements:
+            - class: File
+              identifier: forward
+              location: https://example.com/test-data/reads_1.fastq.gz
+              filetype: fastqsanger.gz
+              hashes:
+                - hash_function: SHA-1
+                  hash_value: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            - class: File
+              identifier: reverse
+              location: https://example.com/test-data/reads_2.fastq.gz
+              filetype: fastqsanger.gz
+              hashes:
+                - hash_function: SHA-1
+                  hash_value: cccccccccccccccccccccccccccccccccccccccc
   outputs:
-    variants:
-      path: test-data/expected.vcf
+    Annotated Variants:
+      path: test-data/expected_variants.tabular
+    SnpEff variants:
+      element_tests:
+        SAMPLE1:
+          asserts:
+            - has_line:
+                line: "chr1\t42\t.\tA\tG\t99\tPASS\tDP=30;AF=0.95"

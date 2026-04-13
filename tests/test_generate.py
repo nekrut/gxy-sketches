@@ -9,9 +9,14 @@ from unittest.mock import MagicMock
 
 from gxy_sketches.generate.llm import SketchGenerator
 from gxy_sketches.generate.sketch_writer import write_sketch
-from gxy_sketches.schema import WorkflowFile, WorkflowRecord
+from gxy_sketches.ingest.iwc import IwcIngestor
 
 
+FIXTURE_ROOT = Path(__file__).parent / "fixtures" / "iwc_sample"
+
+
+# The LLM is no longer asked to emit source/test_data/expected_output —
+# those are filled in from the ingestor's parsed manifest.
 VALID_PAYLOAD = {
     "frontmatter": {
         "name": "haploid-variant-calling-bacterial",
@@ -19,25 +24,14 @@ VALID_PAYLOAD = {
         "domain": "variant-calling",
         "organism_class": ["bacterial", "haploid"],
         "input_data": ["short-reads-paired", "reference-fasta"],
-        "source": {
-            "ecosystem": "iwc",
-            "workflow": "Bacterial Variant Calling",
-            "url": "https://example.com",
-            "version": "0.1.2",
-            "license": "MIT",
-        },
         "tools": ["bwa-mem2", "bcftools"],
         "tags": ["bacteria", "snv"],
-        "test_data": [
-            {"path": "test_data/reads_1.fastq.gz", "role": "reads_forward"},
-            {"path": "test_data/reads_2.fastq.gz", "role": "reads_reverse"},
-            {"path": "test_data/reference.fasta", "role": "reference"},
-        ],
-        "expected_output": [
-            {"path": "expected_output/variants.vcf", "kind": "vcf", "description": "Filtered haploid variants."}
-        ],
     },
-    "body": "# Haploid bacterial variant calling\n\n## When to use this sketch\n- Bacteria\n",
+    "body": (
+        "# Haploid bacterial variant calling\n\n"
+        "## When to use this sketch\n- Bacteria\n\n"
+        "## Test data\nParsed from the source planemo manifest.\n"
+    ),
 }
 
 
@@ -57,75 +51,71 @@ def _mock_client(payload: dict) -> MagicMock:
     return client
 
 
-def _record(tmp_path: Path) -> WorkflowRecord:
-    # Point at a real small fixture so test_data can be copied
-    fixture = Path(__file__).parent / "fixtures" / "iwc_sample" / "workflows" / "variant-calling" / "bacterial"
-    test_data = [fixture / "test-data" / f for f in ("reads_1.fastq.gz", "reads_2.fastq.gz", "reference.fasta")]
-    return WorkflowRecord(
-        ecosystem="iwc",
-        slug="bacterial",
-        display_name="Bacterial Variant Calling",
-        source_url="https://example.com",
-        version="0.1.2",
-        license="MIT",
-        files=[WorkflowFile(relative_path="README.md", content="hello")],
-        test_data_paths=test_data,
-        raw_root=fixture,
+def _fixture_record(monkeypatch):
+    """Build a real WorkflowRecord from the checked-in IWC fixture."""
+    ingestor = IwcIngestor()
+    monkeypatch.setattr(
+        "gxy_sketches.ingest.iwc.ensure_clone",
+        lambda repo_url, dest: FIXTURE_ROOT,
     )
+    return next(iter(ingestor.discover(cache_root=Path("/tmp/unused"))))
 
 
-def test_generate_and_write_end_to_end(tmp_path: Path) -> None:
+def test_generate_uses_parsed_manifest_for_test_data(tmp_path, monkeypatch) -> None:
+    record = _fixture_record(monkeypatch)
+    assert record.test_manifest is not None
+    # sanity: manifest has both URL inputs and a local expected-output path
+    assert any(i.url for i in record.test_manifest.inputs)
+    assert any(o.path for o in record.test_manifest.outputs)
+
     client = _mock_client(VALID_PAYLOAD)
     gen = SketchGenerator(client=client)
-    record = _record(tmp_path)
-
     generated = gen.generate(record)
-    assert generated.frontmatter.name == "haploid-variant-calling-bacterial"
 
-    sketches_root = tmp_path / "sketches"
-    target = write_sketch(generated, record, sketches_root)
-    assert target.is_dir()
+    # Source fields were back-filled from the record, not the LLM payload.
+    assert generated.frontmatter.source.ecosystem == "iwc"
+    assert generated.frontmatter.source.version == "0.1.2"
+    assert generated.frontmatter.source.license == "MIT"
+
+    # test_data / expected_output were lifted from the parsed manifest.
+    roles = {td.role for td in generated.frontmatter.test_data}
+    assert "reference" in roles
+    output_roles = {eo.role for eo in generated.frontmatter.expected_output}
+    assert "annotated_variants" in output_roles
+
+
+def test_write_materializes_remote_and_local(tmp_path, monkeypatch) -> None:
+    record = _fixture_record(monkeypatch)
+    client = _mock_client(VALID_PAYLOAD)
+    gen = SketchGenerator(client=client)
+    generated = gen.generate(record)
+
+    target = write_sketch(generated, record, tmp_path / "sketches")
     assert (target / "SKETCH.md").exists()
-    # test data should have been copied in
-    assert (target / "test_data" / "reads_1.fastq.gz").exists()
-    assert (target / "test_data" / "reference.fasta").exists()
-    # expected_output stub was created
-    assert (target / "expected_output" / "variants.vcf").exists()
-
-    content = (target / "SKETCH.md").read_text()
-    assert content.startswith("---\n")
-    assert "haploid-variant-calling-bacterial" in content
-    assert "# Haploid bacterial variant calling" in content
+    # URL-only inputs get a README manifest instead of per-file bundles.
+    assert (target / "test_data" / "README.md").exists()
+    # Local expected output was copied from the fixture's test-data dir.
+    assert (target / "expected_output" / "expected_variants.tabular").exists()
+    # Assertion-only output → ASSERTIONS.md stub.
+    assert (target / "expected_output" / "ASSERTIONS.md").exists()
 
 
 def test_generator_passes_cache_control_on_system_prompt() -> None:
     client = _mock_client(VALID_PAYLOAD)
     gen = SketchGenerator(client=client)
-    record = _record(Path("/tmp"))
-    gen.generate(record)
+    # Minimal record with no manifest — the cache_control assertion doesn't
+    # depend on the ingestor shape.
+    from gxy_sketches.schema import WorkflowRecord
 
+    record = WorkflowRecord(
+        ecosystem="iwc",
+        slug="w",
+        display_name="W",
+        source_url="https://example.com",
+        raw_root=Path("/tmp"),
+    )
+    gen.generate(record)
     call = client.messages.create.call_args
     system = call.kwargs["system"]
     assert isinstance(system, list)
     assert system[0]["cache_control"] == {"type": "ephemeral"}
-
-
-def test_generator_backfills_source_from_record() -> None:
-    payload = {
-        "frontmatter": {
-            "name": "example-sketch-name",
-            "description": "Use when the payload omits source fields and the generator should back-fill them from the workflow record.",
-            "domain": "variant-calling",
-            "source": {"ecosystem": "iwc", "workflow": "x", "url": "https://x"},
-            "test_data": [],
-            "expected_output": [],
-        },
-        "body": "# x\n",
-    }
-    client = _mock_client(payload)
-    gen = SketchGenerator(client=client)
-    record = _record(Path("/tmp"))
-
-    generated = gen.generate(record)
-    assert generated.frontmatter.source.version == "0.1.2"
-    assert generated.frontmatter.source.license == "MIT"

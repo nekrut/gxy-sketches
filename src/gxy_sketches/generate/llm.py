@@ -60,27 +60,51 @@ class SketchGenerator:
             ],
         )
         text = _extract_text(response)
-        payload = _parse_json_object(text)
-        fm_data = payload.get("frontmatter")
-        body = payload.get("body")
-        if not isinstance(fm_data, dict) or not isinstance(body, str):
-            raise ValueError(
-                f"LLM response did not match expected shape: {text[:500]}"
-            )
+        return finalize_llm_payload(text, record)
 
-        # Back-fill source fields if the model omitted them — they're authoritative
-        # from the ingestor, not the LLM.
-        fm_data.setdefault("source", {})
-        fm_data["source"].setdefault("ecosystem", record.ecosystem)
-        fm_data["source"].setdefault("workflow", record.display_name)
-        fm_data["source"].setdefault("url", record.source_url)
-        if record.version:
-            fm_data["source"].setdefault("version", record.version)
-        if record.license:
-            fm_data["source"].setdefault("license", record.license)
 
-        frontmatter = SketchFrontmatter.model_validate(fm_data)
-        return GeneratedSketch(frontmatter=frontmatter, body=body)
+def finalize_llm_payload(text: str, record: WorkflowRecord) -> GeneratedSketch:
+    """Parse + validate an LLM JSON payload into a `GeneratedSketch`.
+
+    Shared by both backends (`SketchGenerator` and `ClaudeCliGenerator`).
+    Authoritative overrides from the ingestor:
+        - `source` fields always come from the record
+        - `test_data` / `expected_output` always come from the parsed test
+          manifest, never the LLM
+    """
+    payload = _parse_json_object(text)
+    fm_data = payload.get("frontmatter")
+    body = payload.get("body")
+    if not isinstance(fm_data, dict) or not isinstance(body, str):
+        raise ValueError(
+            f"LLM response did not match expected shape: {text[:500]}"
+        )
+
+    fm_data["source"] = {
+        "ecosystem": record.ecosystem,
+        "workflow": record.display_name,
+        "url": record.source_url,
+    }
+    if record.version:
+        fm_data["source"]["version"] = record.version
+    if record.license:
+        fm_data["source"]["license"] = record.license
+
+    if record.test_manifest is not None:
+        fm_data["test_data"] = [
+            td.model_dump(mode="json", exclude_none=True)
+            for td in record.test_manifest.inputs
+        ]
+        fm_data["expected_output"] = [
+            eo.model_dump(mode="json", exclude_none=True)
+            for eo in record.test_manifest.outputs
+        ]
+    else:
+        fm_data.setdefault("test_data", [])
+        fm_data.setdefault("expected_output", [])
+
+    frontmatter = SketchFrontmatter.model_validate(fm_data)
+    return GeneratedSketch(frontmatter=frontmatter, body=body)
 
 
 def _extract_text(response: Any) -> str:
@@ -107,9 +131,21 @@ def _parse_json_object(text: str) -> dict:
     if start == -1:
         raise ValueError(f"No JSON object found in LLM response: {text[:500]}")
     depth = 0
+    in_string = False
+    escape = False
     for i in range(start, len(stripped)):
         ch = stripped[i]
-        if ch == "{":
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+        if ch == '"':
+            in_string = True
+        elif ch == "{":
             depth += 1
         elif ch == "}":
             depth -= 1

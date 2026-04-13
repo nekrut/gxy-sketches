@@ -2,9 +2,14 @@
 
 The system prompt is stable across every pipeline and therefore a perfect
 target for Anthropic prompt caching. `build_system_prompt` composes it from:
-    - the sketch format spec (taken from docs + README),
+    - the sketch format spec,
     - a single full few-shot example (so the model anchors on the target shape),
     - strict formatting rules.
+
+Note: the LLM is deliberately NOT asked to produce the frontmatter fields
+`test_data` and `expected_output`. Those are filled in authoritatively by
+the caller from the source workflow's parsed test manifest, so the model
+never has to hallucinate filenames or URLs.
 """
 
 from __future__ import annotations
@@ -44,12 +49,21 @@ The object has two fields:
   [viral], [plant, polyploid], [eukaryote].
 - input_data: list like [short-reads-paired, reference-fasta] or
   [long-reads-ont, reference-fasta] or [10x-scrna-fastq].
-- source: {ecosystem, workflow, url, version, license}
 - tools: list of the key command-line tools / packages.
 - tags: free-form search tags.
-- test_data: list of {path, role}. `path` MUST start with `test_data/`.
-- expected_output: list of {path, kind, description}. `path` MUST start with
-  `expected_output/`.
+
+### DO NOT emit
+
+- `source` — the caller fills it in authoritatively from the ingestor.
+- `test_data` — the caller fills it in from the parsed planemo/nextflow test
+  spec (see "PARSED TEST MANIFEST" in the user message).
+- `expected_output` — same; filled in by the caller.
+
+You MAY and SHOULD describe the test data and expected outputs in prose
+inside the body section `## Test data` — e.g. "Two paired FASTQ samples
+(ERR018930, ERR1035492) downsampled from public *Plasmodium vivax* runs,
+with expected per-sample variants at NC_009906.1:3204 A>G …". Use the
+parsed manifest in the user message as ground truth for this prose.
 
 ### Required body sections (in order)
 
@@ -59,24 +73,18 @@ The object has two fields:
 4. `## Analysis outline` — numbered, one line per step, naming the tool.
 5. `## Key parameters` — the handful of parameters that actually matter,
    with their critical values (e.g. `ploidy: 1`).
-6. `## Test data` — 1-3 sentences describing what's in `test_data/` and what
-   `expected_output/` should look like if the analysis is run correctly.
+6. `## Test data` — 2-5 sentences describing the inputs listed in the
+   parsed manifest and the expected outputs / assertions.
 7. `## Reference workflow` — cite the source workflow + version.
 
 ## Hard rules
 
 - Never invent parameters the source doesn't support.
-- If the source is a generic pipeline covering multiple scenarios (e.g.
-  bacass handles both assembly AND variant calling), emit ONE sketch for the
-  most prominent / representative class, named accordingly, and mention
-  sibling sketches in "Do not use when".
-- Never write "TODO", "TBD", placeholders, or uncertain language. Omit a
-  field rather than guess.
+- If the source is a generic pipeline covering multiple scenarios, emit ONE
+  sketch for the most prominent / representative class, named accordingly,
+  and mention sibling sketches in "Do not use when".
+- Never write "TODO", "TBD", placeholders, or uncertain language.
 - Keep the body under 400 lines.
-- Every file you list in `test_data` or `expected_output` frontmatter MUST be
-  a realistic, small (<5 MB) artifact plausibly produced by the analysis.
-  The generator will populate the actual files separately — your job is to
-  declare them accurately, not to inline their bytes.
 """
 
 
@@ -88,6 +96,8 @@ INPUT (abridged):
     Description: Simple bacterial assembly and annotation pipeline.
     README excerpt: "assembly of bacterial short-read data ... variant calling
     against a reference with bcftools and ploidy=1 ... snpEff annotation ..."
+    Parsed test manifest inputs: reads_forward, reads_reverse, reference.
+    Parsed test manifest outputs: variants.vcf (local golden), summary.tsv (local golden).
 
 OUTPUT:
 {
@@ -97,26 +107,10 @@ OUTPUT:
     "domain": "variant-calling",
     "organism_class": ["bacterial", "haploid"],
     "input_data": ["short-reads-paired", "reference-fasta"],
-    "source": {
-      "ecosystem": "nf-core",
-      "workflow": "nf-core/bacass",
-      "url": "https://github.com/nf-core/bacass",
-      "version": "2.2.0",
-      "license": "MIT"
-    },
     "tools": ["fastp", "bwa-mem2", "samtools", "bcftools", "snpeff"],
-    "tags": ["bacteria", "wgs", "snv", "indel", "haploid"],
-    "test_data": [
-      {"path": "test_data/reads_1.fastq.gz", "role": "reads_forward"},
-      {"path": "test_data/reads_2.fastq.gz", "role": "reads_reverse"},
-      {"path": "test_data/reference.fasta", "role": "reference"}
-    ],
-    "expected_output": [
-      {"path": "expected_output/variants.vcf", "kind": "vcf", "description": "Final filtered haploid variants."},
-      {"path": "expected_output/summary.tsv", "kind": "tsv", "description": "Per-sample QC and variant count summary."}
-    ]
+    "tags": ["bacteria", "wgs", "snv", "indel", "haploid"]
   },
-  "body": "# Haploid bacterial variant calling\\n\\n## When to use this sketch\\n- Single-chromosome prokaryote ...\\n"
+  "body": "# Haploid bacterial variant calling\\n\\n## When to use this sketch\\n- Single-chromosome prokaryote ...\\n\\n## Test data\\nTwo paired-end FASTQ files plus a reference FASTA, taken from the source pipeline's test profile. Running the workflow is expected to produce `variants.vcf` and a per-sample `summary.tsv` ...\\n"
 }
 """
 
@@ -129,6 +123,7 @@ def build_user_prompt(metadata_bundle: str) -> str:
     return (
         "Distill the workflow below into a single SKETCH.md JSON payload as "
         "specified in the system prompt. Remember: exactly one JSON object, "
-        "no prose.\n\n"
+        "no prose; do NOT include `source`, `test_data`, or `expected_output` "
+        "in the frontmatter — the caller will fill those in.\n\n"
         f"{metadata_bundle}"
     )
