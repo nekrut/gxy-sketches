@@ -92,7 +92,15 @@ class IwcIngestor:
     def _build_record(
         self, repo: Path, wf_dir: Path, ga_file: Path
     ) -> WorkflowRecord | None:
-        slug = wf_dir.relative_to(repo / "workflows").as_posix().replace("/", "--")
+        dir_slug = wf_dir.relative_to(repo / "workflows").as_posix().replace("/", "--")
+        # If the workflow dir contains more than one .ga file, each represents
+        # a distinct workflow variant — disambiguate the slug with the .ga
+        # basename so we don't collapse them into one WorkflowRecord.
+        sibling_ga = sorted(wf_dir.glob("*.ga"))
+        if len(sibling_ga) > 1:
+            slug = f"{dir_slug}--{ga_file.stem}"
+        else:
+            slug = dir_slug
         display_name = self._extract_name(ga_file) or wf_dir.name
 
         files: list[WorkflowFile] = []
@@ -114,18 +122,23 @@ class IwcIngestor:
                     )
                 )
 
+        # Match test yml to its ga file by basename when possible; otherwise
+        # take the first one (IWC convention is one test file per workflow).
         test_yml_path: Path | None = None
-        for t in sorted(wf_dir.glob("*-tests.yml")):
-            wf = read_file_if_exists(t)
+        ga_stem = ga_file.stem
+        candidates = sorted(wf_dir.glob("*-tests.yml"))
+        paired = [t for t in candidates if t.name.startswith(ga_stem + "-")]
+        chosen = paired[0] if paired else (candidates[0] if candidates else None)
+        if chosen is not None:
+            wf = read_file_if_exists(chosen)
             if wf is not None:
                 files.append(
                     WorkflowFile(
-                        relative_path=t.relative_to(repo).as_posix(),
+                        relative_path=chosen.relative_to(repo).as_posix(),
                         content=wf.content,
                     )
                 )
-            test_yml_path = t
-            break  # one test file per workflow is the IWC convention
+            test_yml_path = chosen
 
         test_manifest = (
             self._parse_test_yml(test_yml_path, wf_dir) if test_yml_path else None
