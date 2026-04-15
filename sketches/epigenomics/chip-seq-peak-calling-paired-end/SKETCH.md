@@ -17,13 +17,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/chipseq-pe
   version: '1.1'
   license: MIT
+  slug: epigenetics--chipseq-pe
 tools:
-- fastp
-- bowtie2
-- samtools
-- macs2
-- ucsc-wigToBigWig
-- multiqc
+- name: fastp
+  version: 1.3.1+galaxy0
+- name: bowtie2
+  version: 2.5.5+galaxy0
+- name: samtools
+- name: macs2
+  version: 2.2.9.1+galaxy0
+- name: ucsc-wigToBigWig
+- name: multiqc
+  version: 1.33+galaxy3
 tags:
 - chip-seq
 - epigenomics

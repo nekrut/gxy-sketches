@@ -18,13 +18,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/qiime2/qiime2-III-VI-downsteam
   version: '0.2'
   license: MIT
+  slug: amplicon--qiime2--qiime2-III-VI-downsteam--QIIME2-VI-diversity-metrics-and-estimations
 tools:
-- qiime2
-- q2-diversity
-- core-metrics-phylogenetic
-- alpha-group-significance
-- beta-group-significance
-- emperor
+- name: qiime2
+  version: 2024.10.0+dist.h3d8a7e27
+- name: q2-diversity
+- name: core-metrics-phylogenetic
+- name: alpha-group-significance
+- name: beta-group-significance
+- name: emperor
 tags:
 - qiime2
 - 16s

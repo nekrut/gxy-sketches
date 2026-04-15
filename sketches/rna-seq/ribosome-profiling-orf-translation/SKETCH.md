@@ -18,20 +18,25 @@ source:
   url: https://github.com/nf-core/riboseq
   version: 1.2.0
   license: MIT
+  slug: riboseq
 tools:
-- fastqc
-- trimgalore
-- fastp
-- umi-tools
-- sortmerna
-- star
-- salmon
-- samtools
-- ribotish
-- ribotricer
-- ribowaltz
-- anota2seq
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trimgalore
+- name: fastp
+- name: umi-tools
+- name: sortmerna
+  version: '1.21'
+- name: star
+- name: salmon
+- name: samtools
+- name: ribotish
+- name: ribotricer
+- name: ribowaltz
+  version: '2.0'
+- name: anota2seq
+  version: 1.24.0
+- name: multiqc
 tags:
 - riboseq
 - ribosome-profiling

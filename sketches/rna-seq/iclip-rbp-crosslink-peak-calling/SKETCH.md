@@ -17,21 +17,22 @@ source:
   url: https://github.com/nf-core/clipseq
   version: 1.0.0
   license: MIT
+  slug: clipseq
 tools:
-- cutadapt
-- umi_tools
-- bowtie2
-- star
-- samtools
-- bedtools
-- icount
-- paraclu
-- pureclip
-- piranha
-- dreme
-- rseqc
-- preseq
-- multiqc
+- name: cutadapt
+- name: umi_tools
+- name: bowtie2
+- name: star
+- name: samtools
+- name: bedtools
+- name: icount
+- name: paraclu
+- name: pureclip
+- name: piranha
+- name: dreme
+- name: rseqc
+- name: preseq
+- name: multiqc
 tags:
 - clip
 - iclip

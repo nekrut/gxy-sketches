@@ -18,9 +18,12 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome-assembly/polish-with-long-reads
   version: '0.1'
   license: MIT
+  slug: genome-assembly--polish-with-long-reads
 tools:
-- minimap2
-- racon
+- name: minimap2
+  version: 2.26+galaxy0
+- name: racon
+  version: 1.5.0+galaxy1
 tags:
 - polishing
 - long-reads

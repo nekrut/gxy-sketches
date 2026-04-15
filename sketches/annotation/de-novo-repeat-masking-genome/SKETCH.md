@@ -14,14 +14,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/repeatmasking
   version: '0.1'
   license: MIT
+  slug: repeatmasking
 tools:
-- RepeatModeler
-- RECON
-- RepeatScout
-- LtrHarvest
-- Ltr_retriever
-- RepeatMasker
-- Dfam
+- name: RepeatModeler
+  version: 2.0.4+galaxy1
+- name: RECON
+- name: RepeatScout
+- name: LtrHarvest
+- name: Ltr_retriever
+- name: RepeatMasker
+  version: 4.1.5+galaxy0
+- name: Dfam
 tags:
 - repeat-masking
 - transposable-elements

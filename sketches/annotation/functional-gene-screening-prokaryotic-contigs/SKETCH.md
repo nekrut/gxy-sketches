@@ -18,30 +18,43 @@ source:
   url: https://github.com/nf-core/funcscan
   version: 3.0.0
   license: MIT
+  slug: funcscan
 tools:
-- seqkit
-- pyrodigal
-- prodigal
-- prokka
-- bakta
-- interproscan
-- mmseqs2
-- abricate
-- amrfinderplus
-- deeparg
-- fargene
-- rgi
-- hamronization
-- argnorm
-- ampir
-- amplify
-- macrel
-- hmmer
-- ampcombi
-- antismash
-- deepbgc
-- gecco
-- combgc
+- name: seqkit
+  version: 2.9.0
+- name: pyrodigal
+  version: da1134ad604a59a6f439bdcc3f6df690eba47e9a-0
+- name: prodigal
+  version: 57f05cfa73f769d6ed6d54144cb3aa2a6a6b17e0-0
+- name: prokka
+- name: bakta
+  version: 1.10.4
+- name: interproscan
+  version: 5.59_91.0
+- name: mmseqs2
+- name: abricate
+  version: 1.1.9
+- name: amrfinderplus
+  version: 1.1.9
+- name: deeparg
+  version: 1.1.9
+- name: fargene
+  version: '0.1'
+- name: rgi
+  version: 1.1.9
+- name: hamronization
+- name: argnorm
+  version: 0.5.0
+- name: ampir
+  version: 1.1.0
+- name: amplify
+- name: macrel
+- name: hmmer
+- name: ampcombi
+- name: antismash
+- name: deepbgc
+- name: gecco
+- name: combgc
 tags:
 - amr
 - arg

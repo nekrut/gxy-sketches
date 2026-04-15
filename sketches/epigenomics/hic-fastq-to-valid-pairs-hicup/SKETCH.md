@@ -17,11 +17,12 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/hic-hicup-cooler
   version: '0.3'
   license: MIT
+  slug: epigenetics--hic-hicup-cooler--hic-juicermediumtabix-to-cool-cooler
 tools:
-- hicup
-- bowtie2
-- hicup2juicer
-- galaxy-filter1
+- name: hicup
+- name: bowtie2
+- name: hicup2juicer
+- name: galaxy-filter1
 tags:
 - hi-c
 - hi-chip

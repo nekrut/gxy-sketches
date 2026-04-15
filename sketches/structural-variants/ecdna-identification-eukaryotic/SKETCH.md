@@ -17,18 +17,21 @@ source:
   url: https://github.com/nf-core/circdna
   version: 1.1.0
   license: MIT
+  slug: circdna
 tools:
-- fastqc
-- trim-galore
-- bwa-mem
-- samtools
-- picard-markduplicates
-- circle-map
-- circexplorer2
-- circle-finder
-- unicycler
-- minimap2
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+  version: 0.6.7
+- name: bwa-mem
+- name: samtools
+- name: picard-markduplicates
+- name: circle-map
+- name: circexplorer2
+- name: circle-finder
+- name: unicycler
+- name: minimap2
+- name: multiqc
 tags:
 - ecdna
 - eccdna

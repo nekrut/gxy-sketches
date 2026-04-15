@@ -20,17 +20,28 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/sars-cov-2-variant-calling/sars-cov-2-pe-illumina-artic-variant-calling
   version: 0.5.4
   license: MIT
+  slug: sars-cov-2-variant-calling--sars-cov-2-pe-illumina-artic-variant-calling
 tools:
-- fastp
-- bwa-mem
-- samtools
-- lofreq
-- ivar
-- bcftools
-- snpsift
-- snpeff
-- qualimap
-- multiqc
+- name: fastp
+  version: 0.24.0+galaxy4
+- name: bwa-mem
+  version: 0.7.18
+- name: samtools
+  version: 1.20+galaxy3
+- name: lofreq
+  version: 2.1.5+galaxy0
+- name: ivar
+  version: 1.4.4+galaxy0
+- name: bcftools
+  version: 1.15.1+galaxy4
+- name: snpsift
+  version: 4.3+t.galaxy1
+- name: snpeff
+  version: 4.5covid19
+- name: qualimap
+  version: 2.3+galaxy0
+- name: multiqc
+  version: 1.27+galaxy3
 tags:
 - sars-cov-2
 - covid-19

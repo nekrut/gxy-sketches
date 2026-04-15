@@ -19,21 +19,22 @@ source:
   url: https://github.com/nf-core/viralrecon
   version: 3.0.0
   license: MIT
+  slug: viralrecon
 tools:
-- fastp
-- bowtie2
-- samtools
-- ivar
-- bcftools
-- bedtools
-- mosdepth
-- snpeff
-- snpsift
-- pangolin
-- nextclade
-- freyja
-- kraken2
-- multiqc
+- name: fastp
+- name: bowtie2
+- name: samtools
+- name: ivar
+- name: bcftools
+- name: bedtools
+- name: mosdepth
+- name: snpeff
+- name: snpsift
+- name: pangolin
+- name: nextclade
+- name: freyja
+- name: kraken2
+- name: multiqc
 tags:
 - sars-cov-2
 - covid

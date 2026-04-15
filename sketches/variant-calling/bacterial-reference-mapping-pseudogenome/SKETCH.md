@@ -19,24 +19,30 @@ source:
   url: https://github.com/nf-core/bactmap
   version: 1.0.0
   license: MIT
+  slug: bactmap
 tools:
-- fastp
-- adapterremoval
-- porechop
-- filtlong
-- nanoq
-- rasusa
-- bowtie2
-- bwa-mem2
-- minimap2
-- samtools
-- freebayes
-- clair3
-- bcftools
-- bedtools
-- seqtk
-- snp-sites
-- multiqc
+- name: fastp
+- name: adapterremoval
+  version: 2.3.2
+- name: porechop
+- name: filtlong
+  version: 0.2.1
+- name: nanoq
+  version: 0.10.0
+- name: rasusa
+- name: bowtie2
+- name: bwa-mem2
+- name: minimap2
+- name: samtools
+- name: freebayes
+  version: 1.3.10
+- name: clair3
+- name: bcftools
+- name: bedtools
+- name: seqtk
+- name: snp-sites
+  version: 2.5.1
+- name: multiqc
 tags:
 - bacteria
 - wgs

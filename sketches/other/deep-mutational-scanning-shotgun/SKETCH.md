@@ -17,15 +17,18 @@ source:
   url: https://github.com/nf-core/deepmutscan
   version: dev
   license: MIT
+  slug: deepmutscan
 tools:
-- bwa-mem
-- samtools
-- vsearch
-- gatk-AnalyzeSaturationMutagenesis
-- fastqc
-- multiqc
-- dimsum
-- mutscan
+- name: bwa-mem
+- name: samtools
+- name: vsearch
+- name: gatk-AnalyzeSaturationMutagenesis
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: 1.25.1
+- name: dimsum
+- name: mutscan
 tags:
 - deep-mutational-scanning
 - dms

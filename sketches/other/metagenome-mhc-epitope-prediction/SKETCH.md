@@ -20,15 +20,18 @@ source:
   url: https://github.com/nf-core/metapep
   version: 1.0.0
   license: MIT
+  slug: metapep
 tools:
-- prodigal
-- entrez
-- epytope
-- syfpeithi
-- mhcflurry
-- mhcnuggets
-- pandas
-- multiqc
+- name: prodigal
+  version: 57f05cfa73f769d6ed6d54144cb3aa2a6a6b17e0-0
+- name: entrez
+- name: epytope
+- name: syfpeithi
+- name: mhcflurry
+- name: mhcnuggets
+- name: pandas
+- name: multiqc
+  version: 1.25.1
 tags:
 - immunopeptidomics
 - epitope-prediction

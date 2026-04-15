@@ -17,9 +17,12 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/read-preprocessing/short-read-qc-trimming
   version: '0.3'
   license: MIT
+  slug: read-preprocessing--short-read-qc-trimming
 tools:
-- fastp
-- multiqc
+- name: fastp
+  version: 1.1.0+galaxy0
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - qc
 - trimming

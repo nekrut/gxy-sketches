@@ -19,13 +19,20 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome_annotation/annotation-helixer
   version: '0.3'
   license: MIT
+  slug: genome_annotation--annotation-helixer
 tools:
-- helixer
-- gffread
-- busco
-- omark
-- jcvi-gff-stats
-- jbrowse
+- name: helixer
+  version: 0.3.3+galaxy1
+- name: gffread
+  version: 2.2.1.4+galaxy0
+- name: busco
+  version: 5.8.0+galaxy1
+- name: omark
+  version: 0.3.1+galaxy1
+- name: jcvi-gff-stats
+  version: 0.8.4
+- name: jbrowse
+  version: 1.16.11+galaxy1
 tags:
 - genome-annotation
 - ab-initio

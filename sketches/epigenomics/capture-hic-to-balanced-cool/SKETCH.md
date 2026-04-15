@@ -18,14 +18,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/hic-hicup-cooler
   version: '0.3'
   license: MIT
+  slug: epigenetics--hic-hicup-cooler--hic-juicermediumtabix-to-cool-cooler
 tools:
-- hicup
-- bowtie2
-- hicup2juicer
-- cooler
-- cooler_csort
-- cooler_balance
-- pygenometracks
+- name: hicup
+- name: bowtie2
+- name: hicup2juicer
+- name: cooler
+  version: 0.9.3+galaxy0
+- name: cooler_csort
+- name: cooler_balance
+  version: 0.9.3+galaxy0
+- name: pygenometracks
 tags:
 - hi-c
 - capture-hi-c

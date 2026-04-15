@@ -20,19 +20,20 @@ source:
   url: https://github.com/nf-core/genomeannotator
   version: dev
   license: MIT
+  slug: genomeannotator
 tools:
-- augustus
-- pasa
-- evidencemodeler
-- spaln
-- minimap2
-- star
-- trinity
-- repeatmasker
-- infernal
-- satsuma2
-- kraken
-- busco
+- name: augustus
+- name: pasa
+- name: evidencemodeler
+- name: spaln
+- name: minimap2
+- name: star
+- name: trinity
+- name: repeatmasker
+- name: infernal
+- name: satsuma2
+- name: kraken
+- name: busco
 tags:
 - annotation
 - gene-prediction

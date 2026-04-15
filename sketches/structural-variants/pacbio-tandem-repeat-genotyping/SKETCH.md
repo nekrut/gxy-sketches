@@ -19,12 +19,14 @@ source:
   url: https://github.com/nf-core/pacvar
   version: 1.0.1
   license: MIT
+  slug: pacvar
 tools:
-- lima
-- pbmm2
-- samtools
-- trgt
-- bcftools
+- name: lima
+  version: 2.9.0
+- name: pbmm2
+- name: samtools
+- name: trgt
+- name: bcftools
 tags:
 - pacbio
 - hifi

@@ -19,19 +19,28 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/hi-c-contact-map-for-assembly-manual-curation
   version: '2.3'
   license: MIT
+  slug: VGP-assembly-v2--hi-c-contact-map-for-assembly-manual-curation
 tools:
-- bwa-mem2
-- samtools
-- pairtools
-- pretextmap
-- pretextgraph
-- pretextsnapshot
-- teloscope
-- compleasm
-- minimap2
-- gfastats
-- cutadapt
-- multiqc
+- name: bwa-mem2
+- name: samtools
+  version: 1.22+galaxy1
+- name: pairtools
+- name: pretextmap
+  version: 0.2.3+galaxy0
+- name: pretextgraph
+  version: 0.0.9+galaxy0
+- name: pretextsnapshot
+  version: 0.0.5+galaxy1
+- name: teloscope
+  version: 0.1.3+galaxy1
+- name: compleasm
+- name: minimap2
+  version: 2.28+galaxy2
+- name: gfastats
+  version: 1.3.11+galaxy1
+- name: cutadapt
+  version: 5.2+galaxy1
+- name: multiqc
 tags:
 - hi-c
 - pretext

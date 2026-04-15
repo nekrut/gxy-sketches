@@ -18,11 +18,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome-assembly/assembly-with-flye
   version: '0.4'
   license: MIT
+  slug: genome-assembly--assembly-with-flye
 tools:
-- flye
-- quast
-- fasta-stats
-- bandage
+- name: flye
+  version: 2.9.6+galaxy0
+- name: quast
+  version: 5.3.0+galaxy1
+- name: fasta-stats
+  version: '2.0'
+- name: bandage
+  version: 2022.09+galaxy4
 tags:
 - long-read
 - nanopore

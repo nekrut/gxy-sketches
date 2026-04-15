@@ -15,9 +15,11 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/average-bigwig-between-replicates
   version: '0.2'
   license: MIT
+  slug: epigenetics--average-bigwig-between-replicates
 tools:
-- deeptools-bigwigAverage
-- galaxy-apply-rules
+- name: deeptools-bigwigAverage
+  version: 3.5.4+galaxy0
+- name: galaxy-apply-rules
 tags:
 - bigwig
 - coverage

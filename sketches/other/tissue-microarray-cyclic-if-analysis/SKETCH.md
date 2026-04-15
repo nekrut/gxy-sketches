@@ -20,15 +20,22 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/imaging/tissue-microarray-analysis/tissue-microarray-analysis
   version: 0.1.1
   license: MIT
+  slug: imaging--tissue-microarray-analysis--tissue-microarray-analysis
 tools:
-- basic-illumination
-- ashlar
-- unet-coreograph
-- mesmer
-- mcquant
-- scimap
-- vitessce
-- bfconvert
+- name: basic-illumination
+  version: 1.1.1+galaxy2
+- name: ashlar
+  version: 1.18.0+galaxy1
+- name: unet-coreograph
+  version: 2.2.8+galaxy1
+- name: mesmer
+  version: 0.12.3+galaxy3
+- name: mcquant
+- name: scimap
+  version: 2.1.0+galaxy2
+- name: vitessce
+  version: 3.5.1+galaxy0
+- name: bfconvert
 tags:
 - imaging
 - multiplex

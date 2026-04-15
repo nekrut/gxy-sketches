@@ -20,21 +20,22 @@ source:
   url: https://github.com/nf-core/eager
   version: 2.5.3
   license: MIT
+  slug: eager
 tools:
-- fastqc
-- adapterremoval
-- fastp
-- bwa-aln
-- samtools
-- picard-markduplicates
-- dedup
-- damageprofiler
-- mapdamage2
-- qualimap
-- preseq
-- bamutil
-- pmdtools
-- multiqc
+- name: fastqc
+- name: adapterremoval
+- name: fastp
+- name: bwa-aln
+- name: samtools
+- name: picard-markduplicates
+- name: dedup
+- name: damageprofiler
+- name: mapdamage2
+- name: qualimap
+- name: preseq
+- name: bamutil
+- name: pmdtools
+- name: multiqc
 tags:
 - ancient-dna
 - adna

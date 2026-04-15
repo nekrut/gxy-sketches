@@ -17,19 +17,20 @@ source:
   url: https://github.com/nf-core/denovohybrid
   version: dev
   license: MIT
+  slug: denovohybrid
 tools:
-- porechop
-- filtlong
-- nanoplot
-- fastqc
-- unicycler
-- miniasm
-- racon
-- pilon
-- wtdbg2
-- bandage
-- quast
-- multiqc
+- name: porechop
+- name: filtlong
+- name: nanoplot
+- name: fastqc
+- name: unicycler
+- name: miniasm
+- name: racon
+- name: pilon
+- name: wtdbg2
+- name: bandage
+- name: quast
+- name: multiqc
 tags:
 - hybrid-assembly
 - nanopore

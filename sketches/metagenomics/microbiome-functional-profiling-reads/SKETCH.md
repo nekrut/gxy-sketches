@@ -20,16 +20,20 @@ source:
   url: https://github.com/nf-core/funcprofiler
   version: dev
   license: MIT
+  slug: funcprofiler
 tools:
-- humann
-- metaphlan
-- fmh-funprofiler
-- mifaser
-- diamond
-- eggnog-mapper
-- rgi
-- fastqc
-- multiqc
+- name: humann
+- name: metaphlan
+  version: 4.1.1
+- name: fmh-funprofiler
+- name: mifaser
+- name: diamond
+- name: eggnog-mapper
+  version: 2.1.13
+- name: rgi
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
 tags:
 - metagenomics
 - microbiome

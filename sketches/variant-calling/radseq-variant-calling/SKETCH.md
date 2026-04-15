@@ -20,22 +20,30 @@ source:
   url: https://github.com/nf-core/radseq
   version: dev
   license: MIT
+  slug: radseq
 tools:
-- fastp
-- fastqc
-- cd-hit-est
-- rainbow
-- seqtk
-- bwa
-- bwa-mem2
-- samtools
-- umi_tools
-- bedtools
-- bedops
-- freebayes
-- bcftools
-- tabix
-- multiqc
+- name: fastp
+  version: 0.23.2
+- name: fastqc
+  version: 0.11.9
+- name: cd-hit-est
+  version: 4.8.1
+- name: rainbow
+- name: seqtk
+  version: '1.3'
+- name: bwa
+- name: bwa-mem2
+- name: samtools
+- name: umi_tools
+- name: bedtools
+- name: bedops
+- name: freebayes
+  version: 1.3.5
+- name: bcftools
+- name: tabix
+  version: '1.11'
+- name: multiqc
+  version: '1.14'
 tags:
 - radseq
 - ddrad

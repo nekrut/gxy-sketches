@@ -19,14 +19,15 @@ source:
   url: https://github.com/nf-core/slamseq
   version: 1.0.0
   license: MIT
+  slug: slamseq
 tools:
-- trim-galore
-- slamdunk
-- nextgenmap
-- varscan2
-- samtools
-- deseq2
-- multiqc
+- name: trim-galore
+- name: slamdunk
+- name: nextgenmap
+- name: varscan2
+- name: samtools
+- name: deseq2
+- name: multiqc
 tags:
 - slamseq
 - 4sU

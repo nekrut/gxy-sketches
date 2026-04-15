@@ -17,12 +17,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/comparative_genomics/hyphy
   version: '0.1'
   license: MIT
+  slug: comparative_genomics--hyphy--hyphy-preprocessing
 tools:
-- cawlign
-- iqtree
-- hyphy-cln
-- remove_terminal_stop_codons
-- fasplit
+- name: cawlign
+  version: 0.1.15+galaxy0
+- name: iqtree
+  version: 2.4.0+galaxy1
+- name: hyphy-cln
+  version: 2.5.96+galaxy0
+- name: remove_terminal_stop_codons
+  version: 1.0.0+galaxy0
+- name: fasplit
+  version: '482'
 tags:
 - hyphy
 - codon-alignment

@@ -19,13 +19,16 @@ source:
   url: https://github.com/nf-core/differentialabundance
   version: 1.5.0
   license: MIT
+  slug: differentialabundance
 tools:
-- DESeq2
-- limma
-- GSEA
-- gprofiler2
-- shinyngs
-- RMarkdown
+- name: DESeq2
+- name: limma
+- name: GSEA
+  version: 4.3.2
+- name: gprofiler2
+- name: shinyngs
+- name: RMarkdown
+  version: 0e852a1e4063fdcbe3f254ac2c7469747a60e361-0
 tags:
 - rna-seq
 - differential-expression

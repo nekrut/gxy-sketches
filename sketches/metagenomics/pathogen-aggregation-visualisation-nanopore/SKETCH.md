@@ -20,15 +20,20 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/pathogen-identification/pathogen-detection-pathogfair-samples-aggregation-and-visualisation
   version: '0.1'
   license: MIT
+  slug: microbiome--pathogen-identification--pathogen-detection-pathogfair-samples-aggregation-and-visualisation
 tools:
-- abricate
-- bedtools
-- clustalw
-- fasttree
-- newick_utils
-- ggplot2
-- collapse_collections
-- text_processing
+- name: abricate
+- name: bedtools
+  version: 2.30.0+galaxy1
+- name: clustalw
+  version: 2.1+galaxy1
+- name: fasttree
+  version: 2.1.10+galaxy1
+- name: newick_utils
+- name: ggplot2
+  version: 3.4.0+galaxy0
+- name: collapse_collections
+- name: text_processing
 tags:
 - pathogen
 - amr

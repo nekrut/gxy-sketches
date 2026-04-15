@@ -21,11 +21,12 @@ source:
   url: https://github.com/nf-core/ncrnannotator
   version: dev
   license: MIT
+  slug: ncrnannotator
 tools:
-- infernal
-- cmsearch
-- rfam
-- multiqc
+- name: infernal
+- name: cmsearch
+- name: rfam
+- name: multiqc
 tags:
 - ncrna
 - rfam

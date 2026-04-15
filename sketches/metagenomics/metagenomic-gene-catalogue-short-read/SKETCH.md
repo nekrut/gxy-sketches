@@ -18,20 +18,33 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/metagenomic-genes-catalogue
   version: 1.2.1
   license: GPL-3.0-or-later
+  slug: microbiome--metagenomic-genes-catalogue
 tools:
-- megahit
-- quast
-- prodigal
-- mmseqs2
-- eggnog-mapper
-- amrfinderplus
-- abricate
-- staramr
-- argnorm
-- coverm
-- krakentools
-- krona
-- multiqc
+- name: megahit
+  version: 1.2.9+galaxy2
+- name: quast
+  version: 5.3.0+galaxy1
+- name: prodigal
+  version: 2.6.3+galaxy0
+- name: mmseqs2
+  version: 17-b804f+galaxy0
+- name: eggnog-mapper
+  version: 2.1.8+galaxy4
+- name: amrfinderplus
+  version: 3.12.8+galaxy0
+- name: abricate
+  version: 1.0.1
+- name: staramr
+  version: 0.11.0+galaxy3
+- name: argnorm
+  version: 1.0.0+galaxy0
+- name: coverm
+  version: 0.7.0+galaxy0
+- name: krakentools
+  version: 1.2.1+galaxy0
+- name: krona
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - metagenomics
 - gene-catalogue

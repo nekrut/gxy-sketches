@@ -16,13 +16,19 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/bacterial_genomics/bacterial_genome_annotation
   version: 1.2.0
   license: GPL-3.0-or-later
+  slug: bacterial_genomics--bacterial_genome_annotation
 tools:
-- bakta
-- plasmidfinder
-- integron_finder
-- isescan
-- tooldistillator
-- amrfinderplus
+- name: bakta
+  version: 1.9.4+galaxy1
+- name: plasmidfinder
+  version: 2.1.6+galaxy1
+- name: integron_finder
+  version: 2.0.5+galaxy0
+- name: isescan
+  version: 1.7.3+galaxy0
+- name: tooldistillator
+  version: 1.0.4+galaxy0
+- name: amrfinderplus
 tags:
 - bacteria
 - annotation

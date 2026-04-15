@@ -8,10 +8,13 @@ Strategy for v1:
       nextflow_schema.json, .nf-core.yml, CITATIONS.md.
     * Record the `conf/test.config` profile so the generator knows where the
       pipeline's small test data lives.
+    * Walk `modules/nf-core/**/main.nf` and parse `container` directives to
+      produce a {tool_name -> version} map for `WorkflowRecord.tool_versions`.
 """
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Iterable
 
@@ -82,6 +85,8 @@ class NfCoreIngestor:
         if not files:
             return None
 
+        tool_versions = _scan_modules_tool_versions(dest)
+
         version = self._latest_release(entry)
         license_ = entry.get("license") or "MIT"
 
@@ -100,6 +105,7 @@ class NfCoreIngestor:
             license=license_,
             files=files,
             test_manifest=None,
+            tool_versions=tool_versions,
             raw_root=dest,
         )
 
@@ -113,3 +119,52 @@ class NfCoreIngestor:
         if isinstance(latest, dict):
             return latest.get("tag_name") or latest.get("name")
         return str(latest)
+
+
+# `container "...biocontainers/fastp:0.23.4--h5f740d0_1..."` or
+# `container 'quay.io/biocontainers/samtools:1.21--h96c455f_1'`
+_CONTAINER_RE = re.compile(r"biocontainers/([A-Za-z0-9_.\-]+):([^'\"\s}]+)")
+# Also match the singularity fallback depot.galaxyproject.org URL
+_DEPOT_RE = re.compile(r"depot\.galaxyproject\.org/singularity/([A-Za-z0-9_.\-]+):([^'\"\s}]+)")
+
+
+def _scan_modules_tool_versions(pipeline_root: Path) -> dict[str, str]:
+    """Parse every `modules/nf-core/**/main.nf` for container version pins.
+
+    Returns a dict keyed by tool directory name (lower-case, dots and
+    underscores preserved), value is the container tag after the colon
+    (cleaned of trailing build hashes like `--h5f740d0_1`).
+    """
+    out: dict[str, str] = {}
+    modules_root = pipeline_root / "modules" / "nf-core"
+    if not modules_root.is_dir():
+        return out
+    for main_nf in modules_root.rglob("main.nf"):
+        tool_dir = main_nf.parent.name.lower()
+        if not tool_dir:
+            continue
+        try:
+            text = main_nf.read_text()
+        except OSError:
+            continue
+        version = _extract_container_version(text)
+        if version is None:
+            continue
+        # If multiple matches per tool, keep the first non-empty one.
+        out.setdefault(tool_dir, version)
+    return out
+
+
+def _extract_container_version(main_nf_text: str) -> str | None:
+    for rx in (_CONTAINER_RE, _DEPOT_RE):
+        m = rx.search(main_nf_text)
+        if m is None:
+            continue
+        raw = m.group(2)
+        # Strip the conda-build hash suffix after `--` to get "0.23.4"
+        version = raw.split("--", 1)[0]
+        # And strip any trailing quote/bracket just in case
+        version = version.rstrip("'\"}")
+        if version:
+            return version
+    return None

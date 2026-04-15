@@ -16,16 +16,22 @@ source:
   url: https://github.com/nf-core/bacass
   version: 2.5.0
   license: MIT
+  slug: bacass
 tools:
-- fastp
-- fastqc
-- unicycler
-- kraken2
-- kmerfinder
-- quast
-- busco
-- prokka
-- multiqc
+- name: fastp
+- name: fastqc
+  version: 0.12.1
+- name: unicycler
+- name: kraken2
+  version: 87fc08d11968d081f3e8a37131c1f1f6715b6542-0
+- name: kmerfinder
+- name: quast
+  version: 5.2.0
+- name: busco
+- name: prokka
+  version: 1.14.6
+- name: multiqc
+  version: '1.29'
 tags:
 - bacteria
 - wgs

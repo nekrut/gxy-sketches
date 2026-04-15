@@ -22,18 +22,24 @@ source:
   url: https://github.com/nf-core/genomeqc
   version: dev
   license: MIT
+  slug: genomeqc
 tools:
-- busco
-- quast
-- tidk
-- merqury
-- fcs-gx
-- fcs-adaptor
-- tiara
-- agat
-- gffread
-- orthofinder
-- multiqc
+- name: busco
+- name: quast
+  version: 5.2.0
+- name: tidk
+- name: merqury
+  version: '1.3'
+- name: fcs-gx
+- name: fcs-adaptor
+- name: tiara
+  version: 1.0.3
+- name: agat
+- name: gffread
+  version: 0.12.7
+- name: orthofinder
+  version: 2.5.5
+- name: multiqc
 tags:
 - genome-quality
 - assembly-qc

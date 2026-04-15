@@ -17,20 +17,24 @@ source:
   url: https://github.com/nf-core/demultiplex
   version: 1.7.0
   license: MIT
+  slug: demultiplex
 tools:
-- bcl-convert
-- bcl2fastq
-- bases2fastq
-- sgdemux
-- fqtk
-- mkfastq
-- mgikit
-- samshee
-- fastp
-- falco
-- checkqc
-- kraken2
-- multiqc
+- name: bcl-convert
+- name: bcl2fastq
+- name: bases2fastq
+- name: sgdemux
+  version: 1.1.1
+- name: fqtk
+  version: 0.2.1
+- name: mkfastq
+- name: mgikit
+- name: samshee
+- name: fastp
+- name: falco
+  version: 1.2.1
+- name: checkqc
+- name: kraken2
+- name: multiqc
 tags:
 - demultiplex
 - bcl

@@ -19,21 +19,28 @@ source:
   url: https://github.com/nf-core/variantcatalogue
   version: dev
   license: MIT
+  slug: variantcatalogue
 tools:
-- bwa
-- trimmomatic
-- samtools
-- fastqc
-- mosdepth
-- picard
-- deepvariant
-- glnexus
-- bcftools
-- bedtools
-- hail
-- gatk
-- mutect2
-- vep
+- name: bwa
+- name: trimmomatic
+  version: '0.39'
+- name: samtools
+- name: fastqc
+  version: 0.11.9
+- name: mosdepth
+  version: 0.3.3
+- name: picard
+- name: deepvariant
+- name: glnexus
+  version: 1.4.1
+- name: bcftools
+- name: bedtools
+- name: hail
+- name: gatk
+- name: mutect2
+  version: 4.4.0.0
+- name: vep
+  version: '108.2'
 tags:
 - population-genomics
 - variant-catalogue

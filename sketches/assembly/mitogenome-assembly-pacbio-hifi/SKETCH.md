@@ -18,11 +18,13 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Mitogenome-assembly-VGP0
   version: 0.2.2
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--Mitogenome-assembly-VGP0
 tools:
-- mitohifi
-- hifiasm
-- mitofinder
-- ncbi-entrez
+- name: mitohifi
+  version: 3.2.3+galaxy0
+- name: hifiasm
+- name: mitofinder
+- name: ncbi-entrez
 tags:
 - mitogenome
 - organelle

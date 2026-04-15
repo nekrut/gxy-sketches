@@ -18,15 +18,16 @@ source:
   url: https://github.com/nf-core/stableexpression
   version: dev
   license: MIT
+  slug: stableexpression
 tools:
-- expression-atlas
-- ncbi-geo
-- gprofiler
-- scikit-learn
-- normfinder
-- genorm
-- multiqc
-- dash-plotly
+- name: expression-atlas
+- name: ncbi-geo
+- name: gprofiler
+- name: scikit-learn
+- name: normfinder
+- name: genorm
+- name: multiqc
+- name: dash-plotly
 tags:
 - reference-genes
 - housekeeping-genes

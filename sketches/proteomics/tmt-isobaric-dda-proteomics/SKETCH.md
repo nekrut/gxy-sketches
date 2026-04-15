@@ -18,13 +18,14 @@ source:
   url: https://github.com/nf-core/ddamsproteomics
   version: dev
   license: MIT
+  slug: ddamsproteomics
 tools:
-- msgf+
-- percolator
-- openms
-- hardklor
-- kronik
-- msstitch
+- name: msgf+
+- name: percolator
+- name: openms
+- name: hardklor
+- name: kronik
+- name: msstitch
 tags:
 - proteomics
 - dda

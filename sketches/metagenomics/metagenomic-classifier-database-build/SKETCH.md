@@ -21,19 +21,20 @@ source:
   url: https://github.com/nf-core/createtaxdb
   version: 2.1.0
   license: MIT
+  slug: createtaxdb
 tools:
-- kraken2
-- bracken
-- centrifuge
-- diamond
-- ganon
-- kaiju
-- kmcp
-- krakenuniq
-- malt
-- sourmash
-- sylph
-- metacache
+- name: kraken2
+- name: bracken
+- name: centrifuge
+- name: diamond
+- name: ganon
+- name: kaiju
+- name: kmcp
+- name: krakenuniq
+- name: malt
+- name: sourmash
+- name: sylph
+- name: metacache
 tags:
 - metagenomics
 - database-build

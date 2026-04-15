@@ -19,14 +19,22 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome_annotation/annotation-maker
   version: '0.1'
   license: MIT
+  slug: genome_annotation--annotation-maker
 tools:
-- maker
-- busco
-- gffread
-- jcvi-gff-stats
-- maker-map-ids
-- jbrowse
-- fasta-stats
+- name: maker
+  version: 2.31.11+galaxy2
+- name: busco
+  version: 5.7.1+galaxy0
+- name: gffread
+  version: 2.2.1.4+galaxy0
+- name: jcvi-gff-stats
+  version: 0.8.4
+- name: maker-map-ids
+  version: 2.31.11
+- name: jbrowse
+  version: 1.16.11+galaxy1
+- name: fasta-stats
+  version: '2.0'
 tags:
 - genome-annotation
 - maker

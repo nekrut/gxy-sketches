@@ -21,14 +21,18 @@ source:
   url: https://github.com/nf-core/viralintegration
   version: 0.1.1
   license: MIT
+  slug: viralintegration
 tools:
-- fastqc
-- star
-- trimmomatic
-- polyastripper
-- samtools
-- ctat-vif
-- multiqc
+- name: fastqc
+  version: 0.11.9
+- name: star
+- name: trimmomatic
+  version: '0.39'
+- name: polyastripper
+- name: samtools
+- name: ctat-vif
+- name: multiqc
+  version: '1.14'
 tags:
 - viral-integration
 - chimeric-reads

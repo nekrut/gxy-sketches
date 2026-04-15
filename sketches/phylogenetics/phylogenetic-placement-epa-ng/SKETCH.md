@@ -19,12 +19,13 @@ source:
   url: https://github.com/nf-core/phyloplace
   version: 2.0.0
   license: MIT
+  slug: phyloplace
 tools:
-- epa-ng
-- gappa
-- hmmer
-- clustalo
-- mafft
+- name: epa-ng
+- name: gappa
+- name: hmmer
+- name: clustalo
+- name: mafft
 tags:
 - phylogenetic-placement
 - epa-ng

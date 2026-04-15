@@ -15,10 +15,13 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/data-fetching/parallel-accession-download
   version: 0.1.14
   license: MIT
+  slug: data-fetching--parallel-accession-download
 tools:
-- fasterq-dump
-- sra-tools
-- split_file_to_collection
+- name: fasterq-dump
+  version: 3.1.1+galaxy0
+- name: sra-tools
+- name: split_file_to_collection
+  version: 0.5.2
 tags:
 - sra
 - ena

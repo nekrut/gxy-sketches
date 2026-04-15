@@ -17,16 +17,25 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/atacseq
   version: '1.0'
   license: MIT
+  slug: epigenetics--atacseq
 tools:
-- cutadapt
-- bowtie2
-- bamtools
-- picard-markduplicates
-- samtools
-- bedtools
-- macs2
-- deeptools
-- multiqc
+- name: cutadapt
+  version: 4.9+galaxy1
+- name: bowtie2
+  version: 2.5.3+galaxy1
+- name: bamtools
+- name: picard-markduplicates
+  version: 3.1.1.0
+- name: samtools
+  version: 2.0.5
+- name: bedtools
+  version: 2.31.1+galaxy0
+- name: macs2
+  version: 2.2.9.1+galaxy0
+- name: deeptools
+  version: 3.5.4+galaxy0
+- name: multiqc
+  version: 1.24.1+galaxy0
 tags:
 - atac-seq
 - chromatin-accessibility

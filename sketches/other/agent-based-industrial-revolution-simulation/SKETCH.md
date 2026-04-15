@@ -18,11 +18,12 @@ source:
   url: https://github.com/nf-core/spinningjenny
   version: dev
   license: MIT
+  slug: spinningjenny
 tools:
-- netlogo
-- xmlmod
-- r
-- multiqc
+- name: netlogo
+- name: xmlmod
+- name: r
+- name: multiqc
 tags:
 - agent-based-model
 - netlogo

@@ -17,15 +17,20 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/comparative_genomics/hyphy
   version: '0.1'
   license: MIT
+  slug: comparative_genomics--hyphy--hyphy-preprocessing
 tools:
-- cawlign
-- iqtree
-- hyphy-meme
-- hyphy-fel
-- hyphy-busted
-- hyphy-prime
-- hyphy-cln
-- remove_terminal_stop_codons
+- name: cawlign
+  version: 0.1.15+galaxy0
+- name: iqtree
+  version: 2.4.0+galaxy1
+- name: hyphy-meme
+- name: hyphy-fel
+- name: hyphy-busted
+- name: hyphy-prime
+- name: hyphy-cln
+  version: 2.5.96+galaxy0
+- name: remove_terminal_stop_codons
+  version: 1.0.0+galaxy0
 tags:
 - selection
 - dnds

@@ -18,15 +18,24 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/dada2
   version: '0.3'
   license: MIT
+  slug: amplicon--dada2
 tools:
-- dada2
-- dada2-filterAndTrim
-- dada2-learnErrors
-- dada2-dada
-- dada2-mergePairs
-- dada2-makeSequenceTable
-- dada2-removeBimeraDenovo
-- dada2-assignTaxonomy
+- name: dada2
+  version: 1.34.0+galaxy0
+- name: dada2-filterAndTrim
+  version: 1.34.0+galaxy0
+- name: dada2-learnErrors
+  version: 1.34.0+galaxy0
+- name: dada2-dada
+  version: 1.34.0+galaxy0
+- name: dada2-mergePairs
+  version: 1.34.0+galaxy0
+- name: dada2-makeSequenceTable
+  version: 1.34.0+galaxy0
+- name: dada2-removeBimeraDenovo
+  version: 1.34.0+galaxy0
+- name: dada2-assignTaxonomy
+  version: 1.34.0+galaxy0
 tags:
 - amplicon
 - 16s

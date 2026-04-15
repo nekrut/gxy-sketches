@@ -20,13 +20,19 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Purge-duplicates-one-haplotype-VGP6b
   version: 0.8.5
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--Purge-duplicates-one-haplotype-VGP6b
 tools:
-- purge_dups
-- minimap2
-- merqury
-- compleasm
-- gfastats
-- meryl
+- name: purge_dups
+  version: 1.2.6+galaxy1
+- name: minimap2
+  version: 2.28+galaxy2
+- name: merqury
+  version: 1.3+galaxy4
+- name: compleasm
+  version: 0.2.6+galaxy3
+- name: gfastats
+  version: 1.3.11+galaxy1
+- name: meryl
 tags:
 - vgp
 - purge_dups

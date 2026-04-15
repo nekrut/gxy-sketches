@@ -18,9 +18,12 @@ source:
   url: https://github.com/nf-core/mitodetect
   version: dev
   license: MIT
+  slug: mitodetect
 tools:
-- fastqc
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: '1.27'
 tags:
 - mitochondria
 - mtdna

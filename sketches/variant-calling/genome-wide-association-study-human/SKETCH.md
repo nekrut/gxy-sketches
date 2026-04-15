@@ -18,9 +18,10 @@ source:
   url: https://github.com/nf-core/gwas
   version: dev
   license: MIT
+  slug: gwas
 tools:
-- multiqc
-- nextflow
+- name: multiqc
+- name: nextflow
 tags:
 - gwas
 - association

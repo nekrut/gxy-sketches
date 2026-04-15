@@ -17,12 +17,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/amplicon-mgnify/taxonomic-rank-abundance-summary-table
   version: '0.2'
   license: MIT
+  slug: amplicon--amplicon-mgnify--taxonomic-rank-abundance-summary-table
 tools:
-- map_param_value
-- gawk
-- galaxy-grouping
-- filter_tabular
-- collection_column_join
+- name: map_param_value
+  version: 0.2.0
+- name: gawk
+- name: galaxy-grouping
+- name: filter_tabular
+  version: 3.3.1
+- name: collection_column_join
+  version: 0.0.3
 tags:
 - amplicon
 - 16s

@@ -19,20 +19,22 @@ source:
   url: https://github.com/nf-core/sarek
   version: 3.8.1
   license: MIT
+  slug: sarek
 tools:
-- fastp
-- bwa-mem2
-- gatk4
-- mutect2
-- strelka
-- manta
-- ascat
-- cnvkit
-- controlfreec
-- msisensorpro
-- snpeff
-- vep
-- multiqc
+- name: fastp
+- name: bwa-mem2
+- name: gatk4
+- name: mutect2
+- name: strelka
+- name: manta
+- name: ascat
+- name: cnvkit
+- name: controlfreec
+- name: msisensorpro
+  version: '0.1'
+- name: snpeff
+- name: vep
+- name: multiqc
 tags:
 - human
 - cancer

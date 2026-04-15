@@ -18,21 +18,24 @@ source:
   url: https://github.com/nf-core/multiplesequencealign
   version: 1.1.1
   license: MIT
+  slug: multiplesequencealign
 tools:
-- famsa
-- clustalo
-- mafft
-- tcoffee
-- muscle5
-- kalign
-- magus
-- learnmsa
-- upp
-- regressive
-- 3dcoffee
-- foldmason
-- mtm-align
-- multiqc
+- name: famsa
+- name: clustalo
+- name: mafft
+- name: tcoffee
+- name: muscle5
+- name: kalign
+- name: magus
+- name: learnmsa
+- name: upp
+- name: regressive
+  version: 84c8f17f1259b49e2f7783b95b7a89c6f2cb199e-0
+- name: 3dcoffee
+- name: foldmason
+- name: mtm-align
+- name: multiqc
+  version: '1.27'
 tags:
 - msa
 - protein

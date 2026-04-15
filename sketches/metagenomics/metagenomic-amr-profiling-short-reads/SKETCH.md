@@ -20,14 +20,21 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/metagenomic-raw-reads-amr-analysis
   version: '1.1'
   license: GPL-3.0-or-later
+  slug: microbiome--metagenomic-raw-reads-amr-analysis
 tools:
-- sylph
-- sylph-tax
-- groot
-- deeparg
-- argnorm
-- tooldistillator
-- multiqc
+- name: sylph
+  version: 0.8.1+galaxy0
+- name: sylph-tax
+- name: groot
+  version: 1.1.2+galaxy2
+- name: deeparg
+  version: 1.0.4+galaxy1
+- name: argnorm
+  version: 1.0.0+galaxy0
+- name: tooldistillator
+  version: 1.0.4+galaxy0
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - metagenomics
 - amr

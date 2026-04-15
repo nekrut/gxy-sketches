@@ -17,18 +17,24 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/transcriptomics/rnaseq-sr
   version: '1.3'
   license: MIT
+  slug: transcriptomics--rnaseq-sr
 tools:
-- fastp
-- star
-- featurecounts
-- stringtie
-- cufflinks
-- bedtools
-- samtools
-- rseqc
-- picard
-- fastqc
-- multiqc
+- name: fastp
+  version: 1.1.0+galaxy0
+- name: star
+- name: featurecounts
+  version: 2.1.1+galaxy0
+- name: stringtie
+  version: 2.2.3+galaxy0
+- name: cufflinks
+  version: 2.2.1.4
+- name: bedtools
+- name: samtools
+- name: rseqc
+- name: picard
+- name: fastqc
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - rna-seq
 - bulk

@@ -18,21 +18,22 @@ source:
   url: https://github.com/nf-core/meerpipe
   version: dev
   license: MIT
+  slug: meerpipe
 tools:
-- psrchive
-- meerguard
-- pac
-- pam
-- dlyfix
-- psrstat
-- pdv
-- tempo2
-- rmfit
-- pdmp
-- pat
-- psrplot
-- scintools
-- psrdb
+- name: psrchive
+- name: meerguard
+- name: pac
+- name: pam
+- name: dlyfix
+- name: psrstat
+- name: pdv
+- name: tempo2
+- name: rmfit
+- name: pdmp
+- name: pat
+- name: psrplot
+- name: scintools
+- name: psrdb
 tags:
 - pulsar
 - meerkat

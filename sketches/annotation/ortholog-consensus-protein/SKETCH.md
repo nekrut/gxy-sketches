@@ -17,14 +17,15 @@ source:
   url: https://github.com/nf-core/reportho
   version: 1.1.0
   license: MIT
+  slug: reportho
 tools:
-- oma
-- panther
-- orthoinspector
-- eggnog
-- diamond
-- uniprot
-- multiqc
+- name: oma
+- name: panther
+- name: orthoinspector
+- name: eggnog
+- name: diamond
+- name: uniprot
+- name: multiqc
 tags:
 - orthology
 - orthologs

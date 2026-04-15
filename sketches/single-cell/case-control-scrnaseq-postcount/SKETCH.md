@@ -22,19 +22,20 @@ source:
   url: https://github.com/nf-core/scflow
   version: dev
   license: MIT
+  slug: scflow
 tools:
-- scFlow
-- emptyDrops
-- DoubletFinder
-- LIGER
-- uwot-UMAP
-- Rtsne
-- Leiden
-- Louvain
-- EWCE
-- MAST
-- WebGestaltR
-- DirichletReg
+- name: scFlow
+- name: emptyDrops
+- name: DoubletFinder
+- name: LIGER
+- name: uwot-UMAP
+- name: Rtsne
+- name: Leiden
+- name: Louvain
+- name: EWCE
+- name: MAST
+- name: WebGestaltR
+- name: DirichletReg
 tags:
 - scrna-seq
 - snrna-seq

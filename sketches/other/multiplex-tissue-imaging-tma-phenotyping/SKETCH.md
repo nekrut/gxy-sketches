@@ -22,14 +22,21 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/imaging/tissue-microarray-analysis/multiplex-tissue-microarray-analysis
   version: 0.1.2
   license: MIT
+  slug: imaging--tissue-microarray-analysis--multiplex-tissue-microarray-analysis
 tools:
-- backsub
-- mesmer
-- mcquant
-- scimap
-- squidpy
-- anndata
-- vitessce
+- name: backsub
+  version: 0.4.1+galaxy0
+- name: mesmer
+  version: 0.12.3+galaxy3
+- name: mcquant
+- name: scimap
+  version: 2.1.0+galaxy3
+- name: squidpy
+  version: 1.5.0+galaxy2
+- name: anndata
+  version: 1.9.3+galaxy1
+- name: vitessce
+  version: 3.5.1+galaxy3
 tags:
 - multiplex-imaging
 - cycif

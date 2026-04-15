@@ -17,18 +17,24 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/computational-chemistry/gromacs-dctmd
   version: 0.1.7
   license: MIT
+  slug: computational-chemistry--gromacs-dctmd
 tools:
-- gromacs
-- gmx_setup
-- gmx_solvate
-- gmx_em
-- gmx_sim
-- gmx_makendx
-- ambertools-antechamber
-- acpype
-- rdkit
-- openbabel
-- biomd-neqgamma
+- name: gromacs
+- name: gmx_setup
+- name: gmx_solvate
+  version: 2022+galaxy0
+- name: gmx_em
+  version: 2022+galaxy0
+- name: gmx_sim
+  version: 2022+galaxy0
+- name: gmx_makendx
+  version: 2022+galaxy0
+- name: ambertools-antechamber
+- name: acpype
+- name: rdkit
+- name: openbabel
+- name: biomd-neqgamma
+  version: 0.1.5.2+galaxy1
 tags: []
 test_data: []
 expected_output: []

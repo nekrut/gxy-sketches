@@ -19,9 +19,11 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/proteomics/clinicalmp/clinicalmp-quantitation
   version: '0.1'
   license: CC-BY-4.0
+  slug: proteomics--clinicalmp--clinicalmp-quantitation
 tools:
-- maxquant
-- galaxy-text-utilities
+- name: maxquant
+  version: 2.0.3.0+galaxy0
+- name: galaxy-text-utilities
 tags:
 - metaproteomics
 - clinical

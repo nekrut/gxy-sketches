@@ -23,20 +23,23 @@ source:
   url: https://github.com/nf-core/hadge
   version: 0.2.0
   license: MIT
+  slug: hadge
 tools:
-- cellsnp-lite
-- vireo
-- popscle-demuxlet
-- popscle-freemuxlet
-- souporcell
-- htodemux
-- multiseqdemux
-- bff
-- demuxem
-- gmm-demux
-- hasheddrops
-- scanpy-hashsolo
-- multiqc
+- name: cellsnp-lite
+- name: vireo
+  version: 0.5.8
+- name: popscle-demuxlet
+- name: popscle-freemuxlet
+- name: souporcell
+- name: htodemux
+- name: multiseqdemux
+- name: bff
+- name: demuxem
+- name: gmm-demux
+  version: 0.2.2.3
+- name: hasheddrops
+- name: scanpy-hashsolo
+- name: multiqc
 tags:
 - single-cell
 - demultiplexing

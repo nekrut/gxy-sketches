@@ -19,17 +19,18 @@ source:
   url: https://github.com/nf-core/metaboigniter
   version: 2.0.1
   license: MIT
+  slug: metaboigniter
 tools:
-- openms
-- featurefindermetabo
-- metaboliteadductdecharger
-- mapalignerposeclustering
-- featurelinkerunlabeledkd
-- featurefindermetaboident
-- sirius
-- csi-fingerid
-- ms2query
-- pyopenms
+- name: openms
+- name: featurefindermetabo
+- name: metaboliteadductdecharger
+- name: mapalignerposeclustering
+- name: featurelinkerunlabeledkd
+- name: featurefindermetaboident
+- name: sirius
+- name: csi-fingerid
+- name: ms2query
+- name: pyopenms
 tags:
 - metabolomics
 - lc-ms

@@ -17,12 +17,13 @@ source:
   url: https://github.com/nf-core/proteinfold
   version: 2.0.0
   license: MIT
+  slug: proteinfold
 tools:
-- alphafold2
-- hhblits
-- jackhmmer
-- hhsearch
-- multiqc
+- name: alphafold2
+- name: hhblits
+- name: jackhmmer
+- name: hhsearch
+- name: multiqc
 tags:
 - protein
 - structure-prediction

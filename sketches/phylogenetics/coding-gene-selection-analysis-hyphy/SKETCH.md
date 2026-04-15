@@ -19,18 +19,19 @@ source:
   url: https://github.com/nf-core/genephylomodeler
   version: dev
   license: MIT
+  slug: genephylomodeler
 tools:
-- hyphy
-- absrel
-- busted
-- fel
-- fubar
-- meme
-- slac
-- relax
-- fade
-- bgm
-- gard
+- name: hyphy
+- name: absrel
+- name: busted
+- name: fel
+- name: fubar
+- name: meme
+- name: slac
+- name: relax
+- name: fade
+- name: bgm
+- name: gard
 tags:
 - phylogenetics
 - selection

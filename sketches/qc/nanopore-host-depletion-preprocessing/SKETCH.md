@@ -18,17 +18,28 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/pathogen-identification/nanopore-pre-processing
   version: '0.1'
   license: MIT
+  slug: microbiome--pathogen-identification--nanopore-pre-processing
 tools:
-- nanoplot
-- fastqc
-- porechop
-- fastp
-- minimap2
-- samtools
-- bamtools
-- kraken2
-- krakentools
-- multiqc
+- name: nanoplot
+  version: 1.42.0+galaxy1
+- name: fastqc
+  version: 0.74+galaxy0
+- name: porechop
+  version: 0.2.4+galaxy0
+- name: fastp
+  version: 0.23.4+galaxy0
+- name: minimap2
+  version: 2.28+galaxy0
+- name: samtools
+  version: 1.15.1+galaxy2
+- name: bamtools
+  version: 2.5.2+galaxy2
+- name: kraken2
+  version: 2.1.1+galaxy1
+- name: krakentools
+  version: 1.2+galaxy1
+- name: multiqc
+  version: 1.11+galaxy1
 tags:
 - nanopore
 - long-read

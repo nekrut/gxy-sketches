@@ -17,12 +17,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome_annotation/lncRNAs-annotation
   version: '0.1'
   license: MIT
+  slug: genome_annotation--lncRNAs-annotation
 tools:
-- stringtie
-- gffread
-- feelnc
-- map_param_value
-- cat
+- name: stringtie
+  version: 2.2.3+galaxy0
+- name: gffread
+  version: 2.2.1.4+galaxy0
+- name: feelnc
+  version: 0.2.1+galaxy0
+- name: map_param_value
+  version: 0.2.0
+- name: cat
 tags:
 - lncrna
 - non-coding-rna

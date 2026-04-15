@@ -17,12 +17,14 @@ source:
   url: https://github.com/nf-core/abotyper
   version: dev
   license: MIT
+  slug: abotyper
 tools:
-- fastqc
-- minimap2
-- samtools
-- multiqc
-- pandas
+- name: fastqc
+  version: 0.12.1
+- name: minimap2
+- name: samtools
+- name: multiqc
+- name: pandas
 tags:
 - abo
 - blood-group

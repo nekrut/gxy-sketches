@@ -17,13 +17,19 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/amplicon-mgnify/mgnify-amplicon-pipeline-v5-quality-control-single-end
   version: '0.3'
   license: Apache-2.0
+  slug: amplicon--amplicon-mgnify--mgnify-amplicon-pipeline-v5-quality-control-single-end
 tools:
-- fastqc
-- trimmomatic
-- fastq_filter
-- prinseq
-- multiqc
-- fasta_formatter
+- name: fastqc
+  version: 0.74+galaxy1
+- name: trimmomatic
+  version: 0.39+galaxy2
+- name: fastq_filter
+  version: 1.1.5+galaxy2
+- name: prinseq
+  version: 0.20.4+galaxy2
+- name: multiqc
+  version: 1.27+galaxy3
+- name: fasta_formatter
 tags:
 - amplicon
 - 16S

@@ -20,25 +20,31 @@ source:
   url: https://github.com/nf-core/chipseq
   version: 2.1.0
   license: MIT
+  slug: chipseq
 tools:
-- fastqc
-- trim-galore
-- bwa
-- bowtie2
-- chromap
-- star
-- picard
-- samtools
-- bedtools
-- bamtools
-- macs3
-- homer
-- deeptools
-- phantompeakqualtools
-- preseq
-- featurecounts
-- deseq2
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+  version: 0.6.7
+- name: bwa
+- name: bowtie2
+- name: chromap
+  version: 6500f0fa0c9536821177168555632d9811670937-0
+- name: star
+- name: picard
+- name: samtools
+- name: bedtools
+- name: bamtools
+- name: macs3
+- name: homer
+- name: deeptools
+- name: phantompeakqualtools
+- name: preseq
+- name: featurecounts
+  version: 2.0.1
+- name: deseq2
+- name: multiqc
+  version: '1.23'
 tags:
 - chip-seq
 - peak-calling

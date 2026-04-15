@@ -18,12 +18,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/bacterial_genomics/bacterial-quality-and-contamination-control-post-assembly
   version: 1.0.2
   license: GPL-3.0-or-later
+  slug: bacterial_genomics--bacterial-quality-and-contamination-control-post-assembly
 tools:
-- quast
-- checkm2
-- kraken2
-- bracken
-- tooldistillator
+- name: quast
+  version: 5.3.0+galaxy0
+- name: checkm2
+  version: 1.0.2+galaxy1
+- name: kraken2
+  version: 2.1.3+galaxy1
+- name: bracken
+- name: tooldistillator
+  version: 1.0.4+galaxy0
 tags:
 - bacteria
 - assembly-qc

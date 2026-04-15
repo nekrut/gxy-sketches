@@ -18,14 +18,15 @@ source:
   url: https://github.com/nf-core/spatialvi
   version: dev
   license: MIT
+  slug: spatialvi
 tools:
-- spaceranger
-- scanpy
-- anndata
-- spatialdata
-- squidpy
-- quarto
-- multiqc
+- name: spaceranger
+- name: scanpy
+- name: anndata
+- name: spatialdata
+- name: squidpy
+- name: quarto
+- name: multiqc
 tags:
 - spatial-transcriptomics
 - visium

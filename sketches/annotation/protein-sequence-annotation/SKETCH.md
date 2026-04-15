@@ -17,16 +17,21 @@ source:
   url: https://github.com/nf-core/proteinannotator
   version: 1.0.0
   license: MIT
+  slug: proteinannotator
 tools:
-- seqfu
-- seqkit
-- hmmer
-- pfam
-- funfam
-- interproscan
-- s4pred
-- multiqc
-- aria2
+- name: seqfu
+  version: 2.9.0
+- name: seqkit
+  version: 2.9.0
+- name: hmmer
+- name: pfam
+- name: funfam
+- name: interproscan
+  version: 5.59_91.0
+- name: s4pred
+- name: multiqc
+- name: aria2
+  version: 1.36.0
 tags:
 - protein
 - annotation

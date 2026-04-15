@@ -21,17 +21,19 @@ source:
   url: https://github.com/nf-core/rangeland
   version: 1.0.0
   license: MIT
+  slug: rangeland
 tools:
-- FORCE
-- force-level1-csd
-- force-tile-extent
-- force-cube
-- force-parameter
-- force-l2ps
-- force-higher-level
-- force-mosaic
-- force-pyramid
-- MultiQC
+- name: FORCE
+- name: force-level1-csd
+- name: force-tile-extent
+- name: force-cube
+- name: force-parameter
+- name: force-l2ps
+- name: force-higher-level
+- name: force-mosaic
+- name: force-pyramid
+- name: MultiQC
+  version: 1.25.1
 tags:
 - remote-sensing
 - satellite

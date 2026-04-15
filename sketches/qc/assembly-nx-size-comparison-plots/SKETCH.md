@@ -14,11 +14,15 @@ source:
   workflow: Generate Nx and Size plots for multiple assemblies
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Plot-Nx-Size
   version: 0.1.8
+  slug: VGP-assembly-v2--Plot-Nx-Size
 tools:
-- gfastats
-- datamash
-- ggplot2
-- galaxy-text-processing
+- name: gfastats
+  version: 1.3.11+galaxy0
+- name: datamash
+  version: 1.9+galaxy0
+- name: ggplot2
+  version: 3.5.1+galaxy2
+- name: galaxy-text-processing
 tags:
 - assembly-qc
 - nx-plot

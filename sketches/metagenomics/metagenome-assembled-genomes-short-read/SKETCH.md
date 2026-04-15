@@ -19,23 +19,39 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/mags-building
   version: '0.4'
   license: MIT
+  slug: microbiome--mags-building
 tools:
-- megahit
-- metaspades
-- bowtie2
-- metabat2
-- maxbin2
-- semibin
-- concoct
-- binette
-- checkm2
-- drep
-- gtdb-tk
-- bakta
-- quast
-- checkm
-- coverm
-- multiqc
+- name: megahit
+  version: 1.2.9+galaxy2
+- name: metaspades
+- name: bowtie2
+  version: 2.5.4+galaxy0
+- name: metabat2
+  version: 2.17+galaxy0
+- name: maxbin2
+  version: 2.2.7+galaxy6
+- name: semibin
+  version: 2.1.0+galaxy1
+- name: concoct
+  version: 1.1.0+galaxy2
+- name: binette
+  version: 1.2.0+galaxy0
+- name: checkm2
+  version: 1.1.0+galaxy0
+- name: drep
+  version: 3.6.2+galaxy1
+- name: gtdb-tk
+  version: 2.5.2+galaxy1
+- name: bakta
+  version: 1.9.4+galaxy1
+- name: quast
+  version: 5.3.0+galaxy1
+- name: checkm
+  version: 1.1.0+galaxy0
+- name: coverm
+  version: 0.7.0+galaxy0
+- name: multiqc
+  version: 1.27+galaxy4
 tags:
 - metagenomics
 - mags

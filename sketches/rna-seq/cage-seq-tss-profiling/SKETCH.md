@@ -17,18 +17,19 @@ source:
   url: https://github.com/nf-core/cageseq
   version: 1.0.2
   license: MIT
+  slug: cageseq
 tools:
-- fastqc
-- cutadapt
-- sortmerna
-- star
-- bowtie1
-- samtools
-- paraclu
-- bedtools
-- ucsc-tools
-- rseqc
-- multiqc
+- name: fastqc
+- name: cutadapt
+- name: sortmerna
+- name: star
+- name: bowtie1
+- name: samtools
+- name: paraclu
+- name: bedtools
+- name: ucsc-tools
+- name: rseqc
+- name: multiqc
 tags:
 - cage-seq
 - tss

@@ -18,17 +18,23 @@ source:
   url: https://github.com/nf-core/crisprseq
   version: 2.3.0
   license: MIT
+  slug: crisprseq
 tools:
-- pear
-- fastqc
-- cutadapt
-- seqtk
-- minimap2
-- bwa
-- bowtie2
-- samtools
-- vsearch
-- medaka
+- name: pear
+  version: 0.9.6
+- name: fastqc
+  version: 0.12.1
+- name: cutadapt
+  version: '4.6'
+- name: seqtk
+  version: '1.4'
+- name: minimap2
+- name: bwa
+- name: bowtie2
+- name: samtools
+- name: vsearch
+- name: medaka
+  version: 1.11.3
 tags:
 - crispr
 - cas9

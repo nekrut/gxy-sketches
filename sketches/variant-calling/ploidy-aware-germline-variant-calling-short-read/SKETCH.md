@@ -22,16 +22,26 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/variant-calling/ploidy-aware-genotype-calling
   version: 0.1.1
   license: MIT
+  slug: variant-calling--ploidy-aware-genotype-calling
 tools:
-- fastp
-- bwa-mem
-- samtools
-- picard-markduplicates
-- freebayes
-- bcftools
-- snpeff
-- snpsift
-- multiqc
+- name: fastp
+  version: 1.1.0+galaxy0
+- name: bwa-mem
+  version: 0.7.19
+- name: samtools
+  version: 1.22+galaxy1
+- name: picard-markduplicates
+  version: 3.1.1.0
+- name: freebayes
+  version: 1.3.10+galaxy1
+- name: bcftools
+  version: 1.22+galaxy0
+- name: snpeff
+  version: 5.2+galaxy1
+- name: snpsift
+  version: 4.3+t.galaxy0
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - germline
 - wgs

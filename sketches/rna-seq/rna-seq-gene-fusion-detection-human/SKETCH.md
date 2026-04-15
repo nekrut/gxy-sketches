@@ -19,21 +19,26 @@ source:
   url: https://github.com/nf-core/rnafusion
   version: 4.1.0
   license: MIT
+  slug: rnafusion
 tools:
-- star
-- arriba
-- star-fusion
-- fusioncatcher
-- fusioninspector
-- fusion-report
-- ctat-splicing
-- stringtie
-- fastp
-- fastqc
-- picard
-- salmon
-- samtools
-- multiqc
+- name: star
+- name: arriba
+- name: star-fusion
+- name: fusioncatcher
+  version: 1.33b
+- name: fusioninspector
+- name: fusion-report
+- name: ctat-splicing
+- name: stringtie
+  version: 2.2.3
+- name: fastp
+- name: fastqc
+  version: 0.12.1
+- name: picard
+- name: salmon
+- name: samtools
+- name: multiqc
+  version: '1.30'
 tags:
 - rna-seq
 - gene-fusion

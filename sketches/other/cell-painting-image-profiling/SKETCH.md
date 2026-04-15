@@ -18,10 +18,12 @@ source:
   url: https://github.com/nf-core/cellpainting
   version: dev
   license: MIT
+  slug: cellpainting
 tools:
-- cellprofiler
-- multiqc
-- nextflow
+- name: cellprofiler
+- name: multiqc
+  version: '1.29'
+- name: nextflow
 tags:
 - cell-painting
 - image-based-profiling

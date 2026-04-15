@@ -19,10 +19,13 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/pathogen-identification/taxonomy-profiling-and-visualization-with-krona
   version: '0.1'
   license: MIT
+  slug: microbiome--pathogen-identification--taxonomy-profiling-and-visualization-with-krona
 tools:
-- kraken2
-- krakentools-kreport2krona
-- krona
+- name: kraken2
+  version: 2.1.1+galaxy1
+- name: krakentools-kreport2krona
+  version: 1.2+galaxy1
+- name: krona
 tags:
 - metagenomics
 - taxonomy

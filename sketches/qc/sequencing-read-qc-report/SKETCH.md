@@ -16,9 +16,12 @@ source:
   url: https://github.com/nf-core/evexplorer
   version: dev
   license: MIT
+  slug: evexplorer
 tools:
-- fastqc
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: '1.21'
 tags:
 - qc
 - fastqc

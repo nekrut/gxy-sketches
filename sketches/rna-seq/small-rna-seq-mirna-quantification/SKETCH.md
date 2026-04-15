@@ -20,20 +20,24 @@ source:
   url: https://github.com/nf-core/smrnaseq
   version: 2.4.1
   license: MIT
+  slug: smrnaseq
 tools:
-- fastqc
-- fastp
-- umi_tools
-- umicollapse
-- bowtie1
-- bowtie2
-- samtools
-- mirtrace
-- mirtop
-- seqcluster
-- edger
-- mirdeep2
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: fastp
+- name: umi_tools
+- name: umicollapse
+  version: 1.1.0
+- name: bowtie1
+- name: bowtie2
+- name: samtools
+- name: mirtrace
+- name: mirtop
+- name: seqcluster
+- name: edger
+- name: mirdeep2
+  version: 2.0.1.2
+- name: multiqc
 tags:
 - mirna
 - small-rna

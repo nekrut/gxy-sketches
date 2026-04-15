@@ -18,14 +18,15 @@ source:
   url: https://github.com/nf-core/smartseq2
   version: dev
   license: MIT
+  slug: smartseq2
 tools:
-- fastqc
-- star
-- rsem
-- featurecounts
-- tracer
-- bracer
-- multiqc
+- name: fastqc
+- name: star
+- name: rsem
+- name: featurecounts
+- name: tracer
+- name: bracer
+- name: multiqc
 tags:
 - single-cell
 - scrna-seq

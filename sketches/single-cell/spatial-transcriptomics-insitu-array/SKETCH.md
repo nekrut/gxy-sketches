@@ -19,17 +19,20 @@ source:
   url: https://github.com/nf-core/panoramaseq
   version: dev
   license: MIT
+  slug: panoramaseq
 tools:
-- fastqc
-- seqtk
-- quik
-- umi-tools
-- cutadapt
-- star
-- subread-featurecounts
-- samtools
-- anndata
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: seqtk
+- name: quik
+- name: umi-tools
+- name: cutadapt
+- name: star
+- name: subread-featurecounts
+- name: samtools
+- name: anndata
+- name: multiqc
+  version: '1.27'
 tags:
 - spatial-transcriptomics
 - in-situ-array

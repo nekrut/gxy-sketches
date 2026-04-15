@@ -18,15 +18,24 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/virology/pox-virus-amplicon
   version: '0.4'
   license: MIT
+  slug: virology--pox-virus-amplicon
 tools:
-- fastp
-- bwa-mem
-- samtools
-- ivar
-- qualimap
-- multiqc
-- emboss-maskseq
-- datamash
+- name: fastp
+  version: 1.0.1+galaxy2
+- name: bwa-mem
+  version: 0.7.19
+- name: samtools
+  version: 1.21+galaxy0
+- name: ivar
+  version: 1.4.4+galaxy1
+- name: qualimap
+  version: 2.3+galaxy0
+- name: multiqc
+  version: 1.27+galaxy3
+- name: emboss-maskseq
+  version: 5.0.0
+- name: datamash
+  version: 1.9+galaxy0
 tags:
 - pox
 - mpox

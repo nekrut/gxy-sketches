@@ -16,16 +16,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/computational-chemistry/gromacs-mmgbsa
   version: 0.1.8
   license: MIT
+  slug: computational-chemistry--gromacs-mmgbsa
 tools:
-- gromacs
-- ambertools
-- antechamber
-- acpype
-- parmed
-- mmpbsa.py
-- openbabel
-- rdkit
-- mdtraj
+- name: gromacs
+- name: ambertools
+- name: antechamber
+- name: acpype
+- name: parmed
+- name: mmpbsa.py
+- name: openbabel
+- name: rdkit
+- name: mdtraj
 tags:
 - molecular-dynamics
 - mmgbsa

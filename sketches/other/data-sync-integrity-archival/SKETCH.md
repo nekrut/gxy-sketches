@@ -17,11 +17,13 @@ source:
   url: https://github.com/nf-core/datasync
   version: dev
   license: MIT
+  slug: datasync
 tools:
-- sha256sum
-- md5sum
-- rsync
-- multiqc
+- name: sha256sum
+- name: md5sum
+- name: rsync
+- name: multiqc
+  version: 1.25.1
 tags:
 - sysops
 - data-management

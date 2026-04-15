@@ -18,14 +18,20 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome_annotation/annotation-braker3
   version: '0.1'
   license: MIT
+  slug: genome_annotation--annotation-braker3
 tools:
-- braker3
-- augustus
-- genemark-etp
-- busco
-- omark
-- gffread
-- jbrowse
+- name: braker3
+  version: 3.0.8+galaxy2
+- name: augustus
+- name: genemark-etp
+- name: busco
+  version: 5.8.0+galaxy1
+- name: omark
+  version: 0.3.1+galaxy1
+- name: gffread
+  version: 2.2.1.4+galaxy0
+- name: jbrowse
+  version: 1.16.11+galaxy1
 tags:
 - genome-annotation
 - gene-prediction

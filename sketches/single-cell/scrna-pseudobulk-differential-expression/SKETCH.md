@@ -18,11 +18,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/scRNAseq/pseudobulk-worflow-decoupler-edger
   version: 0.1.1
   license: CC-BY-4.0
+  slug: scRNAseq--pseudobulk-worflow-decoupler-edger
 tools:
-- decoupler
-- edger
-- volcanoplot
-- galaxy
+- name: decoupler
+  version: 1.4.0+galaxy8
+- name: edger
+  version: 3.36.0+galaxy5
+- name: volcanoplot
+  version: 0.0.6
+- name: galaxy
 tags:
 - scrna-seq
 - pseudobulk

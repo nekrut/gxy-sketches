@@ -20,16 +20,25 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Scaffolding-HiC-VGP8
   version: '3.5'
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--Scaffolding-HiC-VGP8
 tools:
-- yahs
-- bwa-mem2
-- samtools
-- pairtools
-- gfastats
-- cutadapt
-- pretextmap
-- compleasm
-- multiqc
+- name: yahs
+  version: 1.2a.2+galaxy3
+- name: bwa-mem2
+  version: 2.3+galaxy0
+- name: samtools
+  version: 2.0.9
+- name: pairtools
+  version: 1.1.3+galaxy6
+- name: gfastats
+  version: 1.3.11+galaxy1
+- name: cutadapt
+- name: pretextmap
+  version: 0.2.3+galaxy0
+- name: compleasm
+  version: 0.2.6+galaxy3
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - scaffolding
 - hi-c

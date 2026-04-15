@@ -20,13 +20,14 @@ source:
   url: https://github.com/nf-core/diaproteomics
   version: 1.2.4
   license: MIT
+  slug: diaproteomics
 tools:
-- OpenSwathWorkflow
-- EasyPQP
-- PyProphet
-- DIAlignR
-- MSstats
-- OpenMS
+- name: OpenSwathWorkflow
+- name: EasyPQP
+- name: PyProphet
+- name: DIAlignR
+- name: MSstats
+- name: OpenMS
 tags:
 - dia
 - swath

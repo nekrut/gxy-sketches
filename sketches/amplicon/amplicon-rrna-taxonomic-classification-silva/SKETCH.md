@@ -20,13 +20,19 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/amplicon-mgnify/mgnify-amplicon-pipeline-v5-rrna-prediction
   version: '0.2'
   license: Apache-2.0
+  slug: amplicon--amplicon-mgnify--mgnify-amplicon-pipeline-v5-rrna-prediction
 tools:
-- infernal-cmsearch
-- cmsearch-deoverlap
-- bedtools
-- mapseq
-- biom-convert
-- krona
+- name: infernal-cmsearch
+  version: 1.1.5+galaxy0
+- name: cmsearch-deoverlap
+  version: 0.08+galaxy2
+- name: bedtools
+  version: 2.31.1+galaxy0
+- name: mapseq
+  version: 2.1.1+galaxy0
+- name: biom-convert
+  version: 2.1.15+galaxy1
+- name: krona
 tags:
 - amplicon
 - 16S

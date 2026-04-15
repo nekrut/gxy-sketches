@@ -19,12 +19,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/scRNAseq/scanpy-clustering
   version: '0.1'
   license: CC-BY-4.0
+  slug: scRNAseq--scanpy-clustering
 tools:
-- scanpy
-- anndata
-- louvain
-- umap
-- wilcoxon
+- name: scanpy
+  version: 1.10.2+galaxy0
+- name: anndata
+  version: 0.10.9+galaxy0
+- name: louvain
+- name: umap
+- name: wilcoxon
 tags:
 - scrna-seq
 - single-cell

@@ -19,21 +19,26 @@ source:
   url: https://github.com/nf-core/nanoseq
   version: 3.1.0
   license: MIT
+  slug: nanoseq
 tools:
-- qcat
-- nanolyse
-- nanoplot
-- fastqc
-- minimap2
-- graphmap2
-- samtools
-- bedtools
-- medaka
-- deepvariant
-- pepper-margin-deepvariant
-- sniffles
-- cutesv
-- multiqc
+- name: qcat
+- name: nanolyse
+  version: 1.2.0
+- name: nanoplot
+  version: 1.41.0
+- name: fastqc
+  version: 0.11.9
+- name: minimap2
+- name: graphmap2
+- name: samtools
+- name: bedtools
+- name: medaka
+- name: deepvariant
+- name: pepper-margin-deepvariant
+- name: sniffles
+- name: cutesv
+- name: multiqc
+  version: '1.14'
 tags:
 - nanopore
 - ont

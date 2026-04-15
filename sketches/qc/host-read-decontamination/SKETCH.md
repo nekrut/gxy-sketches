@@ -21,15 +21,17 @@ source:
   url: https://github.com/nf-core/detaxizer
   version: 1.3.0
   license: MIT
+  slug: detaxizer
 tools:
-- fastqc
-- fastp
-- kraken2
-- bbduk
-- blastn
-- seqkit
-- bbmap
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: fastp
+- name: kraken2
+- name: bbduk
+- name: blastn
+- name: seqkit
+- name: bbmap
+- name: multiqc
 tags:
 - decontamination
 - host-removal

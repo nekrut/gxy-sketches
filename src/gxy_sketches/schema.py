@@ -106,6 +106,19 @@ class ExpectedOutputRef(BaseModel):
         return self
 
 
+class ToolSpec(BaseModel):
+    """One tool used by a sketch, with optional pinned version.
+
+    Accepts a bare string in input (for backward compat with pre-version
+    sketches); always serialises as a structured object.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    name: str
+    version: str | None = None
+
+
 class TestManifest(BaseModel):
     __test__ = False  # stop pytest from treating this as a test class
 
@@ -143,6 +156,7 @@ class WorkflowRecord(BaseModel):
     license: str | None = None
     files: list[WorkflowFile] = Field(default_factory=list)
     test_manifest: TestManifest | None = None
+    tool_versions: dict[str, str] = Field(default_factory=dict)
     raw_root: Path
 
     def metadata_bundle(self) -> str:
@@ -195,6 +209,7 @@ class SketchSource(BaseModel):
     url: str
     version: str | None = None
     license: str | None = None
+    slug: str | None = None  # ingestor slug so backfill/dedup can round-trip
 
 
 class SketchFrontmatter(BaseModel):
@@ -208,10 +223,18 @@ class SketchFrontmatter(BaseModel):
     organism_class: list[str] = Field(default_factory=list)
     input_data: list[str] = Field(default_factory=list)
     source: SketchSource
-    tools: list[str] = Field(default_factory=list)
+    tools: list[ToolSpec] = Field(default_factory=list)
     tags: list[str] = Field(default_factory=list)
     test_data: list[TestDataRef] = Field(default_factory=list)
     expected_output: list[ExpectedOutputRef] = Field(default_factory=list)
+
+    @field_validator("tools", mode="before")
+    @classmethod
+    def _tools_accept_bare_strings(cls, v: object) -> object:
+        """Backward compat: let existing sketches load with `tools: [str, ...]`."""
+        if isinstance(v, list):
+            return [{"name": x} if isinstance(x, str) else x for x in v]
+        return v
 
 
 class Sketch(BaseModel):

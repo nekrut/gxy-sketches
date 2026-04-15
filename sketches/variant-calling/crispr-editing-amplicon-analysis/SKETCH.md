@@ -18,11 +18,12 @@ source:
   url: https://github.com/nf-core/crisprvar
   version: dev
   license: MIT
+  slug: crisprvar
 tools:
-- crispresso
-- fastqc
-- multiqc
-- nextflow
+- name: crispresso
+- name: fastqc
+- name: multiqc
+- name: nextflow
 tags:
 - crispr
 - cas9

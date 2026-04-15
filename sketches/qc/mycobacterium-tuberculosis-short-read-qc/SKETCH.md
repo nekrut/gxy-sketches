@@ -17,9 +17,12 @@ source:
   url: https://github.com/nf-core/tbanalyzer
   version: dev
   license: MIT
+  slug: tbanalyzer
 tools:
-- fastqc
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: 1.25.1
 tags:
 - tuberculosis
 - mtb

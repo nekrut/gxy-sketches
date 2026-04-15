@@ -21,14 +21,17 @@ source:
   url: https://github.com/nf-core/ampliseq
   version: 2.16.1
   license: MIT
+  slug: ampliseq
 tools:
-- fastqc
-- cutadapt
-- dada2
-- vsearch
-- barrnap
-- qiime2
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: cutadapt
+  version: '5.2'
+- name: dada2
+- name: vsearch
+- name: barrnap
+- name: qiime2
+- name: multiqc
 tags:
 - 16S
 - amplicon

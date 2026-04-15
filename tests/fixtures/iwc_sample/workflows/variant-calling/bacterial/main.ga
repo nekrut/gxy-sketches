@@ -8,7 +8,8 @@
     "0": {"type": "data_input", "label": "reads_forward"},
     "1": {"type": "data_input", "label": "reads_reverse"},
     "2": {"type": "data_input", "label": "reference"},
-    "3": {"type": "tool", "tool_id": "bwa_mem2"},
-    "4": {"type": "tool", "tool_id": "bcftools_call"}
+    "3": {"type": "tool", "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2/2.2.1+galaxy0"},
+    "4": {"type": "tool", "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bcftools_call/bcftools_call/1.15.1+galaxy3"},
+    "5": {"type": "tool", "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.4+galaxy0"}
   }
 }

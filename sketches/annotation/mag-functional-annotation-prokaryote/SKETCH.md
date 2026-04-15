@@ -17,13 +17,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/mag-genome-annotation-parallel
   version: '0.2'
   license: MIT
+  slug: microbiome--mag-genome-annotation-parallel
 tools:
-- bakta
-- plasmidfinder
-- isescan
-- integron_finder
-- tooldistillator
-- multiqc
+- name: bakta
+- name: plasmidfinder
+- name: isescan
+- name: integron_finder
+- name: tooldistillator
+- name: multiqc
+  version: 1.33+galaxy2
 tags:
 - mag
 - metagenomics

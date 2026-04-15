@@ -18,13 +18,20 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/pathogen-identification/allele-based-pathogen-identification
   version: 0.1.4
   license: MIT
+  slug: microbiome--pathogen-identification--allele-based-pathogen-identification
 tools:
-- minimap2
-- clair3
-- bcftools
-- snpsift
-- samtools
-- bcftools-consensus
+- name: minimap2
+  version: 2.28+galaxy1
+- name: clair3
+  version: 1.0.10+galaxy1
+- name: bcftools
+  version: 1.15.1+galaxy4
+- name: snpsift
+  version: 4.3+t.galaxy1
+- name: samtools
+  version: 1.15.1+galaxy2
+- name: bcftools-consensus
+  version: 1.15.1+galaxy4
 tags:
 - nanopore
 - pathogen

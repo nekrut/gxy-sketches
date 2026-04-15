@@ -20,12 +20,15 @@ source:
   url: https://github.com/nf-core/fastquorum
   version: 1.2.0
   license: MIT
+  slug: fastquorum
 tools:
-- fgbio
-- bwa-mem
-- samtools
-- fastqc
-- multiqc
+- name: fgbio
+- name: bwa-mem
+- name: samtools
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: '1.27'
 tags:
 - umi
 - consensus

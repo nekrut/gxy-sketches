@@ -20,9 +20,12 @@ source:
   url: https://github.com/nf-core/pacsomatic
   version: dev
   license: MIT
+  slug: pacsomatic
 tools:
-- fastqc
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: 1.25.1
 tags:
 - somatic
 - cancer

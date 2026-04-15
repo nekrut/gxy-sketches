@@ -21,12 +21,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/kmer-profiling-hifi-VGP1
   version: '0.9'
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--kmer-profiling-hifi-VGP1
 tools:
-- meryl
-- genomescope2
-- rdeval
-- mash
-- imagemagick
+- name: meryl
+  version: 1.4.1+galaxy0
+- name: genomescope2
+  version: 2.1.0+galaxy0
+- name: rdeval
+  version: 0.0.9+galaxy0
+- name: mash
+- name: imagemagick
+  version: 7.1.2-2+galaxy1
 tags:
 - vgp
 - kmer

@@ -17,13 +17,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/pathogen-identification/gene-based-pathogen-identification
   version: '0.1'
   license: MIT
+  slug: microbiome--pathogen-identification--gene-based-pathogen-identification
 tools:
-- flye
-- medaka
-- bandage
-- abricate
-- vfdb
-- ncbi-amr
+- name: flye
+  version: 2.9.1+galaxy0
+- name: medaka
+  version: 1.7.2+galaxy0
+- name: bandage
+  version: 2022.09+galaxy4
+- name: abricate
+  version: 1.0.1
+- name: vfdb
+- name: ncbi-amr
 tags:
 - nanopore
 - pathogen

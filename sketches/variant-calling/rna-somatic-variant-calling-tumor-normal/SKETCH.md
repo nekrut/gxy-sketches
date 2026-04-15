@@ -21,22 +21,26 @@ source:
   url: https://github.com/nf-core/rnadnavar
   version: dev
   license: MIT
+  slug: rnadnavar
 tools:
-- fastp
-- fastqc
-- star
-- bwa-mem
-- gatk4
-- mutect2
-- strelka2
-- sage
-- vep
-- vcf2maf
-- vt
-- hisat2
-- bcftools
-- samtools
-- mosdepth
+- name: fastp
+- name: fastqc
+  version: 0.12.1
+- name: star
+- name: bwa-mem
+- name: gatk4
+- name: mutect2
+- name: strelka2
+- name: sage
+- name: vep
+  version: '113.4'
+- name: vcf2maf
+- name: vt
+- name: hisat2
+- name: bcftools
+- name: samtools
+- name: mosdepth
+  version: 0.3.10
 tags:
 - cancer
 - somatic

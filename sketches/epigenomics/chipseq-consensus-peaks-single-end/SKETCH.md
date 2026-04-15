@@ -16,12 +16,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/consensus-peaks
   version: '1.5'
   license: MIT
+  slug: epigenetics--consensus-peaks--consensus-peaks-chip-sr
 tools:
-- macs2
-- samtools
-- bedtools
-- deeptools
-- multiqc
+- name: macs2
+  version: 2.2.9.1+galaxy0
+- name: samtools
+  version: 1.22+galaxy2
+- name: bedtools
+  version: 2.31.1
+- name: deeptools
+  version: 3.5.4+galaxy0
+- name: multiqc
+  version: 1.33+galaxy2
 tags:
 - chip-seq
 - peak-calling

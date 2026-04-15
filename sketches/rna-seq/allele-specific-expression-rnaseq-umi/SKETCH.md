@@ -22,17 +22,21 @@ source:
   url: https://github.com/nf-core/alleleexpression
   version: dev
   license: MIT
+  slug: alleleexpression
 tools:
-- fastqc
-- star
-- wasp
-- umi-tools
-- samtools
-- bcftools
-- beagle
-- phaser
-- phaser-gene-ae
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: star
+- name: wasp
+- name: umi-tools
+- name: samtools
+- name: bcftools
+- name: beagle
+  version: 5.2_21Apr21.304
+- name: phaser
+- name: phaser-gene-ae
+- name: multiqc
+  version: '1.29'
 tags:
 - ase
 - allele-specific-expression

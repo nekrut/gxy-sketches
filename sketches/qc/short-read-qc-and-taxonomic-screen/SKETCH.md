@@ -16,11 +16,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome-assembly/quality-and-contamination-control-raw-reads
   version: 1.1.11
   license: GPL-3.0-or-later
+  slug: genome-assembly--quality-and-contamination-control-raw-reads
 tools:
-- fastp
-- kraken2
-- bracken
-- tooldistillator
+- name: fastp
+  version: 1.0.1+galaxy3
+- name: kraken2
+  version: 2.1.3+galaxy1
+- name: bracken
+- name: tooldistillator
+  version: 1.0.4+galaxy0
 tags:
 - qc
 - trimming

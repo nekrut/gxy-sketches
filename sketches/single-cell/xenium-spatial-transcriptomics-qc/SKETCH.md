@@ -17,10 +17,12 @@ source:
   url: https://github.com/nf-core/spatialxe
   version: dev
   license: MIT
+  slug: spatialxe
 tools:
-- fastqc
-- multiqc
-- nextflow
+- name: fastqc
+- name: multiqc
+  version: '1.13'
+- name: nextflow
 tags:
 - spatial-transcriptomics
 - xenium

@@ -18,11 +18,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/amplicon-mgnify/mgnify-amplicon-pipeline-v5-its
   version: '0.2'
   license: Apache-2.0
+  slug: amplicon--amplicon-mgnify--mgnify-amplicon-pipeline-v5-its
 tools:
-- bedtools
-- mapseq
-- biom-convert
-- krona
+- name: bedtools
+  version: 2.31.1
+- name: mapseq
+  version: 2.1.1+galaxy0
+- name: biom-convert
+  version: 2.1.15+galaxy1
+- name: krona
 tags:
 - its
 - fungi

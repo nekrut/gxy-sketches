@@ -18,14 +18,15 @@ source:
   url: https://github.com/nf-core/rarevariantburden
   version: dev
   license: MIT
+  slug: rarevariantburden
 tools:
-- bcftools
-- annovar
-- vep
-- cocorv
-- seqarray
-- hail
-- gnomad-rf-classifier
+- name: bcftools
+- name: annovar
+- name: vep
+- name: cocorv
+- name: seqarray
+- name: hail
+- name: gnomad-rf-classifier
 tags:
 - rare-variant
 - burden-test

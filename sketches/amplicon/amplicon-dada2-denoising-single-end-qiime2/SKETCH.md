@@ -18,11 +18,13 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/qiime2/qiime2-II-denoising
   version: '0.3'
   license: MIT
+  slug: amplicon--qiime2--qiime2-II-denoising--QIIME2-IIb-denoising-and-feature-table-creation-paired-end
 tools:
-- qiime2
-- dada2
-- q2-feature-table
-- q2-metadata
+- name: qiime2
+  version: 2024.10.0+q2galaxy.2024.10.0
+- name: dada2
+- name: q2-feature-table
+- name: q2-metadata
 tags:
 - qiime2
 - dada2

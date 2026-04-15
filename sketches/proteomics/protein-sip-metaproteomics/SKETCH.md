@@ -18,15 +18,23 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/proteomics/openms-metaprosip
   version: '0.3'
   license: MIT
+  slug: proteomics--openms-metaprosip
 tools:
-- OpenMS
-- DecoyDatabase
-- MSGFPlusAdapter
-- FeatureFinderMultiplex
-- PeptideIndexer
-- FalseDiscoveryRate
-- IDMapper
-- MetaProSIP
+- name: OpenMS
+- name: DecoyDatabase
+  version: 3.1+galaxy0
+- name: MSGFPlusAdapter
+  version: 3.1+galaxy0
+- name: FeatureFinderMultiplex
+  version: 3.1+galaxy0
+- name: PeptideIndexer
+  version: 3.1+galaxy0
+- name: FalseDiscoveryRate
+  version: 3.1+galaxy0
+- name: IDMapper
+  version: 3.1+galaxy0
+- name: MetaProSIP
+  version: 3.1+galaxy0
 tags:
 - protein-sip
 - metaproteomics

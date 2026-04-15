@@ -20,13 +20,19 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/proteomics/clinicalmp/clinicalmp-verification
   version: '0.2'
   license: CC-BY-4.0
+  slug: proteomics--clinicalmp--clinicalmp-verification
 tools:
-- pepquery2
-- dbbuilder
-- fasta_merge_files_and_filter_unique_sequences
-- query_tabular
-- uniprotxml_downloader
-- galaxy-text-utils
+- name: pepquery2
+  version: 2.0.2+galaxy2
+- name: dbbuilder
+  version: 0.3.4
+- name: fasta_merge_files_and_filter_unique_sequences
+  version: 1.2.0
+- name: query_tabular
+  version: 3.3.2
+- name: uniprotxml_downloader
+  version: 2.5.0
+- name: galaxy-text-utils
 tags:
 - metaproteomics
 - clinical

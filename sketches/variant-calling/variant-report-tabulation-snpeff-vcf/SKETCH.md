@@ -18,12 +18,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/variant-calling/variation-reporting
   version: 0.1.1
   license: MIT
+  slug: variant-calling--variation-reporting
 tools:
-- snpsift
-- datamash
-- column_maker
-- text_processing
-- split_file_to_collection
+- name: snpsift
+  version: 4.3+t.galaxy1
+- name: datamash
+  version: 1.1.0
+- name: column_maker
+- name: text_processing
+- name: split_file_to_collection
+  version: 0.5.0
 tags:
 - vcf
 - reporting

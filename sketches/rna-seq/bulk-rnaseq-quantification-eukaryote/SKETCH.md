@@ -18,24 +18,29 @@ source:
   url: https://github.com/nf-core/rnaseq
   version: 3.24.0
   license: MIT
+  slug: rnaseq
 tools:
-- fastqc
-- trim-galore
-- fastp
-- sortmerna
-- star
-- salmon
-- rsem
-- hisat2
-- kallisto
-- samtools
-- picard
-- stringtie
-- rseqc
-- qualimap
-- dupradar
-- deseq2
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+  version: 0.6.10
+- name: fastp
+- name: sortmerna
+- name: star
+- name: salmon
+- name: rsem
+  version: '20.04'
+- name: hisat2
+- name: kallisto
+- name: samtools
+- name: picard
+- name: stringtie
+  version: 2.2.3
+- name: rseqc
+- name: qualimap
+- name: dupradar
+- name: deseq2
+- name: multiqc
 tags:
 - rnaseq
 - bulk

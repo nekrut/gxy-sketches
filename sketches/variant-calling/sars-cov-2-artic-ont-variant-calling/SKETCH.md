@@ -19,18 +19,30 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/sars-cov-2-variant-calling/sars-cov-2-ont-artic-variant-calling
   version: 0.3.2
   license: MIT
+  slug: sars-cov-2-variant-calling--sars-cov-2-ont-artic-variant-calling
 tools:
-- fastp
-- minimap2
-- samtools
-- ivar
-- medaka
-- bcftools
-- bedtools
-- snpeff
-- lofreq
-- qualimap
-- multiqc
+- name: fastp
+  version: 0.20.1+galaxy0
+- name: minimap2
+  version: 2.17+galaxy2
+- name: samtools
+  version: 1.9+galaxy2
+- name: ivar
+  version: 1.3.1+galaxy2
+- name: medaka
+  version: 1.0.3+galaxy2
+- name: bcftools
+  version: '1.10'
+- name: bedtools
+  version: 2.30.0
+- name: snpeff
+  version: 4.5covid19
+- name: lofreq
+  version: 2.1.5+galaxy0
+- name: qualimap
+  version: 2.2.2d+galaxy3
+- name: multiqc
+  version: 1.8+galaxy1
 tags:
 - sars-cov-2
 - covid-19

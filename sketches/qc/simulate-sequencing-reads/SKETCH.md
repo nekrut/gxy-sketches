@@ -18,17 +18,21 @@ source:
   url: https://github.com/nf-core/readsimulator
   version: 1.0.1
   license: MIT
+  slug: readsimulator
 tools:
-- art_illumina
-- crabs
-- capsim
-- bowtie2
-- samtools
-- insilicoseq
-- wgsim
-- fastqc
-- multiqc
-- ncbi-genome-download
+- name: art_illumina
+- name: crabs
+- name: capsim
+- name: bowtie2
+- name: samtools
+- name: insilicoseq
+- name: wgsim
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: '1.21'
+- name: ncbi-genome-download
+  version: 0.3.3
 tags:
 - simulation
 - synthetic-reads

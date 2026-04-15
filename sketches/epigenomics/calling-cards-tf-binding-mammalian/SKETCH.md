@@ -21,21 +21,25 @@ source:
   url: https://github.com/nf-core/callingcards
   version: 1.0.0
   license: MIT
+  slug: callingcards
 tools:
-- callingCardsTools
-- umi-tools
-- seqkit
-- trimmomatic
-- bwa-mem2
-- bwa
-- bowtie2
-- bowtie
-- samtools
-- picard
-- rseqc
-- fastqc
-- bedtools
-- multiqc
+- name: callingCardsTools
+- name: umi-tools
+- name: seqkit
+- name: trimmomatic
+  version: '0.39'
+- name: bwa-mem2
+- name: bwa
+- name: bowtie2
+- name: bowtie
+- name: samtools
+- name: picard
+- name: rseqc
+- name: fastqc
+  version: 0.12.1
+- name: bedtools
+- name: multiqc
+  version: '1.21'
 tags:
 - calling-cards
 - transcription-factor

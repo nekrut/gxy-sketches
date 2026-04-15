@@ -21,18 +21,24 @@ source:
   url: https://github.com/nf-core/coproid
   version: 2.0.1
   license: MIT
+  slug: coproid
 tools:
-- fastqc
-- fastp
-- bowtie2
-- samtools
-- sam2lca
-- pydamage
-- damageprofiler
-- kraken2
-- sourcepredict
-- quarto
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: fastp
+  version: 0.23.4
+- name: bowtie2
+- name: samtools
+- name: sam2lca
+- name: pydamage
+- name: damageprofiler
+  version: '1.1'
+- name: kraken2
+  version: c8cbdc8ff4101e6745f8ede6eb5261ef98bdaff4-0
+- name: sourcepredict
+  version: 0.5.1
+- name: quarto
+- name: multiqc
 tags:
 - coprolite
 - paleofaeces

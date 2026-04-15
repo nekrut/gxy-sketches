@@ -18,22 +18,25 @@ source:
   url: https://github.com/nf-core/references
   version: '0.1'
   license: MIT
+  slug: references
 tools:
-- bwa
-- bwa-mem2
-- bowtie1
-- bowtie2
-- star
-- hisat2
-- salmon
-- kallisto
-- rsem
-- dragmap
-- gatk4
-- samtools
-- gffread
-- msisensor-pro
-- tabix
+- name: bwa
+- name: bwa-mem2
+- name: bowtie1
+- name: bowtie2
+- name: star
+- name: hisat2
+- name: salmon
+- name: kallisto
+- name: rsem
+- name: dragmap
+- name: gatk4
+- name: samtools
+- name: gffread
+  version: 0.12.7
+- name: msisensor-pro
+- name: tabix
+  version: '1.20'
 tags:
 - reference
 - index

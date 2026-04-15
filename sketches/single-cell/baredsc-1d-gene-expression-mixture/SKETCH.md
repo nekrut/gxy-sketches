@@ -16,9 +16,10 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/scRNAseq/baredsc
   version: '0.6'
   license: MIT
+  slug: scRNAseq--baredsc--baredSC-2d-logNorm
 tools:
-- baredSC_1d
-- baredSC_combine_1d
+- name: baredSC_1d
+- name: baredSC_combine_1d
 tags:
 - single-cell
 - scrna-seq

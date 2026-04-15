@@ -17,15 +17,22 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/cutandrun
   version: '0.18'
   license: MIT
+  slug: epigenetics--cutandrun
 tools:
-- cutadapt
-- bowtie2
-- samtools
-- picard-markduplicates
-- bedtools
-- macs2
-- ucsc-wigtobigwig
-- multiqc
+- name: cutadapt
+  version: 5.2+galaxy2
+- name: bowtie2
+  version: 2.5.5+galaxy0
+- name: samtools
+- name: picard-markduplicates
+  version: 3.1.1.0
+- name: bedtools
+  version: 2.31.1+galaxy0
+- name: macs2
+  version: 2.2.9.1+galaxy0
+- name: ucsc-wigtobigwig
+- name: multiqc
+  version: 1.33+galaxy2
 tags:
 - cutandrun
 - cutandtag

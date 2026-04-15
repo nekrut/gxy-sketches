@@ -17,13 +17,18 @@ source:
   url: https://github.com/nf-core/fastqrepair
   version: 1.0.0
   license: MIT
+  slug: fastqrepair
 tools:
-- gzrt
-- wipertools
-- fastqwiper
-- bbmap-repair
-- fastqc
-- multiqc
+- name: gzrt
+  version: 0.9.1
+- name: wipertools
+- name: fastqwiper
+  version: 1.1.5
+- name: bbmap-repair
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: '1.27'
 tags:
 - fastq
 - repair

@@ -16,11 +16,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome-assembly/bacterial-genome-assembly
   version: 2.0.1
   license: GPL-3.0-or-later
+  slug: genome-assembly--bacterial-genome-assembly
 tools:
-- shovill
-- spades
-- bandage
-- tooldistillator
+- name: shovill
+  version: 1.1.0+galaxy2
+- name: spades
+- name: bandage
+  version: 2022.09+galaxy2
+- name: tooldistillator
+  version: 1.0.4+galaxy0
 tags:
 - bacteria
 - wgs

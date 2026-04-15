@@ -20,11 +20,12 @@ source:
   url: https://github.com/nf-core/deepmodeloptim
   version: dev
   license: MIT
+  slug: deepmodeloptim
 tools:
-- stimulus
-- pytorch
-- ray-tune
-- nextflow
+- name: stimulus
+- name: pytorch
+- name: ray-tune
+- name: nextflow
 tags:
 - deep-learning
 - hyperparameter-tuning

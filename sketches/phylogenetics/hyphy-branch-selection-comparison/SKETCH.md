@@ -19,10 +19,11 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/comparative_genomics/hyphy
   version: '0.1'
   license: MIT
+  slug: comparative_genomics--hyphy--hyphy-preprocessing
 tools:
-- hyphy-annotate
-- hyphy-cfel
-- hyphy-relax
+- name: hyphy-annotate
+- name: hyphy-cfel
+- name: hyphy-relax
 tags:
 - hyphy
 - selection

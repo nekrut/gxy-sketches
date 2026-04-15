@@ -16,10 +16,13 @@ source:
   url: https://github.com/nf-core/ribomsqc
   version: 1.0.0
   license: MIT
+  slug: ribomsqc
 tools:
-- ThermoRawFileParser
-- MSnbase
-- MultiQC
+- name: ThermoRawFileParser
+  version: 1.4.5
+- name: MSnbase
+- name: MultiQC
+  version: '1.31'
 tags:
 - mass-spectrometry
 - qc

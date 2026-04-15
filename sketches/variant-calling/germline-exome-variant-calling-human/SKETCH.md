@@ -19,15 +19,16 @@ source:
   url: https://github.com/nf-core/exoseq
   version: dev
   license: MIT
+  slug: exoseq
 tools:
-- fastqc
-- trim-galore
-- bwa-mem
-- picard
-- qualimap
-- gatk
-- snpeff
-- multiqc
+- name: fastqc
+- name: trim-galore
+- name: bwa-mem
+- name: picard
+- name: qualimap
+- name: gatk
+- name: snpeff
+- name: multiqc
 tags:
 - exome
 - wes

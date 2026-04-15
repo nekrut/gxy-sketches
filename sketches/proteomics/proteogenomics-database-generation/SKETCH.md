@@ -18,11 +18,12 @@ source:
   url: https://github.com/nf-core/proteogenomicsdb
   version: 1.0.0
   license: MIT
+  slug: proteogenomicsdb
 tools:
-- pypgatk
-- nextflow
-- decoypyrat
-- ensembl-ftp
+- name: pypgatk
+- name: nextflow
+- name: decoypyrat
+- name: ensembl-ftp
 tags:
 - proteogenomics
 - protein-database

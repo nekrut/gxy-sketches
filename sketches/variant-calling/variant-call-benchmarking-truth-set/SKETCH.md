@@ -21,16 +21,19 @@ source:
   url: https://github.com/nf-core/variantbenchmarking
   version: 1.4.0
   license: MIT
+  slug: variantbenchmarking
 tools:
-- happy
-- rtg-vcfeval
-- truvari
-- svanalyzer
-- wittyer
-- sompy
-- bcftools
-- survivor
-- bedtools
+- name: happy
+  version: 0.3.14
+- name: rtg-vcfeval
+- name: truvari
+- name: svanalyzer
+- name: wittyer
+- name: sompy
+  version: 0.3.14
+- name: bcftools
+- name: survivor
+- name: bedtools
 tags:
 - benchmarking
 - giab

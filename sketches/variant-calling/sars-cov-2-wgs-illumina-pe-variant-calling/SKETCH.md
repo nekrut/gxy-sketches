@@ -17,14 +17,22 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/sars-cov-2-variant-calling/sars-cov-2-pe-illumina-wgs-variant-calling
   version: 0.2.4
   license: MIT
+  slug: sars-cov-2-variant-calling--sars-cov-2-pe-illumina-wgs-variant-calling
 tools:
-- fastp
-- bwa-mem
-- samtools
-- picard-markduplicates
-- lofreq
-- snpeff
-- multiqc
+- name: fastp
+  version: 0.23.2+galaxy0
+- name: bwa-mem
+  version: 0.7.17.2
+- name: samtools
+  version: 1.13+galaxy2
+- name: picard-markduplicates
+  version: 2.18.2.3
+- name: lofreq
+  version: 2.1.5+galaxy0
+- name: snpeff
+  version: 4.5covid19
+- name: multiqc
+  version: 1.11+galaxy0
 tags:
 - sars-cov-2
 - covid-19

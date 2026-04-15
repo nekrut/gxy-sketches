@@ -16,13 +16,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/qiime2/qiime2-I-import
   version: '0.3'
   license: MIT
+  slug: amplicon--qiime2--qiime2-I-import--QIIME2-Id-demultiplexed-data-paired-end
 tools:
-- qiime2
-- qiime2-tools-import
-- qiime2-demux-summarize
-- collection_element_identifiers
-- regex_find_replace
-- relabel_from_file
+- name: qiime2
+  version: 2024.10.0+dist.h3d8a7e27
+- name: qiime2-tools-import
+- name: qiime2-demux-summarize
+  version: 2024.10.0+q2galaxy.2024.10.0
+- name: collection_element_identifiers
+  version: 0.0.2
+- name: regex_find_replace
+- name: relabel_from_file
 tags:
 - qiime2
 - amplicon

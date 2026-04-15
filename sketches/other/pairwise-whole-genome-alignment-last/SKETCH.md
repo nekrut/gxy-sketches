@@ -20,18 +20,20 @@ source:
   url: https://github.com/nf-core/pairgenomealign
   version: 2.2.2
   license: MIT
+  slug: pairgenomealign
 tools:
-- last
-- lastdb
-- last-train
-- lastal
-- last-split
-- last-dotplot
-- maf-convert
-- samtools
-- assembly-scan
-- seqtk
-- multiqc
+- name: last
+- name: lastdb
+- name: last-train
+- name: lastal
+- name: last-split
+- name: last-dotplot
+- name: maf-convert
+- name: samtools
+- name: assembly-scan
+  version: 1.0.0
+- name: seqtk
+- name: multiqc
 tags:
 - whole-genome-alignment
 - synteny

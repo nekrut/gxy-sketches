@@ -16,10 +16,13 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/metabolomics/qcxms-sdf
   version: '0.3'
   license: MIT
+  slug: metabolomics--qcxms-sdf
 tools:
-- openbabel
-- qcxms
-- xtb
+- name: openbabel
+  version: 3.1.1+galaxy2
+- name: qcxms
+  version: 5.2.1+galaxy7
+- name: xtb
 tags:
 - metabolomics
 - mass-spectrometry

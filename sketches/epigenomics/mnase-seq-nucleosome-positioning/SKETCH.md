@@ -17,20 +17,21 @@ source:
   url: https://github.com/nf-core/mnaseseq
   version: 1.0.0
   license: MIT
+  slug: mnaseseq
 tools:
-- fastqc
-- trim-galore
-- bwa
-- picard
-- samtools
-- bamtools
-- bedtools
-- preseq
-- deeptools
-- danpos2
-- ucsc-bedgraphtobigwig
-- multiqc
-- igv
+- name: fastqc
+- name: trim-galore
+- name: bwa
+- name: picard
+- name: samtools
+- name: bamtools
+- name: bedtools
+- name: preseq
+- name: deeptools
+- name: danpos2
+- name: ucsc-bedgraphtobigwig
+- name: multiqc
+- name: igv
 tags:
 - mnase-seq
 - nucleosome

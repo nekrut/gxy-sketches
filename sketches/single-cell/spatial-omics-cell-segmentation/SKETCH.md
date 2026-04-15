@@ -22,17 +22,18 @@ source:
   url: https://github.com/nf-core/sopa
   version: dev
   license: MIT
+  slug: sopa
 tools:
-- sopa
-- spatialdata
-- cellpose
-- stardist
-- baysor
-- proseg
-- comseg
-- scanpy
-- tangram
-- spaceranger
+- name: sopa
+- name: spatialdata
+- name: cellpose
+- name: stardist
+- name: baysor
+- name: proseg
+- name: comseg
+- name: scanpy
+- name: tangram
+- name: spaceranger
 tags:
 - spatial-omics
 - spatial-transcriptomics

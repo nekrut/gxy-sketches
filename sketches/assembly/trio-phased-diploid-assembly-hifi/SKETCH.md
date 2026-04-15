@@ -20,15 +20,24 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Assembly-Hifi-Trio-phasing-VGP5
   version: 0.9.9
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--Assembly-Hifi-Trio-phasing-VGP5
 tools:
-- hifiasm
-- cutadapt
-- gfastats
-- bandage
-- busco
-- compleasm
-- merqury
-- multiqc
+- name: hifiasm
+  version: 0.25.0+galaxy0
+- name: cutadapt
+  version: 5.1+galaxy0
+- name: gfastats
+  version: 1.3.11+galaxy0
+- name: bandage
+  version: 2022.09+galaxy4
+- name: busco
+  version: 5.8.0+galaxy1
+- name: compleasm
+  version: 0.2.6+galaxy3
+- name: merqury
+  version: 1.3+galaxy4
+- name: multiqc
+  version: 1.27+galaxy3
 tags:
 - vgp
 - trio-binning

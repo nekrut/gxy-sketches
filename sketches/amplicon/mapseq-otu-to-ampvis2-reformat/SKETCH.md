@@ -18,12 +18,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/amplicon-mgnify/mapseq-to-ampvis2
   version: '0.2'
   license: MIT
+  slug: amplicon--amplicon-mgnify--mapseq-to-ampvis2
 tools:
-- query_tabular
-- awk
-- collapse_collections
-- collection_column_join
-- ampvis2_load
+- name: query_tabular
+  version: 3.3.2
+- name: awk
+- name: collapse_collections
+- name: collection_column_join
+  version: 0.0.3
+- name: ampvis2_load
+  version: 2.8.9+galaxy0
 tags:
 - amplicon
 - 16s

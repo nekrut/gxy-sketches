@@ -19,14 +19,15 @@ source:
   url: https://github.com/nf-core/createpanelrefs
   version: dev
   license: MIT
+  slug: createpanelrefs
 tools:
-- cnvkit
-- gatk4
-- germlinecnvcaller
-- gens
-- mutect2
-- fastqc
-- multiqc
+- name: cnvkit
+- name: gatk4
+- name: germlinecnvcaller
+- name: gens
+- name: mutect2
+- name: fastqc
+- name: multiqc
 tags:
 - panel-of-normals
 - pon

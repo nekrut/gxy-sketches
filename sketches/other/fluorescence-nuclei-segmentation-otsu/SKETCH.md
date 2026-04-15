@@ -16,14 +16,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/imaging/fluorescence-nuclei-segmentation-and-counting
   version: '0.2'
   license: MIT
+  slug: imaging--fluorescence-nuclei-segmentation-and-counting
 tools:
-- scikit-image
-- bfconvert
-- imgteam-2d-filter
-- imgteam-2d-auto-threshold
-- imgteam-binary2labelimage
-- imgteam-count-objects
-- imgteam-overlay-images
+- name: scikit-image
+- name: bfconvert
+- name: imgteam-2d-filter
+- name: imgteam-2d-auto-threshold
+- name: imgteam-binary2labelimage
+- name: imgteam-count-objects
+- name: imgteam-overlay-images
 tags:
 - imaging
 - microscopy

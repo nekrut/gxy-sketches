@@ -20,20 +20,25 @@ source:
   url: https://github.com/nf-core/rnasplice
   version: 1.0.4
   license: MIT
+  slug: rnasplice
 tools:
-- fastqc
-- trim-galore
-- star
-- salmon
-- featurecounts
-- htseq
-- dexseq
-- edger
-- drimseq
-- rmats
-- suppa2
-- tximport
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+  version: 0.6.7
+- name: star
+- name: salmon
+- name: featurecounts
+  version: 2.0.1
+- name: htseq
+- name: dexseq
+- name: edger
+- name: drimseq
+- name: rmats
+- name: suppa2
+- name: tximport
+- name: multiqc
+  version: '1.18'
 tags:
 - rna-seq
 - splicing

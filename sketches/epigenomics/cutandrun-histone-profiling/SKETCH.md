@@ -20,18 +20,20 @@ source:
   url: https://github.com/nf-core/cutandrun
   version: 3.2.2
   license: MIT
+  slug: cutandrun
 tools:
-- fastqc
-- trim-galore
-- bowtie2
-- samtools
-- picard
-- bedtools
-- deeptools
-- seacr
-- macs2
-- preseq
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+- name: bowtie2
+- name: samtools
+- name: picard
+- name: bedtools
+- name: deeptools
+- name: seacr
+- name: macs2
+- name: preseq
+- name: multiqc
 tags:
 - cut-and-run
 - cut-and-tag

@@ -21,25 +21,32 @@ source:
   url: https://github.com/nf-core/genomeassembler
   version: 1.1.0
   license: MIT
+  slug: genomeassembler
 tools:
-- flye
-- hifiasm
-- medaka
-- pilon
-- ragtag
-- links
-- longstitch
-- busco
-- quast
-- merqury
-- minimap2
-- liftoff
-- porechop
-- lima
-- trimgalore
-- jellyfish
-- genomescope2
-- nanoq
+- name: flye
+- name: hifiasm
+  version: 0.25.0
+- name: medaka
+- name: pilon
+  version: '1.24'
+- name: ragtag
+- name: links
+  version: 2.0.1
+- name: longstitch
+- name: busco
+- name: quast
+- name: merqury
+  version: '1.3'
+- name: minimap2
+- name: liftoff
+  version: 1.6.3
+- name: porechop
+- name: lima
+  version: 2.12.0
+- name: trimgalore
+- name: jellyfish
+- name: genomescope2
+- name: nanoq
 tags:
 - long-read
 - ont

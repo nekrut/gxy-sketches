@@ -22,14 +22,15 @@ source:
   url: https://github.com/nf-core/variantprioritization
   version: 1.0.0
   license: MIT
+  slug: variantprioritization
 tools:
-- pcgr
-- cpsr
-- ensembl-vep
-- bcftools
-- tabix
-- vcf2maf
-- multiqc
+- name: pcgr
+- name: cpsr
+- name: ensembl-vep
+- name: bcftools
+- name: tabix
+- name: vcf2maf
+- name: multiqc
 tags:
 - cancer
 - precision-oncology

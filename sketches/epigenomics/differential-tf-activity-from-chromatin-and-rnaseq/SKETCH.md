@@ -23,20 +23,21 @@ source:
   url: https://github.com/nf-core/tfactivity
   version: dev
   license: MIT
+  slug: tfactivity
 tools:
-- STARE
-- DESeq2
-- ChromHMM
-- ROSE
-- DYNAMITE
-- FIMO
-- SNEEP
-- bedtools
-- universalmotif
-- JASPAR
-- GTFtools
-- samtools
-- TFLink
+- name: STARE
+- name: DESeq2
+- name: ChromHMM
+- name: ROSE
+- name: DYNAMITE
+- name: FIMO
+- name: SNEEP
+- name: bedtools
+- name: universalmotif
+- name: JASPAR
+- name: GTFtools
+- name: samtools
+- name: TFLink
 tags:
 - transcription-factor
 - tf-activity

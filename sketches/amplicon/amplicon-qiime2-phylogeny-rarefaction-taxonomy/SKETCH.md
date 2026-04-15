@@ -20,13 +20,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/qiime2/qiime2-III-VI-downsteam
   version: '0.2'
   license: MIT
+  slug: amplicon--qiime2--qiime2-III-VI-downsteam--QIIME2-VI-diversity-metrics-and-estimations
 tools:
-- qiime2
-- sepp
-- fragment-insertion
-- classify-sklearn
-- alpha-rarefaction
-- taxa-barplot
+- name: qiime2
+  version: 2024.10.0+dist.h3d8a7e27
+- name: sepp
+- name: fragment-insertion
+- name: classify-sklearn
+- name: alpha-rarefaction
+- name: taxa-barplot
 tags:
 - 16s
 - amplicon

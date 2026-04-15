@@ -18,15 +18,17 @@ source:
   url: https://github.com/nf-core/seqinspector
   version: 1.0.1
   license: MIT
+  slug: seqinspector
 tools:
-- fastqc
-- fastq-screen
-- seqfu
-- seqtk
-- bwa-mem2
-- samtools
-- picard
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: fastq-screen
+- name: seqfu
+- name: seqtk
+- name: bwa-mem2
+- name: samtools
+- name: picard
+- name: multiqc
 tags:
 - qc
 - fastq

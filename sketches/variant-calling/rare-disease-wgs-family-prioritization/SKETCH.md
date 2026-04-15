@@ -21,25 +21,32 @@ source:
   url: https://github.com/nf-core/raredisease
   version: 2.6.0
   license: MIT
+  slug: raredisease
 tools:
-- bwa-mem2
-- deepvariant
-- glnexus
-- manta
-- tiddit
-- cnvnator
-- gatk-germlinecnvcaller
-- expansionhunter
-- stranger
-- retroseq
-- svdb
-- vcfanno
-- vep
-- genmod
-- bcftools
-- gatk-mutect2
-- haplogrep
-- hmtnote
+- name: bwa-mem2
+- name: deepvariant
+- name: glnexus
+  version: 1.4.1
+- name: manta
+- name: tiddit
+- name: cnvnator
+  version: 0.4.1
+- name: gatk-germlinecnvcaller
+- name: expansionhunter
+  version: 5.0.0
+- name: stranger
+- name: retroseq
+- name: svdb
+  version: 3.6.1
+- name: vcfanno
+  version: 0.3.5
+- name: vep
+  version: '110.0'
+- name: genmod
+- name: bcftools
+- name: gatk-mutect2
+- name: haplogrep
+- name: hmtnote
 tags:
 - rare-disease
 - trio

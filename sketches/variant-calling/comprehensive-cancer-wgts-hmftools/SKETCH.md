@@ -22,26 +22,27 @@ source:
   url: https://github.com/nf-core/oncoanalyser
   version: 2.3.0
   license: MIT
+  slug: oncoanalyser
 tools:
-- bwa-mem2
-- star
-- redux
-- sage
-- pave
-- esvee
-- amber
-- cobalt
-- purple
-- linx
-- isofox
-- virusbreakend
-- lilac
-- cider
-- chord
-- sigs
-- cuppa
-- peach
-- orange
+- name: bwa-mem2
+- name: star
+- name: redux
+- name: sage
+- name: pave
+- name: esvee
+- name: amber
+- name: cobalt
+- name: purple
+- name: linx
+- name: isofox
+- name: virusbreakend
+- name: lilac
+- name: cider
+- name: chord
+- name: sigs
+- name: cuppa
+- name: peach
+- name: orange
 tags:
 - cancer
 - somatic

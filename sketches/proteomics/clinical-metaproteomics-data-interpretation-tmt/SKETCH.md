@@ -20,10 +20,13 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/proteomics/clinicalmp/clinicalmp-data-interpretation
   version: '0.1'
   license: CC-BY-4.0
+  slug: proteomics--clinicalmp--clinicalmp-data-interpretation
 tools:
-- unipept
-- msstatstmt
-- galaxy-grep-select
+- name: unipept
+  version: 4.5.1
+- name: msstatstmt
+  version: 2.0.0+galaxy1
+- name: galaxy-grep-select
 tags:
 - metaproteomics
 - clinical

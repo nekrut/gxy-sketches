@@ -17,11 +17,14 @@ source:
   url: https://github.com/nf-core/bamtofastq
   version: 2.2.0
   license: MIT
+  slug: bamtofastq
 tools:
-- samtools
-- fastqc
-- fastq_utils
-- multiqc
+- name: samtools
+- name: fastqc
+  version: 0.12.1
+- name: fastq_utils
+- name: multiqc
+  version: '1.28'
 tags:
 - bam
 - cram

@@ -20,15 +20,16 @@ source:
   url: https://github.com/nf-core/epitopeprediction
   version: 3.1.0
   license: MIT
+  slug: epitopeprediction
 tools:
-- epytope
-- mhcflurry
-- mhcnuggets
-- mhcnuggetsii
-- netmhcpan
-- netmhciipan
-- snpsift
-- multiqc
+- name: epytope
+- name: mhcflurry
+- name: mhcnuggets
+- name: mhcnuggetsii
+- name: netmhcpan
+- name: netmhciipan
+- name: snpsift
+- name: multiqc
 tags:
 - neoantigen
 - immunology

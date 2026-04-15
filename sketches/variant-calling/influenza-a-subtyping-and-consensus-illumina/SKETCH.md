@@ -17,17 +17,27 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/virology/influenza-isolates-consensus-and-subtyping
   version: '0.3'
   license: AGPL-3.0-or-later
+  slug: virology--influenza-isolates-consensus-and-subtyping
 tools:
-- vapor
-- fastp
-- bwa-mem
-- samtools
-- ivar
-- qualimap
-- mafft
-- snipit
-- iqtree
-- seqtk
+- name: vapor
+  version: 1.0.3+galaxy0
+- name: fastp
+  version: 1.1.0+galaxy0
+- name: bwa-mem
+  version: 0.7.19
+- name: samtools
+  version: 1.22+galaxy1
+- name: ivar
+  version: 1.4.4+galaxy0
+- name: qualimap
+  version: 2.3+galaxy0
+- name: mafft
+- name: snipit
+  version: 1.7+galaxy0
+- name: iqtree
+  version: 2.4.0+galaxy1
+- name: seqtk
+  version: 1.5+galaxy0
 tags:
 - influenza
 - flu

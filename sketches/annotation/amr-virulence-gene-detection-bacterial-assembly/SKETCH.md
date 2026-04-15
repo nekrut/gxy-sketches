@@ -17,12 +17,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/bacterial_genomics/amr_gene_detection
   version: 1.1.8
   license: GPL-3.0-or-later
+  slug: bacterial_genomics--amr_gene_detection
 tools:
-- staramr
-- amrfinderplus
-- abricate
-- tooldistillator
-- multiqc
+- name: staramr
+  version: 0.11.0+galaxy3
+- name: amrfinderplus
+  version: 3.12.8+galaxy0
+- name: abricate
+  version: 1.0.1
+- name: tooldistillator
+  version: 1.0.4+galaxy0
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - amr
 - antimicrobial-resistance

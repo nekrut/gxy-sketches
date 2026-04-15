@@ -20,9 +20,12 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/kmer-profiling-hifi-trio-VGP2
   version: 0.1.6
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--kmer-profiling-hifi-trio-VGP2
 tools:
-- meryl
-- genomescope2
+- name: meryl
+  version: 1.3+galaxy6
+- name: genomescope2
+  version: 2.0.1+galaxy0
 tags:
 - vgp
 - kmer

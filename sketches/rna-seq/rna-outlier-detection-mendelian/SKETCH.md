@@ -21,17 +21,18 @@ source:
   url: https://github.com/nf-core/drop
   version: 1.0.0
   license: MIT
+  slug: drop
 tools:
-- OUTRIDER
-- FRASER
-- FRASER2
-- GATK-ASEReadCounter
-- DESeq2
-- GenomicAlignments
-- Rsubread
-- bcftools
-- samtools
-- MultiQC
+- name: OUTRIDER
+- name: FRASER
+- name: FRASER2
+- name: GATK-ASEReadCounter
+- name: DESeq2
+- name: GenomicAlignments
+- name: Rsubread
+- name: bcftools
+- name: samtools
+- name: MultiQC
 tags:
 - rna-seq
 - outlier-detection

@@ -17,18 +17,22 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/comparative_genomics/hyphy
   version: '0.1'
   license: MIT
+  slug: comparative_genomics--hyphy--hyphy-preprocessing
 tools:
-- cawlign
-- hyphy-cln
-- iqtree
-- hyphy-meme
-- hyphy-fel
-- hyphy-busted
-- hyphy-prime
-- hyphy-annotate
-- hyphy-cfel
-- hyphy-relax
-- drhip
+- name: cawlign
+  version: 0.1.15+galaxy0
+- name: hyphy-cln
+  version: 2.5.96+galaxy0
+- name: iqtree
+  version: 2.4.0+galaxy1
+- name: hyphy-meme
+- name: hyphy-fel
+- name: hyphy-busted
+- name: hyphy-prime
+- name: hyphy-annotate
+- name: hyphy-cfel
+- name: hyphy-relax
+- name: drhip
 tags:
 - hyphy
 - selection

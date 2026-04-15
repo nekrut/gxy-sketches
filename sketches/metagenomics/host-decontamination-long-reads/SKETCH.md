@@ -18,12 +18,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/host-contamination-removal/host-contamination-removal-long-reads
   version: '0.3'
   license: MIT
+  slug: microbiome--host-contamination-removal--host-contamination-removal-long-reads
 tools:
-- minimap2
-- bamtools
-- samtools
-- qualimap
-- multiqc
+- name: minimap2
+  version: 2.28+galaxy2
+- name: bamtools
+  version: 2.5.2+galaxy2
+- name: samtools
+  version: 1.22+galaxy1
+- name: qualimap
+  version: 2.3+galaxy0
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - decontamination
 - host-removal

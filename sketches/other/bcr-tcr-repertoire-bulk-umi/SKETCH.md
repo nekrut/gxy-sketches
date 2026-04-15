@@ -21,17 +21,19 @@ source:
   url: https://github.com/nf-core/airrflow
   version: 5.0.0
   license: MIT
+  slug: airrflow
 tools:
-- fastp
-- pRESTO
-- IgBLAST
-- Change-O
-- SHazaM
-- SCOPer
-- Alakazam
-- Dowser
-- EnchantR
-- MultiQC
+- name: fastp
+  version: 0.23.4
+- name: pRESTO
+- name: IgBLAST
+- name: Change-O
+- name: SHazaM
+- name: SCOPer
+- name: Alakazam
+- name: Dowser
+- name: EnchantR
+- name: MultiQC
 tags: []
 test_data: []
 expected_output: []

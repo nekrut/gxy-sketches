@@ -16,12 +16,13 @@ source:
   url: https://github.com/nf-core/nanostring
   version: 1.3.3
   license: MIT
+  slug: nanostring
 tools:
-- NACHO
-- GSVA
-- singscore
-- MultiQC
-- R
+- name: NACHO
+- name: GSVA
+- name: singscore
+- name: MultiQC
+- name: R
 tags:
 - nanostring
 - ncounter

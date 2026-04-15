@@ -144,6 +144,8 @@ class IwcIngestor:
             self._parse_test_yml(test_yml_path, wf_dir) if test_yml_path else None
         )
 
+        tool_versions = self._extract_tool_versions(ga_file)
+
         version = self._extract_version(ga_file)
         license_ = self._extract_license(ga_file)
 
@@ -161,6 +163,7 @@ class IwcIngestor:
             license=license_,
             files=files,
             test_manifest=test_manifest,
+            tool_versions=tool_versions,
             raw_root=wf_dir,
         )
 
@@ -226,6 +229,58 @@ class IwcIngestor:
         except (OSError, json.JSONDecodeError):
             return None
         return data.get("license")
+
+    @staticmethod
+    def _extract_tool_versions(ga_file: Path) -> dict[str, str]:
+        """Walk every tool step in the .ga workflow and map name -> version.
+
+        Galaxy step `tool_id` strings look like:
+            toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.4+galaxy0
+        The second-to-last component is the tool name and the last is the
+        version. Bare internal tool ids (e.g. `bwa_mem2/1.2`) are also
+        accepted. The newest version wins if a tool appears twice.
+        """
+        try:
+            data = json.loads(ga_file.read_text())
+        except (OSError, json.JSONDecodeError):
+            return {}
+        out: dict[str, str] = {}
+        steps = data.get("steps") or {}
+        if not isinstance(steps, dict):
+            return {}
+        for step in steps.values():
+            if not isinstance(step, dict):
+                continue
+            tool_id = step.get("tool_id")
+            if not isinstance(tool_id, str):
+                continue
+            name, version = _parse_galaxy_tool_id(tool_id)
+            if name:
+                existing = out.get(name)
+                if existing is None or _version_sort_key(version) > _version_sort_key(
+                    existing
+                ):
+                    out[name] = version or ""
+        # Drop entries where we never found a version
+        return {k: v for k, v in out.items() if v}
+
+
+def _parse_galaxy_tool_id(tool_id: str) -> tuple[str | None, str | None]:
+    """Extract (tool_name, version) from a Galaxy step tool_id."""
+    parts = tool_id.split("/")
+    if len(parts) >= 2:
+        # Standard ToolShed form: .../<owner>/<repo>/<tool_name>/<version>
+        return parts[-2], parts[-1]
+    return tool_id, None
+
+
+def _version_sort_key(v: str | None) -> tuple:
+    """Crude version comparator — good enough to prefer newer on ties."""
+    if not v:
+        return ()
+    import re
+
+    return tuple(int(p) if p.isdigit() else p for p in re.split(r"[._+-]", v))
 
 
 def _flatten_job_entry(label: str, spec: Any, role_prefix: str = "") -> list[TestDataRef]:

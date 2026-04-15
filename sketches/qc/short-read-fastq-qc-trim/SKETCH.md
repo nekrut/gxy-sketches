@@ -16,10 +16,12 @@ source:
   url: https://github.com/nf-core/demo
   version: 1.1.0
   license: MIT
+  slug: demo
 tools:
-- fastqc
-- seqtk
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: seqtk
+- name: multiqc
 tags:
 - qc
 - fastqc

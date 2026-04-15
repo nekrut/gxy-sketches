@@ -18,19 +18,21 @@ source:
   url: https://github.com/nf-core/scrnaseq
   version: 4.1.0
   license: MIT
+  slug: scrnaseq
 tools:
-- fastqc
-- simpleaf
-- alevin-fry
-- alevinqc
-- starsolo
-- kallisto
-- bustools
-- cellranger
-- cellbender
-- scanpy
-- seurat
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: simpleaf
+- name: alevin-fry
+- name: alevinqc
+- name: starsolo
+- name: kallisto
+- name: bustools
+- name: cellranger
+- name: cellbender
+- name: scanpy
+- name: seurat
+- name: multiqc
 tags:
 - scrna-seq
 - 10x-genomics

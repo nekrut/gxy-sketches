@@ -20,22 +20,26 @@ source:
   url: https://github.com/nf-core/circrna
   version: dev
   license: MIT
+  slug: circrna
 tools:
-- fastqc
-- trim-galore
-- star
-- circexplorer2
-- circrna_finder
-- ciriquant
-- dcc
-- find_circ
-- mapsplice
-- segemehl
-- psirc-quant
-- miranda
-- targetscan
-- circtest
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+  version: 0.6.10
+- name: star
+- name: circexplorer2
+- name: circrna_finder
+- name: ciriquant
+- name: dcc
+- name: find_circ
+- name: mapsplice
+- name: segemehl
+- name: psirc-quant
+- name: miranda
+  version: 3.3a
+- name: targetscan
+- name: circtest
+- name: multiqc
 tags:
 - circrna
 - back-splice-junction

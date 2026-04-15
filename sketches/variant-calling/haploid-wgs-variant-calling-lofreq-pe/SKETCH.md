@@ -20,15 +20,24 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/variant-calling/haploid-variant-calling-wgs-pe
   version: '0.1'
   license: MIT
+  slug: variant-calling--haploid-variant-calling-wgs-pe
 tools:
-- fastp
-- bwa-mem
-- samtools
-- picard-markduplicates
-- lofreq
-- snpeff
-- snpsift
-- multiqc
+- name: fastp
+  version: 0.23.2+galaxy0
+- name: bwa-mem
+  version: 0.7.17.2
+- name: samtools
+  version: 1.13+galaxy1
+- name: picard-markduplicates
+  version: 2.18.2.2
+- name: lofreq
+  version: 2.1.5+galaxy0
+- name: snpeff
+  version: 4.3+T.galaxy2
+- name: snpsift
+  version: 4.3+t.galaxy0
+- name: multiqc
+  version: 1.11+galaxy0
 tags:
 - haploid
 - wgs

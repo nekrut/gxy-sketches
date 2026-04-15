@@ -19,16 +19,20 @@ source:
   url: https://github.com/nf-core/seqsubmit
   version: dev
   license: MIT
+  slug: seqsubmit
 tools:
-- ena-webin-cli
-- genome_uploader
-- assembly_uploader
-- coverm
-- checkm2
-- cat_pack
-- barrnap
-- trnascan-se
-- multiqc
+- name: ena-webin-cli
+- name: genome_uploader
+  version: 0.7.0
+- name: assembly_uploader
+- name: coverm
+- name: checkm2
+- name: cat_pack
+- name: barrnap
+  version: '0.9'
+- name: trnascan-se
+  version: 2.0.12
+- name: multiqc
 tags:
 - ena
 - submission

@@ -20,12 +20,13 @@ source:
   url: https://github.com/nf-core/drugresponseeval
   version: 1.2.0
   license: MIT
+  slug: drugresponseeval
 tools:
-- drevalpy
-- curvecurator
-- scikit-learn
-- pytorch-lightning
-- nextflow
+- name: drevalpy
+- name: curvecurator
+- name: scikit-learn
+- name: pytorch-lightning
+- name: nextflow
 tags:
 - drug-response
 - pharmacogenomics

@@ -17,16 +17,17 @@ source:
   url: https://github.com/nf-core/vipr
   version: dev
   license: MIT
+  slug: vipr
 tools:
-- skewer
-- fastqc
-- decont
-- kraken
-- bbtools-tadpole
-- bwa
-- lofreq
-- samtools
-- bedtools
+- name: skewer
+- name: fastqc
+- name: decont
+- name: kraken
+- name: bbtools-tadpole
+- name: bwa
+- name: lofreq
+- name: samtools
+- name: bedtools
 tags:
 - virus
 - intrahost

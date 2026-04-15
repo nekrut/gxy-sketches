@@ -19,28 +19,29 @@ source:
   url: https://github.com/nf-core/scdownstream
   version: dev
   license: MIT
+  slug: scdownstream
 tools:
-- scanpy
-- scvi-tools
-- harmony
-- bbknn
-- combat
-- seurat
-- decontx
-- cellbender
-- soupx
-- scar
-- scrublet
-- scdblfinder
-- solo
-- doubletdetection
-- scds
-- celltypist
-- singler
-- leiden
-- umap
-- multiqc
-- quarto
+- name: scanpy
+- name: scvi-tools
+- name: harmony
+- name: bbknn
+- name: combat
+- name: seurat
+- name: decontx
+- name: cellbender
+- name: soupx
+- name: scar
+- name: scrublet
+- name: scdblfinder
+- name: solo
+- name: doubletdetection
+- name: scds
+- name: celltypist
+- name: singler
+- name: leiden
+- name: umap
+- name: multiqc
+- name: quarto
 tags:
 - single-cell
 - scrna-seq

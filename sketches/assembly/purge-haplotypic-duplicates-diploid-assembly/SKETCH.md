@@ -22,12 +22,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Purge-duplicate-contigs-VGP6
   version: 0.10.5
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--Purge-duplicate-contigs-VGP6
 tools:
-- purge_dups
-- minimap2
-- gfastats
-- merqury
-- compleasm
+- name: purge_dups
+  version: 1.2.6+galaxy1
+- name: minimap2
+  version: 2.28+galaxy2
+- name: gfastats
+  version: 1.3.11+galaxy1
+- name: merqury
+  version: 1.3+galaxy4
+- name: compleasm
+  version: 0.2.6+galaxy3
 tags:
 - vgp
 - diploid

@@ -17,12 +17,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/sars-cov-2-variant-calling/sars-cov-2-variation-reporting
   version: 0.3.4
   license: MIT
+  slug: sars-cov-2-variant-calling--sars-cov-2-variation-reporting
 tools:
-- snpsift
-- datamash
-- column_maker
-- snpfreqplot
-- text_processing
+- name: snpsift
+  version: 4.3+t.galaxy1
+- name: datamash
+  version: 1.8+galaxy0
+- name: column_maker
+- name: snpfreqplot
+  version: 1.0+galaxy3
+- name: text_processing
 tags:
 - sars-cov-2
 - covid-19

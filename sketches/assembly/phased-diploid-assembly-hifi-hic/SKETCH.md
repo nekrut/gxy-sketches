@@ -20,15 +20,23 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Assembly-Hifi-HiC-phasing-VGP4
   version: '0.6'
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--Assembly-Hifi-HiC-phasing-VGP4
 tools:
-- hifiasm
-- cutadapt
-- gfastats
-- bandage
-- compleasm
-- merqury
-- multiqc
-- ggplot2
+- name: hifiasm
+  version: 0.25.0+galaxy3
+- name: cutadapt
+  version: 5.2+galaxy1
+- name: gfastats
+  version: 1.3.11+galaxy0
+- name: bandage
+  version: 2022.09+galaxy4
+- name: compleasm
+  version: 0.2.6+galaxy3
+- name: merqury
+  version: 1.3+galaxy4
+- name: multiqc
+  version: 1.33+galaxy0
+- name: ggplot2
 tags:
 - vgp
 - phased-assembly

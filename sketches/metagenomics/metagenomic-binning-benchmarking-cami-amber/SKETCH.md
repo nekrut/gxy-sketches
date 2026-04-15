@@ -20,16 +20,26 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/binning-evaluation
   version: '1.1'
   license: MIT
+  slug: microbiome--binning-evaluation
 tools:
-- bowtie2
-- samtools
-- concoct
-- metabat2
-- semibin
-- maxbin2
-- das-tool
-- binette
-- cami-amber
+- name: bowtie2
+  version: 2.5.5+galaxy0
+- name: samtools
+  version: 2.0.8
+- name: concoct
+  version: 1.1.0+galaxy2
+- name: metabat2
+  version: 2.17+galaxy0
+- name: semibin
+  version: 2.1.0+galaxy1
+- name: maxbin2
+  version: 2.2.7+galaxy6
+- name: das-tool
+  version: 1.1.7+galaxy1
+- name: binette
+  version: 1.2.1+galaxy0
+- name: cami-amber
+  version: 2.0.7+galaxy0
 tags:
 - metagenomics
 - binning

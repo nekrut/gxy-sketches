@@ -19,16 +19,17 @@ source:
   url: https://github.com/nf-core/proteomicslfq
   version: 1.0.0
   license: MIT
+  slug: proteomicslfq
 tools:
-- openms
-- thermorawfileparser
-- comet
-- msgf+
-- percolator
-- luciphor2
-- proteomicslfq
-- msstats
-- ptxqc
+- name: openms
+- name: thermorawfileparser
+- name: comet
+- name: msgf+
+- name: percolator
+- name: luciphor2
+- name: proteomicslfq
+- name: msstats
+- name: ptxqc
 tags:
 - proteomics
 - lfq

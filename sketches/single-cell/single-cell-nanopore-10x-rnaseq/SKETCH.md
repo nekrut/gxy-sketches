@@ -18,21 +18,27 @@ source:
   url: https://github.com/nf-core/scnanoseq
   version: 1.2.2
   license: MIT
+  slug: scnanoseq
 tools:
-- nanofilt
-- blaze
-- minimap2
-- samtools
-- umi-tools
-- picard
-- isoquant
-- oarfish
-- seurat
-- multiqc
-- nanoplot
-- nanocomp
-- toulligqc
-- fastqc
+- name: nanofilt
+- name: blaze
+- name: minimap2
+- name: samtools
+- name: umi-tools
+- name: picard
+- name: isoquant
+- name: oarfish
+- name: seurat
+- name: multiqc
+  version: '1.27'
+- name: nanoplot
+  version: 1.41.6
+- name: nanocomp
+  version: 1.21.0
+- name: toulligqc
+  version: 2.5.6
+- name: fastqc
+  version: 0.12.1
 tags:
 - single-cell
 - scrna-seq

@@ -21,22 +21,24 @@ source:
   url: https://github.com/nf-core/methylong
   version: 2.0.0
   license: MIT
+  slug: methylong
 tools:
-- dorado
-- jasmine
-- ccsmeth
-- minimap2
-- pbmm2
-- samtools
-- porechop
-- modkit
-- pb-CpG-tools
-- clair3
-- whatshap
-- dss
-- fibertools-rs
-- fastqc
-- multiqc
+- name: dorado
+- name: jasmine
+- name: ccsmeth
+- name: minimap2
+- name: pbmm2
+- name: samtools
+- name: porechop
+- name: modkit
+- name: pb-CpG-tools
+- name: clair3
+- name: whatshap
+- name: dss
+- name: fibertools-rs
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
 tags:
 - methylation
 - 5mC

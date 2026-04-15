@@ -16,13 +16,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/data-fetching/sra-manifest-to-concatenated-fastqs
   version: '0.9'
   license: MIT
+  slug: data-fetching--sra-manifest-to-concatenated-fastqs
 tools:
-- fasterq-dump
-- sra-tools
-- split_file_to_collection
-- concatenate_multiple_datasets
-- map_param_value
-- compose_text_param
+- name: fasterq-dump
+  version: 3.1.1+galaxy0
+- name: sra-tools
+- name: split_file_to_collection
+  version: 0.5.2
+- name: concatenate_multiple_datasets
+- name: map_param_value
+  version: 0.2.0
+- name: compose_text_param
+  version: 0.1.1
 tags:
 - sra
 - data-fetching

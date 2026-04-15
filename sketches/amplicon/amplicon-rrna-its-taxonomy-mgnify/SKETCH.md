@@ -23,19 +23,21 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/amplicon-mgnify/mgnify-amplicon-pipeline-v5-complete
   version: '0.3'
   license: Apache-2.0
+  slug: amplicon--amplicon-mgnify--mgnify-amplicon-pipeline-v5-complete
 tools:
-- fastq-dl
-- fastp
-- trimmomatic
-- SeqPrep
-- PRINSEQ
-- FastQC
-- MultiQC
-- Infernal-cmsearch
-- cmsearch-deoverlap
-- MAPseq
-- biom
-- krona
+- name: fastq-dl
+  version: 3.0.1+galaxy0
+- name: fastp
+- name: trimmomatic
+- name: SeqPrep
+- name: PRINSEQ
+- name: FastQC
+- name: MultiQC
+- name: Infernal-cmsearch
+- name: cmsearch-deoverlap
+- name: MAPseq
+- name: biom
+- name: krona
 tags:
 - amplicon
 - 16S

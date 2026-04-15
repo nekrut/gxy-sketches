@@ -21,12 +21,15 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/genome_annotation/functional-annotation/functional-annotation-of-sequences
   version: '0.3'
   license: MIT
+  slug: genome_annotation--functional-annotation--functional-annotation-of-sequences
 tools:
-- eggnog-mapper
-- interproscan
-- kegg-pathways-completeness
-- prodigal
-- diamond
+- name: eggnog-mapper
+- name: interproscan
+  version: 5.59-91.0+galaxy3
+- name: kegg-pathways-completeness
+  version: 1.3.0+galaxy0
+- name: prodigal
+- name: diamond
 tags:
 - functional-annotation
 - go-terms

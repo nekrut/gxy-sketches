@@ -18,12 +18,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/metabolomics/lcms-preprocessing
   version: '1.1'
   license: MIT
+  slug: metabolomics--lcms-preprocessing
 tools:
-- MSnbase
-- xcms
-- CAMERA
-- checkFormat
-- intensity_checks
+- name: MSnbase
+  version: 2.16.1+galaxy3
+- name: xcms
+  version: 3.12.0+galaxy3
+- name: CAMERA
+- name: checkFormat
+  version: 3.0.0
+- name: intensity_checks
 tags:
 - metabolomics
 - lc-ms

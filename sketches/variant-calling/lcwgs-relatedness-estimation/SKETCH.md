@@ -19,17 +19,19 @@ source:
   url: https://github.com/nf-core/genomicrelatedness
   version: dev
   license: MIT
+  slug: genomicrelatedness
 tools:
-- fastp
-- bwa-mem2
-- samtools
-- gatk4
-- bcftools
-- vcftools
-- mosdepth
-- preseq
-- ngsrelate
-- multiqc
+- name: fastp
+- name: bwa-mem2
+- name: samtools
+- name: gatk4
+- name: bcftools
+- name: vcftools
+  version: 0.1.16
+- name: mosdepth
+- name: preseq
+- name: ngsrelate
+- name: multiqc
 tags:
 - lcwgs
 - relatedness

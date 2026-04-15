@@ -21,14 +21,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/computational-chemistry/fragment-based-docking-scoring
   version: 0.1.5
   license: MIT
+  slug: computational-chemistry--fragment-based-docking-scoring
 tools:
-- rDock
-- rbcavity
-- rbdock
-- SuCOS
-- OpenBabel
-- RDKit
-- Frankenstein-ligand
+- name: rDock
+  version: 2013.1-0+galaxy0
+- name: rbcavity
+- name: rbdock
+- name: SuCOS
+  version: 2020.03.4+galaxy1
+- name: OpenBabel
+  version: 3.1.1+galaxy0
+- name: RDKit
+- name: Frankenstein-ligand
 tags:
 - virtual-screening
 - docking

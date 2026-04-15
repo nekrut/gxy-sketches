@@ -18,13 +18,15 @@ source:
   url: https://github.com/nf-core/methylarray
   version: dev
   license: MIT
+  slug: methylarray
 tools:
-- minfi
-- DNAmCrosshyb
-- ChAMP
-- dmpFinder
-- FastQC
-- MultiQC
+- name: minfi
+- name: DNAmCrosshyb
+- name: ChAMP
+- name: dmpFinder
+- name: FastQC
+  version: 0.12.1
+- name: MultiQC
 tags:
 - methylation
 - epigenetics

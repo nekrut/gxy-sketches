@@ -22,11 +22,14 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/scRNAseq/fastq-to-matrix-10x
   version: 0.6.5
   license: MIT
+  slug: scRNAseq--fastq-to-matrix-10x--scrna-seq-fastq-to-matrix-10x-v3
 tools:
-- STARsolo
-- DropletUtils
-- CITE-seq-Count
-- MultiQC
+- name: STARsolo
+- name: DropletUtils
+  version: 1.10.0+galaxy2
+- name: CITE-seq-Count
+- name: MultiQC
+  version: 1.33+galaxy2
 tags:
 - single-cell
 - scrna-seq

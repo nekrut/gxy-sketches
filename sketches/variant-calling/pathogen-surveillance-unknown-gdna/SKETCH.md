@@ -23,23 +23,28 @@ source:
   url: https://github.com/nf-core/pathogensurveillance
   version: 1.1.0
   license: MIT
+  slug: pathogensurveillance
 tools:
-- fastp
-- sourmash
-- bbmap-sendsketch
-- spades
-- flye
-- bakta
-- busco
-- pirate
-- bwa-mem
-- picard
-- graphtyper
-- mafft
-- iqtree2
-- quast
-- fastqc
-- multiqc
+- name: fastp
+- name: sourmash
+- name: bbmap-sendsketch
+- name: spades
+- name: flye
+- name: bakta
+  version: 1.11.4
+- name: busco
+- name: pirate
+  version: 1.0.5
+- name: bwa-mem
+- name: picard
+- name: graphtyper
+- name: mafft
+- name: iqtree2
+  version: 2.4.0
+- name: quast
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
 tags:
 - pathogen-id
 - biosurveillance

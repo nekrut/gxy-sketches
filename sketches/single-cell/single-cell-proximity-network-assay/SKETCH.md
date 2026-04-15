@@ -17,11 +17,12 @@ source:
   url: https://github.com/nf-core/pixelator
   version: 3.0.1
   license: MIT
+  slug: pixelator
 tools:
-- pixelator
-- pixelatores
-- fastp
-- cutadapt
+- name: pixelator
+- name: pixelatores
+- name: fastp
+- name: cutadapt
 tags:
 - pna
 - proximity-network-assay

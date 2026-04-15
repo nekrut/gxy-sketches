@@ -20,11 +20,14 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Scaffolding-Bionano-VGP7
   version: 0.1.4
   license: CC-BY-4.0
+  slug: VGP-assembly-v2--Scaffolding-Bionano-VGP7
 tools:
-- bionano_solve
-- bionano_hybrid_scaffold
-- gfastats
-- ggplot2
+- name: bionano_solve
+- name: bionano_hybrid_scaffold
+- name: gfastats
+  version: 1.3.6+galaxy0
+- name: ggplot2
+  version: 3.4.0+galaxy1
 tags:
 - vgp
 - scaffolding

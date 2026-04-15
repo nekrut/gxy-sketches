@@ -20,25 +20,31 @@ source:
   url: https://github.com/nf-core/atacseq
   version: 2.1.2
   license: MIT
+  slug: atacseq
 tools:
-- fastqc
-- trim-galore
-- bwa
-- bowtie2
-- chromap
-- star
-- picard
-- samtools
-- bamtools
-- bedtools
-- macs2
-- homer
-- featurecounts
-- deseq2
-- deeptools
-- ataqv
-- preseq
-- multiqc
+- name: fastqc
+  version: 0.11.9
+- name: trim-galore
+  version: 0.6.7
+- name: bwa
+- name: bowtie2
+- name: chromap
+  version: 5b2e433ab8b3d1ef098fc944b567fd98caa23f56-0
+- name: star
+- name: picard
+- name: samtools
+- name: bamtools
+- name: bedtools
+- name: macs2
+- name: homer
+- name: featurecounts
+  version: 2.0.1
+- name: deseq2
+- name: deeptools
+- name: ataqv
+  version: 1.3.1
+- name: preseq
+- name: multiqc
 tags:
 - atac-seq
 - chromatin-accessibility

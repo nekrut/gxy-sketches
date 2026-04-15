@@ -20,16 +20,20 @@ source:
   url: https://github.com/nf-core/phaseimpute
   version: 1.1.0
   license: MIT
+  slug: phaseimpute
 tools:
-- glimpse1
-- glimpse2
-- quilt
-- stitch
-- beagle5
-- minimac4
-- shapeit5
-- bcftools
-- samtools
+- name: glimpse1
+- name: glimpse2
+- name: quilt
+  version: 1.0.5
+- name: stitch
+  version: 1.7.3
+- name: beagle5
+  version: 5.5_27Feb25.75f
+- name: minimac4
+- name: shapeit5
+- name: bcftools
+- name: samtools
 tags:
 - imputation
 - phasing

@@ -19,11 +19,12 @@ source:
   url: https://github.com/nf-core/deepvariant
   version: '1.0'
   license: MIT
+  slug: deepvariant
 tools:
-- deepvariant
-- samtools
-- bgzip
-- nextflow
+- name: deepvariant
+- name: samtools
+- name: bgzip
+- name: nextflow
 tags:
 - human
 - germline

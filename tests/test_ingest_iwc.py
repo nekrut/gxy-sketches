@@ -71,3 +71,10 @@ def test_metadata_bundle_includes_parsed_manifest(monkeypatch) -> None:
     assert "PARSED TEST MANIFEST" in bundle
     assert "reference" in bundle
     assert "has_line" in bundle
+
+
+def test_extracts_tool_versions_from_ga(monkeypatch) -> None:
+    r = _discover_one(monkeypatch)
+    assert r.tool_versions["bwa_mem2"] == "2.2.1+galaxy0"
+    assert r.tool_versions["bcftools_call"] == "1.15.1+galaxy3"
+    assert r.tool_versions["fastp"] == "0.23.4+galaxy0"

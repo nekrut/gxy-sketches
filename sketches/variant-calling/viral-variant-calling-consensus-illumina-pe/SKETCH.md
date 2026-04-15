@@ -19,16 +19,26 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/virology/generic-non-segmented-viral-variant-calling
   version: '0.2'
   license: AGPL-3.0-or-later
+  slug: virology--generic-non-segmented-viral-variant-calling
 tools:
-- fastp
-- bwa-mem
-- samtools
-- lofreq
-- ivar
-- snpeff
-- snpsift
-- qualimap
-- multiqc
+- name: fastp
+  version: 1.0.1+galaxy3
+- name: bwa-mem
+  version: 0.7.19
+- name: samtools
+  version: 2.0.8
+- name: lofreq
+  version: 2.1.5+galaxy0
+- name: ivar
+  version: 1.4.4+galaxy1
+- name: snpeff
+  version: 5.2+galaxy1
+- name: snpsift
+  version: 4.3+t.galaxy0
+- name: qualimap
+  version: 2.3+galaxy0
+- name: multiqc
+  version: 1.24.1+galaxy0
 tags:
 - virology
 - consensus

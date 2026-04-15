@@ -20,16 +20,19 @@ source:
   url: https://github.com/nf-core/magmap
   version: 1.0.0
   license: MIT
+  slug: magmap
 tools:
-- fastqc
-- trim-galore
-- bbduk
-- sourmash
-- prokka
-- bbmap
-- featurecounts
-- samtools
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+- name: bbduk
+- name: sourmash
+- name: prokka
+- name: bbmap
+- name: featurecounts
+  version: 2.0.6
+- name: samtools
+- name: multiqc
 tags:
 - metagenomics
 - metatranscriptomics

@@ -16,11 +16,12 @@ source:
   url: https://github.com/nf-core/neutronstar
   version: 1.0.0
   license: MIT
+  slug: neutronstar
 tools:
-- supernova
-- quast
-- busco
-- multiqc
+- name: supernova
+- name: quast
+- name: busco
+- name: multiqc
 tags:
 - 10x-genomics
 - linked-reads

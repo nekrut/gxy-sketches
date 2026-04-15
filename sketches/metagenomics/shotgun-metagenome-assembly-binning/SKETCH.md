@@ -19,23 +19,29 @@ source:
   url: https://github.com/nf-core/mag
   version: 5.4.2
   license: MIT
+  slug: mag
 tools:
-- fastp
-- bowtie2
-- megahit
-- spades
-- metabat2
-- maxbin2
-- concoct
-- semibin2
-- dastool
-- busco
-- checkm2
-- gtdbtk
-- prokka
-- cat
-- quast
-- prodigal
+- name: fastp
+- name: bowtie2
+- name: megahit
+- name: spades
+- name: metabat2
+  version: '2.17'
+- name: maxbin2
+  version: 2.2.7
+- name: concoct
+  version: 1.1.0
+- name: semibin2
+- name: dastool
+  version: 1.1.7
+- name: busco
+- name: checkm2
+- name: gtdbtk
+- name: prokka
+- name: cat
+- name: quast
+- name: prodigal
+  version: 57f05cfa73f769d6ed6d54144cb3aa2a6a6b17e0-0
 tags:
 - metagenomics
 - mag

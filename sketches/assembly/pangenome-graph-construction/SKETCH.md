@@ -21,14 +21,19 @@ source:
   url: https://github.com/nf-core/pangenome
   version: 1.1.3
   license: MIT
+  slug: pangenome
 tools:
-- wfmash
-- seqwish
-- smoothxg
-- gfaffix
-- odgi
-- vg
-- multiqc
+- name: wfmash
+  version: 0.10.4
+- name: seqwish
+- name: smoothxg
+  version: 0.8.0
+- name: gfaffix
+  version: 0.1.5b
+- name: odgi
+- name: vg
+- name: multiqc
+  version: '1.27'
 tags:
 - pangenome
 - variation-graph

@@ -84,11 +84,16 @@ def finalize_llm_payload(text: str, record: WorkflowRecord) -> GeneratedSketch:
         "ecosystem": record.ecosystem,
         "workflow": record.display_name,
         "url": record.source_url,
+        "slug": record.slug,
     }
     if record.version:
         fm_data["source"]["version"] = record.version
     if record.license:
         fm_data["source"]["license"] = record.license
+
+    fm_data["tools"] = _enrich_tools_with_versions(
+        fm_data.get("tools") or [], record.tool_versions
+    )
 
     if record.test_manifest is not None:
         fm_data["test_data"] = [
@@ -105,6 +110,58 @@ def finalize_llm_payload(text: str, record: WorkflowRecord) -> GeneratedSketch:
 
     frontmatter = SketchFrontmatter.model_validate(fm_data)
     return GeneratedSketch(frontmatter=frontmatter, body=body)
+
+
+def _enrich_tools_with_versions(
+    llm_tools: list, tool_versions: dict[str, str]
+) -> list[dict]:
+    """Convert the LLM's tool list into ToolSpec dicts, looking up versions.
+
+    The LLM emits curated tool names (e.g. ["fastp", "bwa-mem2", "bcftools"]);
+    the ingestor's `tool_versions` is a much larger dict keyed by the source
+    workflow's own tool IDs (e.g. "fastp" → "0.23.4+galaxy0",
+    "bwa_mem2" → "2.2.1", "bcftools_call" → "1.15.1"). We match by
+    normalised name (lowercase, hyphens/underscores stripped) with a prefix
+    fallback for families like bcftools_* or samtools_*.
+    """
+    normalised: dict[str, tuple[str, str]] = {}
+    for key, ver in tool_versions.items():
+        normalised[_norm(key)] = (key, ver)
+
+    out: list[dict] = []
+    for entry in llm_tools:
+        if isinstance(entry, dict):
+            name = entry.get("name")
+            if not isinstance(name, str):
+                continue
+            existing_version = entry.get("version")
+        elif isinstance(entry, str):
+            name = entry
+            existing_version = None
+        else:
+            continue
+
+        version = existing_version or _lookup_version(name, normalised)
+        spec = {"name": name}
+        if version:
+            spec["version"] = version
+        out.append(spec)
+    return out
+
+
+def _norm(s: str) -> str:
+    return "".join(c for c in s.lower() if c.isalnum())
+
+
+def _lookup_version(name: str, normalised: dict[str, tuple[str, str]]) -> str | None:
+    target = _norm(name)
+    if target in normalised:
+        return normalised[target][1]
+    # Prefix match: LLM says "bcftools", source has "bcftools_call" etc.
+    for key, (_, ver) in normalised.items():
+        if key.startswith(target) or target.startswith(key):
+            return ver
+    return None
 
 
 def _extract_text(response: Any) -> str:

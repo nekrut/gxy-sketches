@@ -18,13 +18,18 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/computational-chemistry/protein-ligand-complex-parameterization
   version: 0.1.4
   license: MIT
+  slug: computational-chemistry--protein-ligand-complex-parameterization
 tools:
-- openbabel
-- rdkit
-- gromacs
-- ambertools-antechamber
-- ambertools-acpype
-- gmx_merge_topology_files
+- name: openbabel
+  version: 3.1.1+galaxy0
+- name: rdkit
+- name: gromacs
+- name: ambertools-antechamber
+  version: 21.10+galaxy0
+- name: ambertools-acpype
+  version: 21.10+galaxy0
+- name: gmx_merge_topology_files
+  version: 3.4.3+galaxy0
 tags:
 - molecular-dynamics
 - gromacs

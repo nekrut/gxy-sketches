@@ -19,21 +19,26 @@ source:
   url: https://github.com/nf-core/phageannotator
   version: dev
   license: MIT
+  slug: phageannotator
 tools:
-- geNomad
-- CheckV
-- BLAST
-- vRhyme
-- bowtie2
-- CoverM
-- mash
-- iPHoP
-- BACPHLIP
-- prodigal-gv
-- inStrain
-- propagAtE
-- FastQC
-- MultiQC
+- name: geNomad
+- name: CheckV
+- name: BLAST
+  version: 2.14.1
+- name: vRhyme
+- name: bowtie2
+- name: CoverM
+- name: mash
+- name: iPHoP
+- name: BACPHLIP
+  version: c64689d7d5c51670ff5841ec4af982edbe7aa406-0
+- name: prodigal-gv
+- name: inStrain
+- name: propagAtE
+- name: FastQC
+  version: 0.12.1
+- name: MultiQC
+  version: '1.21'
 tags:
 - phage
 - virus

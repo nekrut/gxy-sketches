@@ -18,16 +18,19 @@ source:
   url: https://github.com/nf-core/mcmicro
   version: dev
   license: MIT
+  slug: mcmicro
 tools:
-- ashlar
-- basicpy
-- backsub
-- coreograph
-- cellpose
-- mccellpose
-- deepcell-mesmer
-- mcquant
-- multiqc
+- name: ashlar
+  version: 1.18.0
+- name: basicpy
+- name: backsub
+- name: coreograph
+- name: cellpose
+  version: 3.0.1_cv1
+- name: mccellpose
+- name: deepcell-mesmer
+- name: mcquant
+- name: multiqc
 tags:
 - imaging
 - multiplexed

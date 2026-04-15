@@ -19,15 +19,17 @@ source:
   url: https://github.com/nf-core/methylseq
   version: 4.2.0
   license: MIT
+  slug: methylseq
 tools:
-- fastqc
-- trim-galore
-- bismark
-- bowtie2
-- samtools
-- qualimap
-- preseq
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+- name: bismark
+- name: bowtie2
+- name: samtools
+- name: qualimap
+- name: preseq
+- name: multiqc
 tags:
 - methylation
 - bisulfite

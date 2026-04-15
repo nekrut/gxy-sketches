@@ -19,16 +19,26 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/proteomics/clinicalmp/clinicalmp-discovery
   version: '0.1'
   license: CC-BY-4.0
+  slug: proteomics--clinicalmp--clinicalmp-discovery
 tools:
-- msconvert
-- searchgui
-- peptideshaker
-- maxquant
-- fastacli
-- dbbuilder
-- fasta_merge_files_and_filter_unique_sequences
-- query_tabular
-- filter_tabular
+- name: msconvert
+  version: 3.0.20287.2
+- name: searchgui
+  version: 4.0.41+galaxy1
+- name: peptideshaker
+  version: 2.0.33+galaxy1
+- name: maxquant
+  version: 2.0.3.0+galaxy0
+- name: fastacli
+  version: 4.0.41+galaxy1
+- name: dbbuilder
+  version: 0.3.4
+- name: fasta_merge_files_and_filter_unique_sequences
+  version: 1.2.0
+- name: query_tabular
+  version: 3.3.0
+- name: filter_tabular
+  version: 3.3.0
 tags:
 - metaproteomics
 - clinical

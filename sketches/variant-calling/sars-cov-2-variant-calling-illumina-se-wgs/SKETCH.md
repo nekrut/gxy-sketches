@@ -17,13 +17,20 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/sars-cov-2-variant-calling/sars-cov-2-se-illumina-wgs-variant-calling
   version: 0.1.6
   license: MIT
+  slug: sars-cov-2-variant-calling--sars-cov-2-se-illumina-wgs-variant-calling
 tools:
-- fastp
-- bowtie2
-- picard-markduplicates
-- lofreq
-- snpeff
-- multiqc
+- name: fastp
+  version: 0.24.0+galaxy4
+- name: bowtie2
+  version: 2.5.3+galaxy1
+- name: picard-markduplicates
+  version: 3.1.1.0
+- name: lofreq
+  version: 2.1.5+galaxy0
+- name: snpeff
+  version: 4.5covid19
+- name: multiqc
+  version: 1.27+galaxy3
 tags:
 - sars-cov-2
 - covid-19

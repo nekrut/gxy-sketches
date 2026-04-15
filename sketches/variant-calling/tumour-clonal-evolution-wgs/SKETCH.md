@@ -19,17 +19,22 @@ source:
   url: https://github.com/nf-core/tumourevo
   version: dev
   license: MIT
+  slug: tumourevo
 tools:
-- ensembl-vep
-- cnaqc
-- tinc
-- pyclone-vi
-- mobster
-- viber
-- ctree
-- sparsesignatures
-- sigprofiler
-- bcftools
+- name: ensembl-vep
+- name: cnaqc
+  version: 1.1.3
+- name: tinc
+  version: 0.1.0
+- name: pyclone-vi
+  version: 0.1.6
+- name: mobster
+- name: viber
+- name: ctree
+- name: sparsesignatures
+  version: a995bb98b7122825523ffed7ae131cb006e56cbe-0
+- name: sigprofiler
+- name: bcftools
 tags:
 - cancer
 - wgs

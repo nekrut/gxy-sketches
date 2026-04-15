@@ -16,10 +16,13 @@ source:
   url: https://github.com/nf-core/troughgraph
   version: dev
   license: MIT
+  slug: troughgraph
 tools:
-- fastqc
-- multiqc
-- nextflow
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
+  version: '1.27'
+- name: nextflow
 tags:
 - qc
 - fastqc

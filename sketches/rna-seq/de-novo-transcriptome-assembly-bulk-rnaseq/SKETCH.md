@@ -16,18 +16,25 @@ source:
   url: https://github.com/nf-core/denovotranscript
   version: 1.2.1
   license: MIT
+  slug: denovotranscript
 tools:
-- fastqc
-- fastp
-- sortmerna
-- trinity
-- rnaspades
-- evidentialgene-tr2aacds
-- busco
-- rnaquast
-- transrate
-- salmon
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: fastp
+  version: 0.23.4
+- name: sortmerna
+  version: 4.3.6
+- name: trinity
+  version: 2.15.2
+- name: rnaspades
+- name: evidentialgene-tr2aacds
+- name: busco
+  version: 5.7.1
+- name: rnaquast
+- name: transrate
+- name: salmon
+- name: multiqc
+  version: 1.27.1
 tags:
 - de-novo
 - transcriptome

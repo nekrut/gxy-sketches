@@ -19,16 +19,18 @@ source:
   url: https://github.com/nf-core/mhcquant
   version: 3.1.0
   license: MIT
+  slug: mhcquant
 tools:
-- OpenMS
-- Comet
-- MS2Rescore
-- DeepLC
-- MS2PIP
-- Percolator
-- Mokapot
-- EasyPQP
-- epicore
+- name: OpenMS
+- name: Comet
+  version: 3.4.1
+- name: MS2Rescore
+- name: DeepLC
+- name: MS2PIP
+- name: Percolator
+- name: Mokapot
+- name: EasyPQP
+- name: epicore
 tags:
 - immunopeptidomics
 - mhc

@@ -19,10 +19,12 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/qiime2/qiime2-I-import
   version: '0.3'
   license: MIT
+  slug: amplicon--qiime2--qiime2-I-import--QIIME2-Id-demultiplexed-data-paired-end
 tools:
-- qiime2
-- q2-demux
-- qiime2-tools-import
+- name: qiime2
+  version: 2024.10.0+dist.h3d8a7e27
+- name: q2-demux
+- name: qiime2-tools-import
 tags:
 - qiime2
 - amplicon

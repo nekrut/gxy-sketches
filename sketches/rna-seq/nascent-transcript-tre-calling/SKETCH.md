@@ -20,27 +20,32 @@ source:
   url: https://github.com/nf-core/nascent
   version: 2.3.0
   license: MIT
+  slug: nascent
 tools:
-- fastqc
-- fastp
-- bwa
-- bwa-mem2
-- dragmap
-- bowtie2
-- hisat2
-- samtools
-- umi-tools
-- picard
-- rseqc
-- preseq
-- bbmap
-- bedtools
-- deeptools
-- homer
-- grohmm
-- pints
-- featurecounts
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: fastp
+  version: 0.23.4
+- name: bwa
+- name: bwa-mem2
+- name: dragmap
+- name: bowtie2
+- name: hisat2
+- name: samtools
+- name: umi-tools
+- name: picard
+- name: rseqc
+- name: preseq
+- name: bbmap
+- name: bedtools
+- name: deeptools
+- name: homer
+- name: grohmm
+- name: pints
+- name: featurecounts
+  version: 2.0.1
+- name: multiqc
+  version: '1.27'
 tags:
 - nascent
 - gro-seq

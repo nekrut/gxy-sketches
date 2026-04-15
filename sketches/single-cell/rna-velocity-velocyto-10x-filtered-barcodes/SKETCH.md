@@ -18,8 +18,9 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/scRNAseq/velocyto
   version: '0.3'
   license: MIT
+  slug: scRNAseq--velocyto--Velocyto-on10X-from-bundled
 tools:
-- velocyto
+- name: velocyto
 tags:
 - single-cell
 - rna-velocity

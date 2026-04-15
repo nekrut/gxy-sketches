@@ -16,9 +16,12 @@ source:
   url: https://github.com/nf-core/genomeskim
   version: dev
   license: MIT
+  slug: genomeskim
 tools:
-- fastqc
-- multiqc
+- name: fastqc
+  version: 0.11.9
+- name: multiqc
+  version: '1.12'
 tags:
 - genome-skim
 - qc

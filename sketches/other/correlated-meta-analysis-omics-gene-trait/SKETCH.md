@@ -21,11 +21,12 @@ source:
   url: https://github.com/nf-core/omicsgenetraitassociation
   version: dev
   license: MIT
+  slug: omicsgenetraitassociation
 tools:
-- PascalX
-- MMAP
-- corrmeta
-- WebGestaltR
+- name: PascalX
+- name: MMAP
+- name: corrmeta
+- name: WebGestaltR
 tags:
 - gwas
 - twas

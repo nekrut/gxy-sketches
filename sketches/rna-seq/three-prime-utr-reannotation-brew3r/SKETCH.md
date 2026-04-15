@@ -18,10 +18,14 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/transcriptomics/brew3r
   version: '0.2'
   license: GPL-3.0-or-later
+  slug: transcriptomics--brew3r
 tools:
-- stringtie
-- stringtie-merge
-- brew3r.r
+- name: stringtie
+  version: 2.2.3+galaxy0
+- name: stringtie-merge
+  version: 2.2.3+galaxy0
+- name: brew3r.r
+  version: 1.0.2+galaxy1
 tags:
 - annotation
 - 3utr

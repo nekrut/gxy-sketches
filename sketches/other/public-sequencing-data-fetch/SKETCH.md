@@ -15,12 +15,14 @@ source:
   url: https://github.com/nf-core/fetchngs
   version: 1.12.0
   license: MIT
+  slug: fetchngs
 tools:
-- nf-core/fetchngs
-- sra-tools
-- aspera-cli
-- wget
-- ENA API
+- name: nf-core/fetchngs
+- name: sra-tools
+  version: 3.0.8
+- name: aspera-cli
+- name: wget
+- name: ENA API
 tags:
 - sra
 - ena

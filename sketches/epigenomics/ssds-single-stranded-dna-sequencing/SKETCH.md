@@ -19,17 +19,21 @@ source:
   url: https://github.com/nf-core/ssds
   version: dev
   license: MIT
+  slug: ssds
 tools:
-- fastqc
-- trim-galore
-- bwa-mem
-- picard
-- samtools
-- ssds_pipeline_accessory_scripts
-- bedtools
-- ucsc-bedgraphtobigwig
-- deeptools
-- multiqc
+- name: fastqc
+  version: 0.11.9
+- name: trim-galore
+  version: 0.6.7
+- name: bwa-mem
+- name: picard
+- name: samtools
+- name: ssds_pipeline_accessory_scripts
+- name: bedtools
+- name: ucsc-bedgraphtobigwig
+- name: deeptools
+- name: multiqc
+  version: '1.11'
 tags:
 - ssds
 - ssdna

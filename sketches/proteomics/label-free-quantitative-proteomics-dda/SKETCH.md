@@ -19,17 +19,18 @@ source:
   url: https://github.com/nf-core/quantms
   version: 1.2.0
   license: MIT
+  slug: quantms
 tools:
-- thermorawfileparser
-- comet
-- msgfplus
-- sage
-- percolator
-- openms
-- luciphor
-- proteomicslfq
-- msstats
-- pmultiqc
+- name: thermorawfileparser
+- name: comet
+- name: msgfplus
+- name: sage
+- name: percolator
+- name: openms
+- name: luciphor
+- name: proteomicslfq
+- name: msstats
+- name: pmultiqc
 tags:
 - proteomics
 - mass-spectrometry

@@ -21,37 +21,43 @@ source:
   url: https://github.com/nf-core/viralmetagenome
   version: 1.1.1
   license: MIT
+  slug: viralmetagenome
 tools:
-- fastp
-- trimmomatic
-- bbduk
-- prinseq++
-- kraken2
-- kaiju
-- bracken
-- spades
-- megahit
-- trinity
-- blastn
-- cd-hit-est
-- vsearch
-- mmseqs2
-- mash
-- minimap2
-- bwa-mem2
-- bowtie2
-- picard
-- umi-tools
-- mosdepth
-- bcftools
-- ivar
-- snpeff
-- snpsift
-- checkv
-- quast
-- prokka
-- mafft
-- multiqc
+- name: fastp
+- name: trimmomatic
+  version: '0.39'
+- name: bbduk
+- name: prinseq++
+  version: 1.2.3
+- name: kraken2
+- name: kaiju
+  version: 1.10.0
+- name: bracken
+- name: spades
+- name: megahit
+- name: trinity
+  version: 2.15.2
+- name: blastn
+- name: cd-hit-est
+  version: 4.8.1
+- name: vsearch
+- name: mmseqs2
+- name: mash
+- name: minimap2
+- name: bwa-mem2
+- name: bowtie2
+- name: picard
+- name: umi-tools
+- name: mosdepth
+- name: bcftools
+- name: ivar
+- name: snpeff
+- name: snpsift
+- name: checkv
+- name: quast
+- name: prokka
+- name: mafft
+- name: multiqc
 tags:
 - virus
 - metagenomics

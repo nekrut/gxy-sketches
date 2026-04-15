@@ -17,10 +17,14 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/bacterial_genomics/cgmlst-bacterial-genome
   version: '1.1'
   license: GPL-3.0-or-later
+  slug: bacterial_genomics--cgmlst-bacterial-genome
 tools:
-- coreprofiler
-- tooldistillator
-- tooldistillator_summarize
+- name: coreprofiler
+  version: 2.0.0+galaxy2
+- name: tooldistillator
+  version: 1.0.5+galaxy1
+- name: tooldistillator_summarize
+  version: 1.0.5+galaxy1
 tags:
 - bacteria
 - cgmlst

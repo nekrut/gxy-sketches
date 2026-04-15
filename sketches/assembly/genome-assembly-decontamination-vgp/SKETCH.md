@@ -16,13 +16,19 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/VGP-assembly-v2/Assembly-decontamination-VGP9
   version: '1.3'
   license: BSD-3-Clause
+  slug: VGP-assembly-v2--Assembly-decontamination-VGP9
 tools:
-- ncbi-fcs-adaptor
-- ncbi-fcs-gx
-- ncbi-blast+
-- dustmasker
-- parse_mito_blast
-- gfastats
+- name: ncbi-fcs-adaptor
+  version: 0.5.0+galaxy0
+- name: ncbi-fcs-gx
+  version: 0.5.5+galaxy2
+- name: ncbi-blast+
+  version: 2.16.0+galaxy0
+- name: dustmasker
+- name: parse_mito_blast
+  version: 1.0.2+galaxy0
+- name: gfastats
+  version: 1.3.11+galaxy1
 tags:
 - vgp
 - decontamination

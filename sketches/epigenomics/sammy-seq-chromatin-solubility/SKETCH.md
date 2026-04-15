@@ -18,17 +18,20 @@ source:
   url: https://github.com/nf-core/sammyseq
   version: dev
   license: MIT
+  slug: sammyseq
 tools:
-- fastqc
-- trim-galore
-- trimmomatic
-- bwa
-- bowtie2
-- samtools
-- picard
-- deeptools
-- spp
-- multiqc
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+- name: trimmomatic
+  version: '0.39'
+- name: bwa
+- name: bowtie2
+- name: samtools
+- name: picard
+- name: deeptools
+- name: spp
+- name: multiqc
 tags:
 - sammy-seq
 - chromatin

@@ -19,9 +19,11 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/transcriptomics/goseq
   version: '0.1'
   license: MIT
+  slug: transcriptomics--goseq
 tools:
-- goseq
-- galaxy-join
+- name: goseq
+  version: 1.50.0+galaxy0
+- name: galaxy-join
 tags:
 - enrichment
 - gene-ontology

@@ -16,11 +16,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/transcriptomics/rnaseq-de
   version: '0.8'
   license: MIT
+  slug: transcriptomics--rnaseq-de
 tools:
-- deseq2
-- deg_annotate
-- volcanoplot
-- ggplot2_heatmap2
+- name: deseq2
+  version: 2.11.40.8+galaxy2
+- name: deg_annotate
+  version: 1.1.0+galaxy1
+- name: volcanoplot
+  version: 4.0.2+galaxy0
+- name: ggplot2_heatmap2
+  version: 3.3.0+galaxy0
 tags:
 - rnaseq
 - differential-expression

@@ -16,10 +16,14 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/epigenetics/hic-hicup-cooler
   version: '0.3'
   license: MIT
+  slug: epigenetics--hic-hicup-cooler--hic-juicermediumtabix-to-cool-cooler
 tools:
-- cooler_makebins
-- cooler_cload_tabix
-- cooler_balance
+- name: cooler_makebins
+  version: 0.9.3+galaxy0
+- name: cooler_cload_tabix
+  version: 0.9.3+galaxy1
+- name: cooler_balance
+  version: 0.9.3+galaxy0
 tags:
 - hi-c
 - cooler

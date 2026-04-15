@@ -20,16 +20,18 @@ source:
   url: https://github.com/nf-core/rnavar
   version: 1.2.3
   license: MIT
+  slug: rnavar
 tools:
-- star
-- samtools
-- picard-markduplicates
-- gatk4
-- bcftools
-- snpeff
-- ensembl-vep
-- fastqc
-- multiqc
+- name: star
+- name: samtools
+- name: picard-markduplicates
+- name: gatk4
+- name: bcftools
+- name: snpeff
+- name: ensembl-vep
+- name: fastqc
+  version: 0.12.1
+- name: multiqc
 tags:
 - rna-seq
 - variant-calling

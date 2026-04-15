@@ -17,13 +17,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/metabolomics/gcms-metams
   version: '0.2'
   license: MIT
+  slug: metabolomics--gcms-metams
 tools:
-- MSnbase
-- xcms
-- metaMS
-- CAMERA
-- Workflow4Metabolomics-checkFormat
-- Workflow4Metabolomics-Multivariate
+- name: MSnbase
+  version: 2.16.1+galaxy3
+- name: xcms
+  version: 3.12.0+galaxy3
+- name: metaMS
+  version: 3.0.0+metaMS1.24.0-galaxy0
+- name: CAMERA
+- name: Workflow4Metabolomics-checkFormat
+- name: Workflow4Metabolomics-Multivariate
 tags:
 - metabolomics
 - GC-MS

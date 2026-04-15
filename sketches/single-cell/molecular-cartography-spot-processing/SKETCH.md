@@ -17,16 +17,19 @@ source:
   url: https://github.com/nf-core/molkart
   version: 1.2.0
   license: MIT
+  slug: molkart
 tools:
-- mindagap
-- clahe
-- cellpose
-- mesmer
-- stardist
-- ilastik
-- spot2cell
-- anndata
-- multiqc
+- name: mindagap
+  version: 0.0.2
+- name: clahe
+- name: cellpose
+  version: 3.0.1_cv1
+- name: mesmer
+- name: stardist
+- name: ilastik
+- name: spot2cell
+- name: anndata
+- name: multiqc
 tags:
 - spatial-transcriptomics
 - molecular-cartography

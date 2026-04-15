@@ -19,15 +19,19 @@ source:
   url: https://github.com/nf-core/marsseq
   version: 1.0.3
   license: MIT
+  slug: marsseq
 tools:
-- bowtie2
-- star
-- starsolo
-- cutadapt
-- fastp
-- fastqc
-- multiqc
-- perl-marsseq2
+- name: bowtie2
+- name: star
+- name: starsolo
+- name: cutadapt
+  version: '3.4'
+- name: fastp
+- name: fastqc
+  version: 0.11.9
+- name: multiqc
+  version: '1.14'
+- name: perl-marsseq2
 tags:
 - mars-seq
 - plate-based

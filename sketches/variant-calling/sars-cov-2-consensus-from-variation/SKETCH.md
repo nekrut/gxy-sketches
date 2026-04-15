@@ -18,12 +18,17 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/sars-cov-2-variant-calling/sars-cov-2-consensus-from-variation
   version: 0.4.3
   license: MIT
+  slug: sars-cov-2-variant-calling--sars-cov-2-consensus-from-variation
 tools:
-- bcftools
-- bedtools
-- snpsift
-- compose_text_param
-- column_maker
+- name: bcftools
+  version: 1.15.1+galaxy4
+- name: bedtools
+  version: 2.31.1
+- name: snpsift
+  version: 4.3+t.galaxy1
+- name: compose_text_param
+  version: 0.1.1
+- name: column_maker
 tags:
 - sars-cov-2
 - covid-19

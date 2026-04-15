@@ -20,17 +20,22 @@ source:
   url: https://github.com/nf-core/proteinfamilies
   version: 2.2.0
   license: MIT
+  slug: proteinfamilies
 tools:
-- seqfu
-- seqkit
-- mmseqs2
-- famsa
-- mafft
-- clipkit
-- hmmer
-- hh-suite3
-- cmaple
-- multiqc
+- name: seqfu
+  version: 2.9.0
+- name: seqkit
+  version: 2.9.0
+- name: mmseqs2
+- name: famsa
+- name: mafft
+- name: clipkit
+  version: 2.4.1
+- name: hmmer
+- name: hh-suite3
+- name: cmaple
+  version: 1.1.0
+- name: multiqc
 tags:
 - protein-families
 - hmm

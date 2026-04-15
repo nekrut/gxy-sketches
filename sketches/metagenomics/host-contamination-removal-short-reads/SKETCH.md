@@ -16,9 +16,12 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/host-contamination-removal/host-contamination-removal-short-reads
   version: '0.3'
   license: MIT
+  slug: microbiome--host-contamination-removal--host-contamination-removal-short-reads
 tools:
-- bowtie2
-- multiqc
+- name: bowtie2
+  version: 2.5.4+galaxy0
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - microbiome
 - decontamination

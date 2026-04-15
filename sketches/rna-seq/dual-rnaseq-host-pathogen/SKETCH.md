@@ -22,16 +22,17 @@ source:
   url: https://github.com/nf-core/dualrnaseq
   version: 1.0.0
   license: MIT
+  slug: dualrnaseq
 tools:
-- fastqc
-- bbduk
-- cutadapt
-- salmon
-- star
-- htseq
-- tximport
-- gffread
-- multiqc
+- name: fastqc
+- name: bbduk
+- name: cutadapt
+- name: salmon
+- name: star
+- name: htseq
+- name: tximport
+- name: gffread
+- name: multiqc
 tags:
 - dual-rnaseq
 - host-pathogen

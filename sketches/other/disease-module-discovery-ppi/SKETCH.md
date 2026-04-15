@@ -17,19 +17,20 @@ source:
   url: https://github.com/nf-core/diseasemodulediscovery
   version: dev
   license: MIT
+  slug: diseasemodulediscovery
 tools:
-- domino
-- diamond
-- robust
-- robust-bias-aware
-- rwr
-- gprofiler2
-- digest
-- graph-tool
-- drugst.one
-- nedrex
-- pyvis
-- multiqc
+- name: domino
+- name: diamond
+- name: robust
+- name: robust-bias-aware
+- name: rwr
+- name: gprofiler2
+- name: digest
+- name: graph-tool
+- name: drugst.one
+- name: nedrex
+- name: pyvis
+- name: multiqc
 tags:
 - network-medicine
 - disease-module

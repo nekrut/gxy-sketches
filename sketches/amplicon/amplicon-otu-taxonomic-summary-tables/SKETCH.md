@@ -16,12 +16,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/amplicon/amplicon-mgnify/mgnify-amplicon-taxonomic-summary-tables
   version: '0.2'
   license: MIT
+  slug: amplicon--amplicon-mgnify--mgnify-amplicon-taxonomic-summary-tables
 tools:
-- query_tabular
-- gnu-awk
-- galaxy-grouping
-- filter_tabular
-- collection_column_join
+- name: query_tabular
+  version: 3.3.2
+- name: gnu-awk
+- name: galaxy-grouping
+- name: filter_tabular
+  version: 3.3.1
+- name: collection_column_join
+  version: 0.0.3
 tags:
 - amplicon
 - 16S

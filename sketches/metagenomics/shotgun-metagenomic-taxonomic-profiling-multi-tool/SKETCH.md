@@ -24,29 +24,37 @@ source:
   url: https://github.com/nf-core/taxprofiler
   version: 1.2.6
   license: MIT
+  slug: taxprofiler
 tools:
-- fastp
-- adapterremoval
-- porechop
-- filtlong
-- nanoq
-- bowtie2
-- minimap2
-- kraken2
-- bracken
-- krakenuniq
-- centrifuge
-- kaiju
-- diamond
-- malt
-- metaphlan
-- motus
-- kmcp
-- ganon
-- taxpasta
-- krona
-- multiqc
-- nonpareil
+- name: fastp
+- name: adapterremoval
+  version: 2.3.2
+- name: porechop
+- name: filtlong
+  version: 0.2.1
+- name: nanoq
+  version: 0.10.0
+- name: bowtie2
+- name: minimap2
+- name: kraken2
+- name: bracken
+- name: krakenuniq
+- name: centrifuge
+  version: 1.0.4.2
+- name: kaiju
+  version: 1.10.0
+- name: diamond
+- name: malt
+- name: metaphlan
+  version: 4.1.1
+- name: motus
+- name: kmcp
+- name: ganon
+- name: taxpasta
+- name: krona
+- name: multiqc
+- name: nonpareil
+  version: 3.5.5
 tags:
 - metagenomics
 - taxonomic-profiling

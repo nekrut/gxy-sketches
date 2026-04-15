@@ -17,17 +17,20 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/metabolomics/mfassignr
   version: '0.1'
   license: MIT
+  slug: metabolomics--mfassignr
 tools:
-- MFAssignR
-- KMDNoise
-- HistNoise
-- SNplot
-- IsoFiltR
-- MFAssignCHO
-- RecalList
-- FindRecalSeries
-- Recal
-- MFAssign
+- name: MFAssignR
+  version: 1.1.2+galaxy0
+- name: KMDNoise
+- name: HistNoise
+- name: SNplot
+- name: IsoFiltR
+- name: MFAssignCHO
+- name: RecalList
+- name: FindRecalSeries
+- name: Recal
+- name: MFAssign
+  version: 1.1.2+galaxy0
 tags:
 - metabolomics
 - mass-spectrometry

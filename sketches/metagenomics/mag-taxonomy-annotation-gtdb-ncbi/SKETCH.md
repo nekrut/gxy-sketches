@@ -18,11 +18,16 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/microbiome/mags-taxonomy-annotation
   version: '0.1'
   license: MIT
+  slug: microbiome--mags-taxonomy-annotation
 tools:
-- gtdbtk
-- gtdb_to_taxdump
-- name2taxid
-- multiqc
+- name: gtdbtk
+  version: 2.5.2+galaxy1
+- name: gtdb_to_taxdump
+  version: 0.1.9+galaxy0
+- name: name2taxid
+  version: 0.20.0+galaxy0
+- name: multiqc
+  version: 1.33+galaxy0
 tags:
 - mag
 - bin

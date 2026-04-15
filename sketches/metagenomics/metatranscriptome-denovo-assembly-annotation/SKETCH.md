@@ -19,24 +19,28 @@ source:
   url: https://github.com/nf-core/metatdenovo
   version: 1.3.0
   license: MIT
+  slug: metatdenovo
 tools:
-- fastqc
-- trim-galore
-- bbduk
-- bbnorm
-- megahit
-- spades
-- prodigal
-- prokka
-- transdecoder
-- bbmap
-- featurecounts
-- eggnog-mapper
-- kofamscan
-- hmmer
-- eukulele
-- diamond
-- taxonkit
+- name: fastqc
+  version: 0.12.1
+- name: trim-galore
+- name: bbduk
+- name: bbnorm
+- name: megahit
+- name: spades
+- name: prodigal
+  version: 57f05cfa73f769d6ed6d54144cb3aa2a6a6b17e0-0
+- name: prokka
+- name: transdecoder
+- name: bbmap
+- name: featurecounts
+  version: 2.0.6
+- name: eggnog-mapper
+- name: kofamscan
+- name: hmmer
+- name: eukulele
+- name: diamond
+- name: taxonkit
 tags:
 - metatranscriptomics
 - metagenomics

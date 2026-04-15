@@ -20,11 +20,14 @@ source:
   url: https://github.com/galaxyproject/iwc/tree/main/workflows/proteomics/clinicalmp/clinicalmp-database-generation
   version: '0.1'
   license: CC-BY-4.0
+  slug: proteomics--clinicalmp--clinicalmp-database-generation
 tools:
-- fasta_merge_files_and_filter_unique_sequences
-- metanovo
-- directag
-- compomics
+- name: fasta_merge_files_and_filter_unique_sequences
+  version: 1.2.0
+- name: metanovo
+  version: 1.9.4+galaxy4
+- name: directag
+- name: compomics
 tags:
 - metaproteomics
 - clinical
