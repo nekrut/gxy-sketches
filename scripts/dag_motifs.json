@@ -1,0 +1,275 @@
+{
+  "parsed": 175,
+  "total": 258,
+  "kpath_motifs": [
+    {
+      "motif": [
+        "bam_utils",
+        "markdup"
+      ],
+      "support": 16,
+      "sketches": [
+        "epigenomics/atacseq-chromatin-accessibility-paired-end",
+        "epigenomics/calling-cards-tf-binding-mammalian",
+        "epigenomics/cutandrun-cutandtag-peak-calling",
+        "epigenomics/cutandrun-histone-profiling",
+        "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+        "rna-seq/bulk-rnaseq-single-end-star-quantification",
+        "rna-seq/nascent-transcript-tre-calling",
+        "variant-calling/ancient-dna-short-read-preprocessing-mapping",
+        "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+        "variant-calling/haploid-wgs-variant-calling-paired-end",
+        "variant-calling/lcwgs-relatedness-estimation",
+        "variant-calling/low-frequency-variant-calling-viral-wgs",
+        "variant-calling/pathogen-surveillance-unknown-gdna",
+        "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+        "variant-calling/rna-seq-germline-variant-calling-gatk",
+        "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling"
+      ]
+    },
+    {
+      "motif": [
+        "sr_aln",
+        "bam_utils"
+      ],
+      "support": 11,
+      "sketches": [
+        "assembly/hic-scaffolding-yahs-vgp",
+        "other/deep-mutational-scanning-shotgun",
+        "rna-seq/nascent-transcript-tre-calling",
+        "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+        "variant-calling/haploid-wgs-variant-calling-paired-end",
+        "variant-calling/low-frequency-variant-calling-viral-wgs",
+        "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+        "variant-calling/sars-cov-2-artic-illumina-variant-calling",
+        "variant-calling/sars-cov-2-illumina-amplicon-ivar",
+        "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling",
+        "variant-calling/viral-variant-calling-consensus-illumina-pe"
+      ]
+    },
+    {
+      "motif": [
+        "raw_qc",
+        "trim"
+      ],
+      "support": 9,
+      "sketches": [
+        "amplicon/amplicon-read-qc-paired-end-mgnify",
+        "epigenomics/sammy-seq-chromatin-solubility",
+        "rna-seq/nascent-transcript-tre-calling",
+        "single-cell/marsseq-plate-scrnaseq-preprocessing",
+        "variant-calling/ancient-dna-short-read-preprocessing-mapping",
+        "variant-calling/bacterial-reference-mapping-pseudogenome",
+        "variant-calling/pathogen-surveillance-unknown-gdna",
+        "variant-calling/sars-cov-2-amplicon-illumina-consensus",
+        "variant-calling/somatic-variant-calling-tumor-normal-human"
+      ]
+    },
+    {
+      "motif": [
+        "sr_aln",
+        "bam_utils",
+        "markdup"
+      ],
+      "support": 6,
+      "sketches": [
+        "rna-seq/nascent-transcript-tre-calling",
+        "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+        "variant-calling/haploid-wgs-variant-calling-paired-end",
+        "variant-calling/low-frequency-variant-calling-viral-wgs",
+        "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+        "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling"
+      ]
+    },
+    {
+      "motif": [
+        "intervals",
+        "bam_utils"
+      ],
+      "support": 6,
+      "sketches": [
+        "epigenomics/atacseq-chromatin-accessibility-paired-end",
+        "epigenomics/chipseq-consensus-peaks-single-end",
+        "epigenomics/consensus-peak-calling-atac-cutandrun",
+        "epigenomics/consensus-peak-calling-chipseq-paired-end",
+        "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+        "rna-seq/bulk-rnaseq-single-end-star-quantification"
+      ]
+    },
+    {
+      "motif": [
+        "markdup",
+        "qc_report"
+      ],
+      "support": 6,
+      "sketches": [
+        "qc/fastq-sequencing-qc-core-facility",
+        "rna-seq/bulk-rnaseq-single-end-star-quantification",
+        "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+        "variant-calling/haploid-wgs-variant-calling-paired-end",
+        "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+        "variant-calling/sars-cov-2-variant-calling-illumina-se-wgs"
+      ]
+    },
+    {
+      "motif": [
+        "raw_qc",
+        "qc_report"
+      ],
+      "support": 6,
+      "sketches": [
+        "amplicon/amplicon-read-qc-paired-end-mgnify",
+        "qc/fastq-repair-gz-recovery",
+        "qc/genome-skim-read-qc",
+        "qc/mitochondrial-ngs-qc",
+        "qc/sequencing-read-qc-report",
+        "variant-calling/pacbio-hifi-tumor-normal-somatic"
+      ]
+    },
+    {
+      "motif": [
+        "sr_aln",
+        "sr_aln_sensitive"
+      ],
+      "support": 6,
+      "sketches": [
+        "amplicon/crispr-targeted-edit-quantification",
+        "epigenomics/calling-cards-tf-binding-mammalian",
+        "epigenomics/chipseq-peak-calling-tf-histone",
+        "epigenomics/sammy-seq-chromatin-solubility",
+        "variant-calling/ancient-dna-short-read-preprocessing-mapping",
+        "variant-calling/bacterial-reference-mapping-pseudogenome"
+      ]
+    },
+    {
+      "motif": [
+        "sr_aln_sensitive",
+        "bam_utils"
+      ],
+      "support": 6,
+      "sketches": [
+        "epigenomics/atacseq-chromatin-accessibility-paired-end",
+        "epigenomics/chip-seq-peak-calling-paired-end",
+        "epigenomics/chip-seq-peak-calling-single-end",
+        "epigenomics/cutandrun-cutandtag-peak-calling",
+        "variant-calling/ancient-dna-short-read-preprocessing-mapping",
+        "variant-calling/bacterial-reference-mapping-pseudogenome"
+      ]
+    },
+    {
+      "motif": [
+        "trim",
+        "sr_aln"
+      ],
+      "support": 6,
+      "sketches": [
+        "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+        "variant-calling/sars-cov-2-artic-illumina-variant-calling",
+        "variant-calling/sars-cov-2-illumina-amplicon-ivar",
+        "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling",
+        "variant-calling/somatic-variant-calling-tumor-normal-human",
+        "variant-calling/viral-variant-calling-consensus-illumina-pe"
+      ]
+    },
+    {
+      "motif": [
+        "trim",
+        "sr_aln",
+        "bam_utils"
+      ],
+      "support": 5,
+      "sketches": [
+        "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+        "variant-calling/sars-cov-2-artic-illumina-variant-calling",
+        "variant-calling/sars-cov-2-illumina-amplicon-ivar",
+        "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling",
+        "variant-calling/viral-variant-calling-consensus-illumina-pe"
+      ]
+    },
+    {
+      "motif": [
+        "annot_var",
+        "vcf_filter"
+      ],
+      "support": 5,
+      "sketches": [
+        "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+        "variant-calling/haploid-wgs-variant-calling-paired-end",
+        "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+        "variant-calling/sars-cov-2-amplicon-illumina-consensus",
+        "variant-calling/viral-variant-calling-consensus-illumina-pe"
+      ]
+    },
+    {
+      "motif": [
+        "bam_utils",
+        "intervals"
+      ],
+      "support": 5,
+      "sketches": [
+        "epigenomics/calling-cards-tf-binding-mammalian",
+        "epigenomics/chipseq-consensus-peaks-single-end",
+        "rna-seq/alternative-splicing-rnaseq",
+        "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+        "rna-seq/bulk-rnaseq-single-end-star-quantification"
+      ]
+    },
+    {
+      "motif": [
+        "bam_utils",
+        "sr_aln"
+      ],
+      "support": 5,
+      "sketches": [
+        "epigenomics/sammy-seq-chromatin-solubility",
+        "other/deep-mutational-scanning-shotgun",
+        "qc/fastq-sequencing-qc-core-facility",
+        "variant-calling/lcwgs-relatedness-estimation",
+        "variant-calling/umi-consensus-reads-fgbio"
+      ]
+    },
+    {
+      "motif": [
+        "qc_report",
+        "raw_qc"
+      ],
+      "support": 5,
+      "sketches": [
+        "epigenomics/illumina-methylation-array-dmp-dmr",
+        "qc/sequencing-read-qc-report",
+        "qc/simulate-sequencing-reads",
+        "rna-seq/bulk-rnaseq-single-end-star-quantification",
+        "single-cell/marsseq-plate-scrnaseq-preprocessing"
+      ]
+    },
+    {
+      "motif": [
+        "vc_lowfreq",
+        "annot_var"
+      ],
+      "support": 5,
+      "sketches": [
+        "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+        "variant-calling/haploid-wgs-variant-calling-paired-end",
+        "variant-calling/low-frequency-variant-calling-viral-wgs",
+        "variant-calling/sars-cov-2-variant-calling-illumina-se-wgs",
+        "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling"
+      ]
+    }
+  ],
+  "costep_motifs": [
+    {
+      "costep": [
+        "bam_utils",
+        "intervals"
+      ],
+      "support": 4,
+      "sketches": [
+        "epigenomics/calling-cards-tf-binding-mammalian",
+        "rna-seq/alternative-splicing-rnaseq",
+        "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+        "rna-seq/bulk-rnaseq-single-end-star-quantification"
+      ]
+    }
+  ]
+}
