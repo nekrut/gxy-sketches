@@ -1,0 +1,1159 @@
+{
+  "classification": {
+    "amp-qiime2-dada2": {
+      "parsed": 9,
+      "total": 10,
+      "slugs": [
+        "amplicon-16s-asv-illumina-paired",
+        "amplicon-alpha-beta-diversity-qiime2",
+        "amplicon-asv-dada2-paired",
+        "amplicon-dada2-denoising-paired-qiime2",
+        "amplicon-dada2-denoising-single-end-qiime2",
+        "amplicon-qiime2-phylogeny-rarefaction-taxonomy",
+        "qiime2-import-demultiplex-emp-single-end",
+        "qiime2-import-demultiplexed-paired-end",
+        "qiime2-import-demultiplexed-single-end",
+        "qiime2-import-demux-emp-paired"
+      ]
+    },
+    "amp-other": {
+      "parsed": 1,
+      "total": 3,
+      "slugs": [
+        "amplicon-otu-taxonomic-summary-tables",
+        "amplicon-rrna-taxonomic-classification-silva",
+        "mapseq-otu-to-ampvis2-reformat"
+      ]
+    },
+    "amp-mgnify": {
+      "parsed": 3,
+      "total": 4,
+      "slugs": [
+        "amplicon-read-qc-paired-end-mgnify",
+        "amplicon-rrna-its-taxonomy-mgnify",
+        "its-amplicon-taxonomy-mgnify",
+        "mgnify-otu-rank-abundance-summary"
+      ]
+    },
+    "amp-crispr": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "crispr-targeted-edit-quantification"
+      ]
+    },
+    "amp-viral": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "pox-virus-amplicon-consensus-itr"
+      ]
+    },
+    "annot-eukaryotic": {
+      "parsed": 1,
+      "total": 4,
+      "slugs": [
+        "ab-initio-eukaryotic-genome-annotation-helixer",
+        "eukaryote-genome-annotation-metazoan",
+        "eukaryotic-genome-annotation-braker3",
+        "eukaryotic-genome-annotation-maker"
+      ]
+    },
+    "annot-bacterial": {
+      "parsed": 3,
+      "total": 4,
+      "slugs": [
+        "amr-virulence-gene-detection-bacterial-assembly",
+        "bacterial-genome-annotation",
+        "cgmlst-bacterial-strain-typing",
+        "mag-functional-annotation-prokaryote"
+      ]
+    },
+    "annot-other": {
+      "parsed": 6,
+      "total": 8,
+      "slugs": [
+        "cancer-variant-prioritization-pcgr-cpsr",
+        "de-novo-repeat-masking-genome",
+        "functional-gene-screening-prokaryotic-contigs",
+        "lncrna-annotation-feelnc",
+        "mhc-binding-epitope-prediction",
+        "ncrna-annotation-genome",
+        "protein-family-hmm-msa-generation",
+        "protein-sequence-annotation"
+      ]
+    },
+    "annot-functional": {
+      "parsed": 2,
+      "total": 2,
+      "slugs": [
+        "functional-annotation-protein-dna-sequences",
+        "ortholog-consensus-protein"
+      ]
+    },
+    "asm-long-read": {
+      "parsed": 4,
+      "total": 7,
+      "slugs": [
+        "assembly-polishing-long-reads-racon",
+        "hifi-contig-assembly-vertebrate-vgp",
+        "long-read-de-novo-assembly-flye",
+        "long-read-genome-assembly",
+        "mitogenome-assembly-pacbio-hifi",
+        "phased-diploid-assembly-hifi-hic",
+        "trio-phased-diploid-assembly-hifi"
+      ]
+    },
+    "asm-short-bacterial": {
+      "parsed": 2,
+      "total": 3,
+      "slugs": [
+        "bacterial-genome-assembly-short-read",
+        "bacterial-short-read-assembly-shovill",
+        "hybrid-denovo-assembly-bacterial"
+      ]
+    },
+    "asm-hic-scaffolding": {
+      "parsed": 2,
+      "total": 3,
+      "slugs": [
+        "bionano-optical-map-scaffolding-vgp",
+        "hic-pretext-contact-map-assembly-curation",
+        "hic-scaffolding-yahs-vgp"
+      ]
+    },
+    "asm-decontamination": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "genome-assembly-decontamination-vgp"
+      ]
+    },
+    "asm-other": {
+      "parsed": 2,
+      "total": 2,
+      "slugs": [
+        "linked-read-denovo-assembly-10x",
+        "pangenome-graph-construction"
+      ]
+    },
+    "asm-purge-haplotypes": {
+      "parsed": 2,
+      "total": 2,
+      "slugs": [
+        "purge-haplotypic-duplicates-diploid-assembly",
+        "purge-haplotypic-duplicates-single-haplotype"
+      ]
+    },
+    "epi-atacseq": {
+      "parsed": 2,
+      "total": 3,
+      "slugs": [
+        "atac-seq-peak-calling-differential",
+        "atacseq-chromatin-accessibility-paired-end",
+        "consensus-peak-calling-atac-cutandrun"
+      ]
+    },
+    "epi-other": {
+      "parsed": 3,
+      "total": 6,
+      "slugs": [
+        "average-bigwig-replicates-epigenomics",
+        "calling-cards-tf-binding-mammalian",
+        "differential-tf-activity-from-chromatin-and-rnaseq",
+        "illumina-methylation-array-dmp-dmr",
+        "sammy-seq-chromatin-solubility",
+        "ssds-single-stranded-dna-sequencing"
+      ]
+    },
+    "epi-bisulfite": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "bisulfite-methylation-bismark"
+      ]
+    },
+    "epi-hic": {
+      "parsed": 4,
+      "total": 4,
+      "slugs": [
+        "capture-hic-to-balanced-cool",
+        "hic-fastq-to-balanced-cool-matrix",
+        "hic-fastq-to-valid-pairs-hicup",
+        "hic-juicer-medium-to-cooler"
+      ]
+    },
+    "epi-chipseq": {
+      "parsed": 5,
+      "total": 5,
+      "slugs": [
+        "chip-seq-peak-calling-paired-end",
+        "chip-seq-peak-calling-single-end",
+        "chipseq-consensus-peaks-single-end",
+        "chipseq-peak-calling-tf-histone",
+        "consensus-peak-calling-chipseq-paired-end"
+      ]
+    },
+    "epi-cutandrun": {
+      "parsed": 2,
+      "total": 2,
+      "slugs": [
+        "cutandrun-cutandtag-peak-calling",
+        "cutandrun-histone-profiling"
+      ]
+    },
+    "epi-long-read-meth": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "long-read-methylation-calling"
+      ]
+    },
+    "epi-mnase": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "mnase-seq-nucleosome-positioning"
+      ]
+    },
+    "longread-other": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "nanopore-dna-demux-align-qc"
+      ]
+    },
+    "meta-host-decon": {
+      "parsed": 1,
+      "total": 3,
+      "slugs": [
+        "coprolite-host-identification-ancient",
+        "host-decontamination-long-reads",
+        "metagenome-read-mapping-to-genome-collection"
+      ]
+    },
+    "meta-other": {
+      "parsed": 5,
+      "total": 6,
+      "slugs": [
+        "gene-based-pathogen-identification-nanopore",
+        "host-contamination-removal-short-reads",
+        "mag-taxonomy-annotation-gtdb-ncbi",
+        "metagenomic-binning-benchmarking-cami-amber",
+        "pathogen-aggregation-visualisation-nanopore",
+        "phage-identification-metagenomic"
+      ]
+    },
+    "meta-tax-profiling": {
+      "parsed": 2,
+      "total": 3,
+      "slugs": [
+        "kraken2-krona-taxonomy-profiling-nanopore",
+        "metagenomic-classifier-database-build",
+        "shotgun-metagenomic-taxonomic-profiling-multi-tool"
+      ]
+    },
+    "meta-assembly-binning": {
+      "parsed": 1,
+      "total": 3,
+      "slugs": [
+        "metagenome-assembled-genomes-short-read",
+        "metagenomic-gene-catalogue-short-read",
+        "shotgun-metagenome-assembly-binning"
+      ]
+    },
+    "meta-functional": {
+      "parsed": 1,
+      "total": 2,
+      "slugs": [
+        "metagenomic-amr-profiling-short-reads",
+        "microbiome-functional-profiling-reads"
+      ]
+    },
+    "meta-metatranscriptome": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "metatranscriptome-denovo-assembly-annotation"
+      ]
+    },
+    "other": {
+      "parsed": 16,
+      "total": 29,
+      "slugs": [
+        "agent-based-industrial-revolution-simulation",
+        "bcr-tcr-repertoire-bulk-umi",
+        "cell-painting-image-profiling",
+        "correlated-meta-analysis-omics-gene-trait",
+        "data-sync-integrity-archival",
+        "dctmd-free-energy-protein-ligand-gromacs",
+        "deep-learning-model-tuning-genomics",
+        "deep-mutational-scanning-shotgun",
+        "disease-module-discovery-ppi",
+        "drug-response-prediction-benchmarking",
+        "ena-submission-mags-bins-assemblies",
+        "fluorescence-nuclei-segmentation-otsu",
+        "fragment-based-virtual-screening-rdock-sucos",
+        "landsat-vegetation-trend-analysis",
+        "lcms-untargeted-metabolomics-preprocessing-nextflow",
+        "meerkat-pulsar-timing",
+        "metagenome-mhc-epitope-prediction",
+        "mmgbsa-binding-free-energy-gromacs",
+        "molecular-formula-assignment-ultrahigh-res-ms",
+        "multiplex-tissue-imaging-tma-phenotyping",
+        "multiplexed-tissue-imaging-single-cell",
+        "pairwise-whole-genome-alignment-last",
+        "protein-ligand-complex-parameterization-gromacs",
+        "protein-structure-prediction-alphafold2",
+        "public-sequencing-data-fetch",
+        "qcxms-ei-spectra-prediction-sdf",
+        "reference-genome-index-building",
+        "sra-manifest-to-concatenated-fastqs",
+        "tissue-microarray-cyclic-if-analysis"
+      ]
+    },
+    "phylo": {
+      "parsed": 4,
+      "total": 7,
+      "slugs": [
+        "coding-gene-selection-analysis-hyphy",
+        "codon-aware-alignment-and-gene-trees-viral",
+        "codon-selection-hyphy-viral",
+        "hyphy-branch-selection-comparison",
+        "hyphy-codon-selection-viral",
+        "phylogenetic-placement-epa-ng",
+        "protein-multiple-sequence-alignment-benchmarking"
+      ]
+    },
+    "prot-other": {
+      "parsed": 10,
+      "total": 11,
+      "slugs": [
+        "clinical-metaproteomics-data-interpretation-tmt",
+        "clinical-metaproteomics-database-generation",
+        "clinical-metaproteomics-discovery",
+        "clinical-metaproteomics-tmt-quantitation",
+        "gcms-untargeted-metabolomics-metams",
+        "label-free-proteomics-quantification",
+        "lcms-untargeted-metabolomics-preprocessing",
+        "metaproteomics-peptide-verification-pepquery",
+        "protein-sip-metaproteomics",
+        "proteogenomics-database-generation",
+        "ribonucleoside-ms-qc"
+      ]
+    },
+    "prot-dia": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "dia-proteomics-quantification"
+      ]
+    },
+    "prot-dda": {
+      "parsed": 0,
+      "total": 3,
+      "slugs": [
+        "immunopeptidomics-mhc-dda",
+        "label-free-quantitative-proteomics-dda",
+        "tmt-isobaric-dda-proteomics"
+      ]
+    },
+    "qc-short-read": {
+      "parsed": 7,
+      "total": 7,
+      "slugs": [
+        "amplicon-read-qc-single-end",
+        "fastq-sequencing-qc-core-facility",
+        "sequencing-read-qc-report",
+        "short-read-fastq-qc-trim",
+        "short-read-fastqc-multiqc",
+        "short-read-qc-and-taxonomic-screen",
+        "short-read-qc-trimming-illumina"
+      ]
+    },
+    "qc-asm": {
+      "parsed": 1,
+      "total": 2,
+      "slugs": [
+        "assembly-nx-size-comparison-plots",
+        "multi-genome-assembly-qc-comparison"
+      ]
+    },
+    "qc-decontamination": {
+      "parsed": 1,
+      "total": 3,
+      "slugs": [
+        "bacterial-assembly-qc-contamination",
+        "host-read-decontamination",
+        "nanopore-host-depletion-preprocessing"
+      ]
+    },
+    "qc-format-convert": {
+      "parsed": 2,
+      "total": 2,
+      "slugs": [
+        "bam-cram-to-fastq-conversion",
+        "fastq-repair-gz-recovery"
+      ]
+    },
+    "qc-long-read": {
+      "parsed": 2,
+      "total": 3,
+      "slugs": [
+        "genome-skim-read-qc",
+        "kmer-profiling-hifi-genome-qc",
+        "kmer-profiling-trio-hifi"
+      ]
+    },
+    "qc-bcl-demux": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "illumina-bcl-demultiplexing"
+      ]
+    },
+    "qc-mito": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "mitochondrial-ngs-qc"
+      ]
+    },
+    "qc-mtb": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "mycobacterium-tuberculosis-short-read-qc"
+      ]
+    },
+    "qc-sra": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "parallel-sra-accession-download"
+      ]
+    },
+    "qc-simulate": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "simulate-sequencing-reads"
+      ]
+    },
+    "rna-other": {
+      "parsed": 4,
+      "total": 6,
+      "slugs": [
+        "allele-specific-expression-rnaseq-umi",
+        "goseq-go-kegg-enrichment-rnaseq",
+        "nanostring-ncounter-qc-normalization",
+        "rna-outlier-detection-mendelian",
+        "stable-reference-gene-discovery",
+        "three-prime-utr-reannotation-brew3r"
+      ]
+    },
+    "rna-splicing": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "alternative-splicing-rnaseq"
+      ]
+    },
+    "rna-bulk-de": {
+      "parsed": 3,
+      "total": 6,
+      "slugs": [
+        "bulk-rnaseq-differential-expression",
+        "bulk-rnaseq-paired-end-star-quantification",
+        "bulk-rnaseq-quantification-eukaryote",
+        "bulk-rnaseq-single-end-star-quantification",
+        "dual-rnaseq-host-pathogen",
+        "two-condition-rnaseq-differential-expression"
+      ]
+    },
+    "rna-cage-tss": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "cage-seq-tss-profiling"
+      ]
+    },
+    "rna-circrna": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "circrna-detection-quantification-bulk-rnaseq"
+      ]
+    },
+    "rna-de-novo": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "de-novo-transcriptome-assembly-bulk-rnaseq"
+      ]
+    },
+    "rna-iclip-clip": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "iclip-rbp-crosslink-peak-calling"
+      ]
+    },
+    "rna-nascent": {
+      "parsed": 2,
+      "total": 2,
+      "slugs": [
+        "nascent-transcript-tre-calling",
+        "slamseq-transcriptional-output"
+      ]
+    },
+    "rna-ribosome": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "ribosome-profiling-orf-translation"
+      ]
+    },
+    "rna-fusion": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "rna-seq-gene-fusion-detection-human"
+      ]
+    },
+    "rna-mirna-smallrna": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "small-rna-seq-mirna-quantification"
+      ]
+    },
+    "rna-spatial": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "visium-spatial-transcriptomics-10x"
+      ]
+    },
+    "sc-rna": {
+      "parsed": 13,
+      "total": 20,
+      "slugs": [
+        "baredsc-1d-gene-expression-mixture",
+        "baredsc-2d-gene-coexpression-mixture",
+        "case-control-scrnaseq-postcount",
+        "marsseq-plate-scrnaseq-preprocessing",
+        "molecular-cartography-spot-processing",
+        "rna-velocity-velocyto-10x-bundled",
+        "rna-velocity-velocyto-10x-filtered-barcodes",
+        "scrna-10x-cellplex-multiplex-preprocessing",
+        "scrna-10x-v3-fastq-to-count-matrix",
+        "scrna-downstream-integration-clustering",
+        "scrna-pseudobulk-differential-expression",
+        "scrna-seq-scanpy-clustering-10x",
+        "scrnaseq-10x-gene-expression-quantification",
+        "single-cell-donor-demultiplexing-rescue",
+        "single-cell-nanopore-10x-rnaseq",
+        "single-cell-proximity-network-assay",
+        "smartseq2-scrna-quantification-with-immune-receptor",
+        "spatial-omics-cell-segmentation",
+        "spatial-transcriptomics-insitu-array",
+        "xenium-spatial-transcriptomics-qc"
+      ]
+    },
+    "sv": {
+      "parsed": 2,
+      "total": 3,
+      "slugs": [
+        "ecdna-identification-eukaryotic",
+        "pacbio-tandem-repeat-genotyping",
+        "viral-integration-detection-human"
+      ]
+    },
+    "vc-pathogen-id": {
+      "parsed": 3,
+      "total": 3,
+      "slugs": [
+        "abo-blood-typing-nanopore",
+        "allele-based-pathogen-id-nanopore",
+        "pathogen-surveillance-unknown-gdna"
+      ]
+    },
+    "vc-gwas-imputation": {
+      "parsed": 4,
+      "total": 5,
+      "slugs": [
+        "alphagenome-gwas-regulatory-interpretation",
+        "lcwgs-relatedness-estimation",
+        "low-coverage-genotype-imputation-human",
+        "radseq-variant-calling",
+        "rare-variant-burden-case-only-gnomad"
+      ]
+    },
+    "vc-ancient-dna": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "ancient-dna-short-read-preprocessing-mapping"
+      ]
+    },
+    "vc-haploid-microbial": {
+      "parsed": 3,
+      "total": 3,
+      "slugs": [
+        "bacterial-reference-mapping-pseudogenome",
+        "haploid-wgs-variant-calling-lofreq-pe",
+        "haploid-wgs-variant-calling-paired-end"
+      ]
+    },
+    "vc-somatic-human": {
+      "parsed": 5,
+      "total": 6,
+      "slugs": [
+        "comprehensive-cancer-wgts-hmftools",
+        "pacbio-hifi-tumor-normal-somatic",
+        "panel-of-normals-human-cnv-somatic",
+        "rna-somatic-variant-calling-tumor-normal",
+        "somatic-variant-calling-tumor-normal-human",
+        "tumour-clonal-evolution-wgs"
+      ]
+    },
+    "vc-viral-amplicon": {
+      "parsed": 5,
+      "total": 8,
+      "slugs": [
+        "crispr-editing-amplicon-analysis",
+        "influenza-a-subtyping-and-consensus-illumina",
+        "sars-cov-2-amplicon-illumina-consensus",
+        "sars-cov-2-artic-illumina-variant-calling",
+        "sars-cov-2-artic-ont-variant-calling",
+        "sars-cov-2-illumina-amplicon-ivar",
+        "untargeted-viral-consensus-metagenomic",
+        "viral-variant-calling-consensus-illumina-pe"
+      ]
+    },
+    "vc-germline-human": {
+      "parsed": 2,
+      "total": 6,
+      "slugs": [
+        "deep-learning-germline-variant-calling-human",
+        "germline-exome-variant-calling-human",
+        "ploidy-aware-germline-variant-calling-short-read",
+        "population-variant-catalogue-human-wgs",
+        "rare-disease-wgs-family-prioritization",
+        "rna-seq-germline-variant-calling-gatk"
+      ]
+    },
+    "unclassified": {
+      "parsed": 0,
+      "total": 1,
+      "slugs": [
+        "genome-wide-association-study-human"
+      ]
+    },
+    "vc-viral-shotgun": {
+      "parsed": 6,
+      "total": 6,
+      "slugs": [
+        "low-frequency-variant-calling-viral-wgs",
+        "sars-cov-2-consensus-from-variation",
+        "sars-cov-2-variant-calling-illumina-se-wgs",
+        "sars-cov-2-variant-reporting",
+        "sars-cov-2-wgs-illumina-pe-variant-calling",
+        "viral-intrahost-low-frequency-variants"
+      ]
+    },
+    "vc-umi-consensus": {
+      "parsed": 1,
+      "total": 1,
+      "slugs": [
+        "umi-consensus-reads-fgbio"
+      ]
+    },
+    "vc-reporting-benchmark": {
+      "parsed": 2,
+      "total": 2,
+      "slugs": [
+        "variant-call-benchmarking-truth-set",
+        "variant-report-tabulation-snpeff-vcf"
+      ]
+    }
+  },
+  "motifs_by_class": {
+    "amp-qiime2-dada2": [],
+    "amp-mgnify": [],
+    "annot-bacterial": [],
+    "annot-other": [],
+    "annot-functional": [],
+    "asm-long-read": [],
+    "asm-short-bacterial": [],
+    "asm-hic-scaffolding": [],
+    "asm-other": [],
+    "asm-purge-haplotypes": [
+      {
+        "motif": [
+          "lr_aln",
+          "purge_dups",
+          "asm_stats"
+        ],
+        "support": 2,
+        "sketches": [
+          "assembly/purge-haplotypic-duplicates-diploid-assembly",
+          "assembly/purge-haplotypic-duplicates-single-haplotype"
+        ]
+      }
+    ],
+    "epi-atacseq": [
+      {
+        "motif": [
+          "intervals",
+          "peak_call",
+          "intervals",
+          "bam_utils"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/atacseq-chromatin-accessibility-paired-end",
+          "epigenomics/consensus-peak-calling-atac-cutandrun"
+        ]
+      }
+    ],
+    "epi-other": [
+      {
+        "motif": [
+          "trim",
+          "bam_utils"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/calling-cards-tf-binding-mammalian",
+          "epigenomics/sammy-seq-chromatin-solubility"
+        ]
+      },
+      {
+        "motif": [
+          "sr_aln",
+          "sr_aln_sensitive"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/calling-cards-tf-binding-mammalian",
+          "epigenomics/sammy-seq-chromatin-solubility"
+        ]
+      }
+    ],
+    "epi-hic": [
+      {
+        "motif": [
+          "hicup2juicer",
+          "cooler"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/capture-hic-to-balanced-cool",
+          "epigenomics/hic-fastq-to-balanced-cool-matrix"
+        ]
+      },
+      {
+        "motif": [
+          "hicup",
+          "hicup2juicer"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/hic-fastq-to-balanced-cool-matrix",
+          "epigenomics/hic-fastq-to-valid-pairs-hicup"
+        ]
+      }
+    ],
+    "epi-chipseq": [
+      {
+        "motif": [
+          "bam_utils",
+          "peak_call"
+        ],
+        "support": 3,
+        "sketches": [
+          "epigenomics/chip-seq-peak-calling-paired-end",
+          "epigenomics/chip-seq-peak-calling-single-end",
+          "epigenomics/consensus-peak-calling-chipseq-paired-end"
+        ]
+      },
+      {
+        "motif": [
+          "trim",
+          "sr_aln_sensitive",
+          "bam_utils",
+          "peak_call",
+          "qc_report"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/chip-seq-peak-calling-paired-end",
+          "epigenomics/chip-seq-peak-calling-single-end"
+        ]
+      },
+      {
+        "motif": [
+          "intervals",
+          "bam_utils"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/chipseq-consensus-peaks-single-end",
+          "epigenomics/consensus-peak-calling-chipseq-paired-end"
+        ]
+      }
+    ],
+    "epi-cutandrun": [
+      {
+        "motif": [
+          "bam_utils",
+          "markdup"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/cutandrun-cutandtag-peak-calling",
+          "epigenomics/cutandrun-histone-profiling"
+        ]
+      },
+      {
+        "motif": [
+          "intervals",
+          "peak_call"
+        ],
+        "support": 2,
+        "sketches": [
+          "epigenomics/cutandrun-cutandtag-peak-calling",
+          "epigenomics/cutandrun-histone-profiling"
+        ]
+      }
+    ],
+    "meta-other": [],
+    "meta-tax-profiling": [],
+    "other": [],
+    "phylo": [
+      {
+        "motif": [
+          "cawlign",
+          "hyphy-cln"
+        ],
+        "support": 3,
+        "sketches": [
+          "phylogenetics/codon-aware-alignment-and-gene-trees-viral",
+          "phylogenetics/codon-selection-hyphy-viral",
+          "phylogenetics/hyphy-codon-selection-viral"
+        ]
+      },
+      {
+        "motif": [
+          "cawlign",
+          "hyphy-cln",
+          "hyphy-busted",
+          "hyphy-fel",
+          "hyphy-meme",
+          "hyphy-prime"
+        ],
+        "support": 2,
+        "sketches": [
+          "phylogenetics/codon-selection-hyphy-viral",
+          "phylogenetics/hyphy-codon-selection-viral"
+        ]
+      }
+    ],
+    "prot-other": [],
+    "qc-short-read": [],
+    "qc-format-convert": [],
+    "qc-long-read": [],
+    "rna-bulk-de": [
+      {
+        "motif": [
+          "trim",
+          "count",
+          "cufflinks",
+          "transcript_quant",
+          "bam_utils",
+          "intervals"
+        ],
+        "support": 2,
+        "sketches": [
+          "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+          "rna-seq/bulk-rnaseq-single-end-star-quantification"
+        ]
+      },
+      {
+        "motif": [
+          "count",
+          "cufflinks",
+          "transcript_quant",
+          "bam_utils",
+          "intervals",
+          "bam_utils"
+        ],
+        "support": 2,
+        "sketches": [
+          "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+          "rna-seq/bulk-rnaseq-single-end-star-quantification"
+        ]
+      },
+      {
+        "motif": [
+          "cufflinks",
+          "transcript_quant",
+          "bam_utils",
+          "intervals",
+          "bam_utils",
+          "markdup"
+        ],
+        "support": 2,
+        "sketches": [
+          "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+          "rna-seq/bulk-rnaseq-single-end-star-quantification"
+        ]
+      },
+      {
+        "motif": [
+          "raw_qc",
+          "rnaseq_qc"
+        ],
+        "support": 2,
+        "sketches": [
+          "rna-seq/bulk-rnaseq-paired-end-star-quantification",
+          "rna-seq/bulk-rnaseq-single-end-star-quantification"
+        ]
+      }
+    ],
+    "rna-other": [],
+    "rna-nascent": [],
+    "sc-rna": [],
+    "sv": [],
+    "vc-pathogen-id": [],
+    "vc-gwas-imputation": [],
+    "vc-haploid-microbial": [
+      {
+        "motif": [
+          "trim",
+          "annot_var",
+          "sr_aln",
+          "bam_utils",
+          "markdup",
+          "qc_report"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+          "variant-calling/haploid-wgs-variant-calling-paired-end"
+        ]
+      },
+      {
+        "motif": [
+          "annot_var",
+          "sr_aln",
+          "bam_utils",
+          "markdup",
+          "qc_report",
+          "vc_lowfreq"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+          "variant-calling/haploid-wgs-variant-calling-paired-end"
+        ]
+      },
+      {
+        "motif": [
+          "sr_aln",
+          "bam_utils",
+          "markdup",
+          "qc_report",
+          "vc_lowfreq",
+          "annot_var"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+          "variant-calling/haploid-wgs-variant-calling-paired-end"
+        ]
+      },
+      {
+        "motif": [
+          "bam_utils",
+          "markdup",
+          "qc_report",
+          "vc_lowfreq",
+          "annot_var",
+          "vcf_filter"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/haploid-wgs-variant-calling-lofreq-pe",
+          "variant-calling/haploid-wgs-variant-calling-paired-end"
+        ]
+      }
+    ],
+    "vc-viral-shotgun": [
+      {
+        "motif": [
+          "vc_lowfreq",
+          "annot_var"
+        ],
+        "support": 3,
+        "sketches": [
+          "variant-calling/low-frequency-variant-calling-viral-wgs",
+          "variant-calling/sars-cov-2-variant-calling-illumina-se-wgs",
+          "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling"
+        ]
+      },
+      {
+        "motif": [
+          "sr_aln",
+          "bam_utils",
+          "markdup"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/low-frequency-variant-calling-viral-wgs",
+          "variant-calling/sars-cov-2-wgs-illumina-pe-variant-calling"
+        ]
+      },
+      {
+        "motif": [
+          "qc_report",
+          "vc_lowfreq",
+          "annot_var"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/low-frequency-variant-calling-viral-wgs",
+          "variant-calling/sars-cov-2-variant-calling-illumina-se-wgs"
+        ]
+      }
+    ],
+    "vc-somatic-human": [],
+    "vc-germline-human": [
+      {
+        "motif": [
+          "bam_utils",
+          "markdup"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/ploidy-aware-germline-variant-calling-short-read",
+          "variant-calling/rna-seq-germline-variant-calling-gatk"
+        ]
+      }
+    ],
+    "vc-viral-amplicon": [
+      {
+        "motif": [
+          "trim",
+          "sr_aln",
+          "bam_utils"
+        ],
+        "support": 3,
+        "sketches": [
+          "variant-calling/sars-cov-2-artic-illumina-variant-calling",
+          "variant-calling/sars-cov-2-illumina-amplicon-ivar",
+          "variant-calling/viral-variant-calling-consensus-illumina-pe"
+        ]
+      },
+      {
+        "motif": [
+          "bam_utils",
+          "vc_amplicon_viral"
+        ],
+        "support": 3,
+        "sketches": [
+          "variant-calling/sars-cov-2-amplicon-illumina-consensus",
+          "variant-calling/sars-cov-2-artic-ont-variant-calling",
+          "variant-calling/sars-cov-2-illumina-amplicon-ivar"
+        ]
+      },
+      {
+        "motif": [
+          "vc_amplicon_viral",
+          "annot_var"
+        ],
+        "support": 3,
+        "sketches": [
+          "variant-calling/sars-cov-2-amplicon-illumina-consensus",
+          "variant-calling/sars-cov-2-illumina-amplicon-ivar",
+          "variant-calling/viral-variant-calling-consensus-illumina-pe"
+        ]
+      },
+      {
+        "motif": [
+          "trim",
+          "sr_aln",
+          "bam_utils",
+          "vc_lowfreq",
+          "vc_amplicon_viral"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/sars-cov-2-artic-illumina-variant-calling",
+          "variant-calling/viral-variant-calling-consensus-illumina-pe"
+        ]
+      },
+      {
+        "motif": [
+          "bam_utils",
+          "vc_amplicon_viral",
+          "annot_var"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/sars-cov-2-amplicon-illumina-consensus",
+          "variant-calling/sars-cov-2-illumina-amplicon-ivar"
+        ]
+      },
+      {
+        "motif": [
+          "vc_amplicon_viral",
+          "annot_var",
+          "vcf_filter"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/sars-cov-2-amplicon-illumina-consensus",
+          "variant-calling/viral-variant-calling-consensus-illumina-pe"
+        ]
+      },
+      {
+        "motif": [
+          "vcf_utils",
+          "annot_var",
+          "vc_lowfreq"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/sars-cov-2-artic-illumina-variant-calling",
+          "variant-calling/sars-cov-2-artic-ont-variant-calling"
+        ]
+      },
+      {
+        "motif": [
+          "nextclade",
+          "pangolin"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/sars-cov-2-amplicon-illumina-consensus",
+          "variant-calling/sars-cov-2-illumina-amplicon-ivar"
+        ]
+      },
+      {
+        "motif": [
+          "bam_qc",
+          "bam_utils"
+        ],
+        "support": 2,
+        "sketches": [
+          "variant-calling/sars-cov-2-artic-ont-variant-calling",
+          "variant-calling/sars-cov-2-illumina-amplicon-ivar"
+        ]
+      }
+    ],
+    "vc-reporting-benchmark": []
+  }
+}
